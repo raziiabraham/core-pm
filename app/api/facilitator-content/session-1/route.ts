@@ -1,0 +1,7 @@
+import { NextRequest } from "next/server";
+import html from "../../../../private/facilitator/session-1-facilitator-run-sheet.html?raw";
+import { serveFacilitatorContent } from "../../../../lib/facilitator-content";
+
+export function GET(request: NextRequest) {
+  return serveFacilitatorContent(request, html, 1);
+}

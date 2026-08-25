@@ -1,0 +1,62 @@
+.journey-arrow,
+.inline-connector,
+.closing-connector {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 18px;
+}
+
+.journey-arrow::before,
+.inline-connector::before,
+.closing-connector::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  left: 5px;
+  height: 1.5px;
+  background: currentColor;
+  transform: translateY(-50%);
+}
+
+.journey-arrow::after,
+.inline-connector::after,
+.closing-connector::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  width: 7px;
+  height: 7px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.journey-arrow {
+  color: var(--green2);
+}
+
+.comparison-column .inline-connector {
+  color: var(--green2);
+  font-size: 0;
+}
+
+.comparison-column.weak .inline-connector {
+  color: #82908a;
+}
+
+.closing-path .closing-connector {
+  color: var(--mint);
+  font-size: 0;
+}
+
+.closing-path .closing-connector::before {
+  right: 7px;
+  left: 7px;
+}
+
+.closing-path .closing-connector::after {
+  right: 7px;
+}
