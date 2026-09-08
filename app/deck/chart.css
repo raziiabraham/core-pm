@@ -1,0 +1,91 @@
+.spark-chart .spark-line {
+  display: none;
+}
+
+.spark-series {
+  position: absolute;
+  inset: 0;
+}
+
+.spark-segment {
+  position: absolute;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--red);
+  transform-origin: left center;
+}
+
+.spark-segment.s1 {
+  top: 30%;
+  left: 3%;
+  width: 17.2%;
+  transform: rotate(6.5deg);
+}
+
+.spark-segment.s2 {
+  top: 42%;
+  left: 20%;
+  width: 18.1%;
+  transform: rotate(-3.5deg);
+}
+
+.spark-segment.s3 {
+  top: 35%;
+  left: 38%;
+  width: 18.3%;
+  transform: rotate(10deg);
+}
+
+.spark-segment.s4 {
+  top: 55%;
+  left: 56%;
+  width: 17.2%;
+  transform: rotate(-2.8deg);
+}
+
+.spark-segment.s5 {
+  top: 50%;
+  left: 73%;
+  width: 16.8%;
+  transform: rotate(13.5deg);
+}
+
+.spark-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 0 1px var(--red);
+  transform: translate(-50%, -50%);
+}
+
+.spark-dot.d1 { top: 30%; left: 3%; }
+.spark-dot.d2 { top: 42%; left: 20%; }
+.spark-dot.d3 { top: 35%; left: 38%; }
+.spark-dot.d4 { top: 55%; left: 56%; }
+.spark-dot.d5 { top: 50%; left: 73%; }
+.spark-dot.d6 { top: 75%; left: 89%; }
+
+.spark-chart .p1 { top: 15%; left: 2%; }
+.spark-chart .p2 { top: 27%; left: 19%; }
+.spark-chart .p3 { top: 20%; left: 37%; }
+.spark-chart .p4 { top: 40%; left: 55%; }
+.spark-chart .p5 { top: 35%; left: 72%; }
+.spark-chart .p6 { top: 60%; left: 88%; }
+
+.spark-chart .week {
+  position: absolute;
+  bottom: 4%;
+  color: #8a9690;
+  font: 600 0.56vw var(--font-mono);
+  letter-spacing: 0.06em;
+}
+
+.spark-chart .w1 { left: 2%; }
+.spark-chart .w2 { left: 19%; }
+.spark-chart .w3 { left: 37%; }
+.spark-chart .w4 { left: 55%; }
+.spark-chart .w5 { left: 72%; }
+.spark-chart .w6 { left: 88%; }

@@ -1,0 +1,33 @@
+.noted-audience-lens {
+  margin-top: 34px;
+  border-top: 3px solid var(--noted-green);
+  background: var(--noted-pale);
+  padding: 18px 20px;
+}
+
+.noted-audience-lens > span {
+  color: var(--noted-green);
+  font: 800 10px var(--font-mono);
+  letter-spacing: 0.12em;
+}
+
+.noted-audience-lens p {
+  margin: 9px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .noted-briefing {
+    overflow-x: hidden;
+  }
+
+  .noted-topbar-actions a {
+    display: none;
+  }
+
+  .noted-hero-copy,
+  .noted-field-note > div {
+    min-width: 0;
+  }
+}
