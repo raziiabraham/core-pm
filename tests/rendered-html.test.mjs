@@ -31,9 +31,11 @@ test("server-renders the self-paced course landing page", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /Re-own the[\s\S]{0,80}PM core/);
-  assert.match(html, /SELF-PACED · FREE · NO SIGN-UP/);
-  assert.match(html, /Twelve practical lessons/);
-  assert.match(html, /One decision\. Four phases\. Twelve lessons\./);
+  assert.match(html, /OPEN CURRICULUM · SELF-PACED · NO SIGN-UP/);
+  assert.match(html, /43 atomic lessons/);
+  assert.match(html, /Seven phases\. Forty-three lessons/);
+  assert.match(html, /Complete foundation/);
+  assert.match(html, /Technical \+ AI judgment/);
   assert.match(html, /Every lesson ends in evidence you can keep/);
   assert.match(html, /Read/);
   assert.match(html, /Decide/);
@@ -48,10 +50,22 @@ test("server-renders the self-paced course landing page", async () => {
   assert.match(html, /https:\/\/book\.raziiabraham\.com/);
   assert.match(html, /Explore the book/);
   assert.doesNotMatch(html, /guided live cohort|Demo Day|price range|linkedin\.com/i);
-  assert.match(html, /href="\/session-1"/);
-  assert.match(html, /href="\/session-2"/);
-  assert.match(html, /href="\/session-3"/);
-  assert.match(html, /href="\/session-4"/);
+  assert.match(html, /href="\/learn\/pf-01-decision-before-method"/);
+  assert.match(html, /The website is the reader\. The curriculum is the source/);
+});
+
+test("server-renders atomic full-curriculum lessons", async () => {
+  const response = await render("/learn/pf-01-decision-before-method");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Decision before method/);
+  assert.match(html, /THE PROBLEM/);
+  assert.match(html, /THE CONCEPT/);
+  assert.match(html, /BUILD IT/);
+  assert.match(html, /USE IT/);
+  assert.match(html, /SHIP IT/);
+  assert.match(html, /CHECK UNDERSTANDING/);
+  assert.match(html, /Decision brief/);
 });
 
 test("server-renders the Session 1 reading orientation", async () => {

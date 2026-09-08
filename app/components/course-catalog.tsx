@@ -2,77 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { allLessons, curriculum, learningPaths, totalMinutes } from "@/lib/curriculum";
 
-type Lesson = {
-  id: string;
-  number: string;
-  title: string;
-  description: string;
-  href: string;
-  minutes: number;
-};
-
-type Phase = {
-  number: string;
-  verb: string;
-  title: string;
-  description: string;
-  output: string;
-  lessons: Lesson[];
-};
-
-export const coursePhases: Phase[] = [
-  {
-    number: "01",
-    verb: "FRAME",
-    title: "Re-own the product decision",
-    description: "Turn competing signals into one bounded decision that can survive scrutiny.",
-    output: "Decision & Problem Hypothesis",
-    lessons: [
-      { id: "lesson-01", number: "01", title: "Choose what deserves attention", description: "Bound the consequential choice before selecting the activity.", href: "/session-1/reading#attention", minutes: 12 },
-      { id: "lesson-02", number: "02", title: "Form a product view", description: "Integrate evidence and judgment while preserving uncertainty.", href: "/session-1/reading#view", minutes: 12 },
-      { id: "lesson-03", number: "03", title: "Earn the problem definition", description: "Link audience, problem, value, alternatives, and weakest claim.", href: "/session-1/reading#problem", minutes: 14 },
-    ],
-  },
-  {
-    number: "02",
-    verb: "LEARN",
-    title: "Make evidence earn the decision",
-    description: "Build an evidence chain that updates the decision without overstating what is known.",
-    output: "Evidence & Belief Update",
-    lessons: [
-      { id: "lesson-04", number: "04", title: "Choose evidence that can answer", description: "Match claim, method, metric meaning, and observability.", href: "/session-2/reading#unit-04", minutes: 13 },
-      { id: "lesson-05", number: "05", title: "Build a defensible belief", description: "Preserve lineage, contradiction, segments, and known flaws.", href: "/session-2/reading#unit-05", minutes: 14 },
-      { id: "lesson-06", number: "06", title: "Measure without false certainty", description: "Interpret estimates, error consequences, and result integrity.", href: "/session-2/reading#unit-06", minutes: 14 },
-    ],
-  },
-  {
-    number: "03",
-    verb: "CHOOSE",
-    title: "Turn evidence into direction",
-    description: "Convert a calibrated belief into a strategic choice and visible trade-offs.",
-    output: "Strategy & Constraint Choice",
-    lessons: [
-      { id: "lesson-07", number: "07", title: "Create a coherent strategy", description: "Link diagnosis, winning mechanism, exclusions, and revision triggers.", href: "/session-3/reading#unit-07", minutes: 13 },
-      { id: "lesson-08", number: "08", title: "Make the portfolio portable", description: "Fund and sequence different forms of product value.", href: "/session-3/reading#unit-08", minutes: 13 },
-      { id: "lesson-09", number: "09", title: "Reprice the technical choice", description: "Compare build, buy, adapt, defer, and no-build across lifecycle cost.", href: "/session-3/reading#unit-09", minutes: 14 },
-    ],
-  },
-  {
-    number: "04",
-    verb: "COMMIT + LEARN",
-    title: "Make the choice survivable",
-    description: "Carry the choice through disagreement, delivery change, exposure, and learning.",
-    output: "Product Decision Case",
-    lessons: [
-      { id: "lesson-10", number: "10", title: "Create commitment", description: "Separate participation, authority, confidence, dissent, and exact asks.", href: "/session-4/reading#unit-10", minutes: 13 },
-      { id: "lesson-11", number: "11", title: "Adapt without taking over", description: "Change sequence and controls while preserving clear owners.", href: "/session-4/reading#unit-11", minutes: 13 },
-      { id: "lesson-12", number: "12", title: "Learn without rewriting history", description: "Separate exposure, outcome, impact, decision quality, and luck.", href: "/session-4/reading#unit-12", minutes: 14 },
-    ],
-  },
-];
-
-const storageKey = "core-pm-progress-v1";
+const storageKey = "core-pm-progress-v2";
 
 function readProgress(): string[] {
   try {
@@ -85,8 +17,10 @@ function readProgress(): string[] {
 
 export default function CourseCatalog() {
   const [completed, setCompleted] = useState<string[]>([]);
+  const [activePath, setActivePath] = useState("complete");
   const [ready, setReady] = useState(false);
-  const lessons = useMemo(() => coursePhases.flatMap((phase) => phase.lessons), []);
+  const selectedPath = learningPaths.find((path) => path.id === activePath) ?? learningPaths[0];
+  const selectedIds = useMemo(() => new Set(selectedPath.lessons), [selectedPath]);
 
   useEffect(() => {
     setCompleted(readProgress());
@@ -106,62 +40,72 @@ export default function CourseCatalog() {
     setCompleted([]);
   }
 
-  const nextLesson = lessons.find((lesson) => !completed.includes(lesson.id)) ?? lessons[lessons.length - 1];
-  const percent = Math.round((completed.length / lessons.length) * 100);
+  const pathLessons = selectedPath.lessons.map((id) => allLessons.find((item) => item.id === id)).filter((item) => item !== undefined);
+  const pathCompleted = pathLessons.filter((item) => completed.includes(item.id)).length;
+  const nextLesson = pathLessons.find((item) => !completed.includes(item.id)) ?? pathLessons.at(-1);
+  const percent = Math.round((pathCompleted / pathLessons.length) * 100);
 
   return <>
-    <section className="course-command" aria-label="Course progress">
+    <section className="course-command" aria-label="Course introduction and progress">
       <div className="course-command-copy">
-        <p>SELF-PACED · FREE · NO SIGN-UP</p>
+        <p>OPEN CURRICULUM · SELF-PACED · NO SIGN-UP</p>
         <h1>Re-own the<br /><em>PM core.</em></h1>
-        <span>Twelve practical lessons for product managers who know the rituals and want to recover the judgment underneath them.</span>
-        <div className="course-command-actions"><Link href={nextLesson.href}>{completed.length ? "Continue the course" : "Start lesson 01"} <i aria-hidden="true">›</i></Link><a href="#curriculum">Browse the curriculum</a></div>
+        <span>A living product-management curriculum: 43 atomic lessons, seven phases, four learning paths, and an artifact from every lesson.</span>
+        <div className="course-command-actions">
+          {nextLesson && <Link href={`/learn/${nextLesson.slug}`}>{pathCompleted ? "Continue your path" : "Start learning"} <i aria-hidden="true">›</i></Link>}
+          <a href="#paths">Choose a path</a>
+        </div>
       </div>
       <aside className="course-progress-card">
-        <header><span>YOUR PROGRESS</span><b>{ready ? `${completed.length} / ${lessons.length}` : "— / 12"}</b></header>
+        <header><span>{selectedPath.title.toUpperCase()}</span><b>{ready ? `${pathCompleted} / ${pathLessons.length}` : `— / ${pathLessons.length}`}</b></header>
         <div className="course-progress-track" aria-label={`${percent}% complete`}><i style={{ width: `${percent}%` }} /></div>
-        <strong>{percent === 100 ? "Course complete" : nextLesson.title}</strong>
-        <p>{percent === 100 ? "Your Product Decision Case is ready for a final review." : `Next · Lesson ${nextLesson.number} · ${nextLesson.minutes} min`}</p>
+        <strong>{percent === 100 ? "Path complete" : nextLesson?.title}</strong>
+        <p>{percent === 100 ? "Review the artifacts you produced across the path." : nextLesson ? `Next · ${nextLesson.id} · ${nextLesson.minutes} min` : "Choose a learning path."}</p>
         {completed.length > 0 && <button type="button" onClick={reset}>Reset progress</button>}
-        <small>Saved only in this browser.</small>
+        <small>Progress stays in this browser.</small>
       </aside>
+    </section>
+
+    <section className="course-paths" id="paths" aria-labelledby="paths-title">
+      <header><p>START HERE</p><h2 id="paths-title">Choose the route that matches the work.</h2><span>The lessons remain the same. A path changes the order and depth—not the standard.</span></header>
+      <div>{learningPaths.map((path) => <button className={path.id === activePath ? "is-active" : ""} key={path.id} type="button" onClick={() => setActivePath(path.id)}>
+        <span>{String(path.lessons.length).padStart(2, "0")} LESSONS · ~{path.hours} HOURS</span><b>{path.title}</b><p>{path.description}</p><i>{path.id === activePath ? "Selected" : "Choose path"} →</i>
+      </button>)}</div>
     </section>
 
     <section className="course-catalog" id="curriculum" aria-labelledby="curriculum-title">
       <header>
         <p>THE CURRICULUM</p>
-        <h2 id="curriculum-title">One decision. Four phases. Twelve lessons.</h2>
-        <span>Move in order the first time. Each phase adds a reviewable layer to the same Product Decision Case.</span>
+        <h2 id="curriculum-title">Seven phases. Forty-three lessons. One body of judgment.</h2>
+        <span>{Math.round(totalMinutes / 60)} hours of core study. Follow the complete sequence or show only the lessons in your selected path.</span>
       </header>
       <div className="course-phase-list">
-        {coursePhases.map((phase) => {
-          const phaseComplete = phase.lessons.filter((lesson) => completed.includes(lesson.id)).length;
-          return <article className="course-phase" key={phase.number}>
+        {curriculum.map((phase) => {
+          const visibleLessons = phase.lessons.filter((item) => selectedIds.has(item.id));
+          if (!visibleLessons.length) return null;
+          const phaseComplete = visibleLessons.filter((item) => completed.includes(item.id)).length;
+          return <article className="course-phase" key={phase.id}>
             <header>
-              <div><span>PHASE {phase.number}</span><em>{phase.verb}</em></div>
-              <b>{phaseComplete} / 3</b>
+              <div><span>PHASE {phase.number}</span><em>{phase.id}</em></div>
+              <b>{phaseComplete} / {visibleLessons.length}</b>
               <h3>{phase.title}</h3>
-              <p>{phase.description}</p>
+              <p>{phase.promise}</p>
+              <small>{phase.sourcePrograms.join(" · ")}</small>
             </header>
             <div className="course-lesson-list">
-              {phase.lessons.map((lesson) => {
-                const done = completed.includes(lesson.id);
-                return <div className={done ? "course-lesson is-complete" : "course-lesson"} key={lesson.id}>
-                  <button type="button" aria-pressed={done} aria-label={`${done ? "Mark incomplete" : "Mark complete"}: lesson ${lesson.number}`} onClick={() => toggle(lesson.id)}><span aria-hidden="true">{done ? "✓" : ""}</span></button>
-                  <Link href={lesson.href}>
-                    <small>LESSON {lesson.number} · {lesson.minutes} MIN</small>
-                    <b>{lesson.title}</b>
-                    <p>{lesson.description}</p>
-                  </Link>
+              {visibleLessons.map((item) => {
+                const done = completed.includes(item.id);
+                return <div className={done ? "course-lesson is-complete" : "course-lesson"} key={item.id}>
+                  <button type="button" aria-pressed={done} aria-label={`${done ? "Mark incomplete" : "Mark complete"}: ${item.id}`} onClick={() => toggle(item.id)}><span aria-hidden="true">{done ? "✓" : ""}</span></button>
+                  <Link href={`/learn/${item.slug}`}><small>{item.id} · {item.minutes} MIN</small><b>{item.title}</b><p>{item.premise}</p></Link>
                   <i aria-hidden="true">›</i>
                 </div>;
               })}
             </div>
-            <footer><span>KEEP</span><b>{phase.output}</b><Link href={`/session-${Number(phase.number)}`}>Phase overview →</Link></footer>
+            <footer><span>PHASE OUTPUT</span><b>{visibleLessons.at(-1)?.artifact}</b><span>{phase.lessons.length} lessons in full phase</span></footer>
           </article>;
         })}
       </div>
     </section>
   </>;
 }
-

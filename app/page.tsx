@@ -229,14 +229,14 @@ export default function CourseHome() {
   return <main className="course-home">
     <header className="course-home-nav">
       <Link href="/" className="course-home-mark"><span>CORE / PM</span><small>FIELD COURSE 01</small></Link>
-      <nav aria-label="Primary navigation"><a href="#curriculum">Curriculum</a><Link href="/noted">The Noted case</Link><a href="#method">How to study</a><a href="https://book.raziiabraham.com" target="_blank" rel="noreferrer">Book ↗</a></nav>
-      <span>12 lessons · browser progress</span>
+      <nav aria-label="Primary navigation"><a href="#curriculum">Curriculum</a><Link href="/noted">The Noted case</Link><a href="#method">How to study</a><a href="https://github.com/raziiabraham/core-pm" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://book.raziiabraham.com" target="_blank" rel="noreferrer">Book ↗</a></nav>
+      <span>43 lessons · 7 phases</span>
     </header>
 
     <CourseCatalog />
 
     <section className="course-loop" id="method" aria-labelledby="method-title">
-      <header><p>THE LEARNING LOOP</p><h2 id="method-title">Every lesson ends in evidence you can keep.</h2><span>Reading is only the first move. Use the same four-beat loop for all twelve lessons.</span></header>
+      <header><p>THE LEARNING LOOP</p><h2 id="method-title">Every lesson ends in evidence you can keep.</h2><span>Reading is only the first move. Use the same four-beat loop across the complete curriculum.</span></header>
       <div>
         <article><span>01</span><b>Read</b><p>Understand the product problem, the durable principle, and the boundary where it stops being true.</p></article>
         <i aria-hidden="true">→</i>
@@ -256,16 +256,27 @@ export default function CourseHome() {
         <Link href="/noted">Meet the product case <i aria-hidden="true">›</i></Link>
       </div>
       <ol>
-        <li><span>PHASE 01</span><b>Decision &amp; problem</b><p>What deserves attention, for whom, and why now?</p></li>
-        <li><span>PHASE 02</span><b>Evidence &amp; belief</b><p>What can the evidence establish, and what changed?</p></li>
-        <li><span>PHASE 03</span><b>Strategy &amp; constraints</b><p>What direction earns commitment, and what will wait?</p></li>
-        <li><span>PHASE 04</span><b>Commitment &amp; learning</b><p>How will the choice survive delivery and honest review?</p></li>
+        <li><span>FIELD 01</span><b>Frame the decision</b><p>Bound what deserves attention, for whom, and why now.</p></li>
+        <li><span>FIELD 02</span><b>Update the belief</b><p>Choose evidence that can change the decision.</p></li>
+        <li><span>FIELD 03</span><b>Make the choice</b><p>Turn belief into strategy, portfolio, and technical judgment.</p></li>
+        <li><span>FIELD 04</span><b>Carry it through</b><p>Create commitment, adapt delivery, and learn honestly.</p></li>
       </ol>
     </section>
 
+    <section className="course-repository" aria-labelledby="repository-title">
+      <header><p>BUILT LIKE A LIVING REPOSITORY</p><h2 id="repository-title">The website is the reader. The curriculum is the source.</h2><span>The complete foundation is organized as atomic modules with stable IDs, prerequisites, a shared lesson contract, and learning paths. The original twelve-lesson field course remains as the fastest applied route through the larger system.</span></header>
+      <div>
+        <article><span>DOC</span><b>Learn the model</b><p>Problem, concept, boundary, and source lineage.</p></article>
+        <article><span>BUILD</span><b>Make the decision</b><p>One Noted exercise and one real-product transfer.</p></article>
+        <article><span>OUTPUT</span><b>Ship an artifact</b><p>A reusable decision object—not disposable homework.</p></article>
+        <article><span>CHECK</span><b>Test the reasoning</b><p>Inspectable questions before progress is recorded.</p></article>
+      </div>
+      <a className="course-repository-link" href="https://github.com/raziiabraham/core-pm" target="_blank" rel="noreferrer">Browse the curriculum on GitHub <i aria-hidden="true">↗</i></a>
+    </section>
+
     <section className="course-foundation" aria-labelledby="foundation-title">
-      <header><p>RESEARCH FOUNDATION</p><h2 id="foundation-title">Broad source material. One original learning spine.</h2><span>The course synthesizes 563 PDF resources across nine Reforge product-management programs. It keeps the durable decision principles and rebuilds their sequence around one cumulative act of product judgment.</span></header>
-      <div><b>9</b><span>source programs</span><b>563</b><span>PDF resources reviewed</span><b>12</b><span>synthesized lessons</span><b>1</b><span>decision case to keep</span></div>
+      <header><p>RESEARCH FOUNDATION</p><h2 id="foundation-title">Broad source material. One original learning spine.</h2><span>The curriculum synthesizes every PDF in the source folder across nine Reforge product-management programs. It keeps the durable decision principles and rebuilds their sequence around inspectable product judgment.</span></header>
+      <div><b>9</b><span>source programs</span><b>563</b><span>PDF resources reviewed</span><b>43</b><span>atomic lessons</span><b>4</b><span>learning paths</span></div>
       <p>Covered domains include product craft, product-market fit, user insight, data, experimentation, strategy, technical strategy, delivery, and leadership. Source notes remain visible at the end of each lesson.</p>
     </section>
 
@@ -274,6 +285,6 @@ export default function CourseHome() {
       <a href="https://book.raziiabraham.com" target="_blank" rel="noreferrer">Explore the book <i aria-hidden="true">↗</i></a>
     </section>
 
-    <footer className="course-home-footer"><span>CORE / PM · A self-paced field course</span><span>Built for practicing PMs. Progress stays on your device.</span></footer>
+    <footer className="course-home-footer"><span>CORE / PM · An open, self-paced curriculum</span><span>Built for practicing PMs. Progress stays on your device.</span></footer>
   </main>;
 }

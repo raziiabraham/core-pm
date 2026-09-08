@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import "./lesson-progress.css";
 
-const storageKey = "core-pm-progress-v1";
+const storageKey = "core-pm-progress-v2";
 
 export default function LessonProgress({ lesson, title }: { lesson: string; title: string }) {
   const [complete, setComplete] = useState(false);
