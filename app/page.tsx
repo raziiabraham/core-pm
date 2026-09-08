@@ -229,7 +229,7 @@ export default function CourseHome() {
   return <main className="course-home">
     <header className="course-home-nav">
       <Link href="/" className="course-home-mark"><span>CORE / PM</span><small>FIELD COURSE 01</small></Link>
-      <nav aria-label="Primary navigation"><a href="#curriculum">Curriculum</a><Link href="/noted">The Noted case</Link><a href="#method">How to study</a><a href="https://github.com/raz-ii/core-pm" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://book.raziiabraham.com" target="_blank" rel="noreferrer">Book ↗</a></nav>
+      <nav aria-label="Primary navigation"><a href="#curriculum">Curriculum</a><Link href="/noted">The Noted case</Link><a href="#method">How to study</a><a href="https://github.com/raziiabraham/core-pm" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://book.raziiabraham.com" target="_blank" rel="noreferrer">Book ↗</a></nav>
       <span>43 lessons · 7 phases</span>
     </header>
 
@@ -271,7 +271,7 @@ export default function CourseHome() {
         <article><span>OUTPUT</span><b>Ship an artifact</b><p>A reusable decision object—not disposable homework.</p></article>
         <article><span>CHECK</span><b>Test the reasoning</b><p>Inspectable questions before progress is recorded.</p></article>
       </div>
-      <a className="course-repository-link" href="https://github.com/raz-ii/core-pm" target="_blank" rel="noreferrer">Browse the curriculum on GitHub <i aria-hidden="true">↗</i></a>
+      <a className="course-repository-link" href="https://github.com/raziiabraham/core-pm" target="_blank" rel="noreferrer">Browse the curriculum on GitHub <i aria-hidden="true">↗</i></a>
     </section>
 
     <section className="course-foundation" aria-labelledby="foundation-title">
