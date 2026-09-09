@@ -6,7 +6,7 @@
 [![Phases](https://img.shields.io/badge/phases-7-c15f3c?style=flat-square)](#the-curriculum)
 [![Skills](https://img.shields.io/badge/agent_skills-6-526a61?style=flat-square)](#the-six-skills)
 [![Diagrams](https://img.shields.io/badge/diagrams-91-2f6f55?style=flat-square)](#what-a-lesson-contains)
-[![Reader](https://img.shields.io/badge/web_reader-open-f0b99d?style=flat-square)](https://core-pm-field-course.razii-abrhm.chatgpt.site)
+[![Reader](https://img.shields.io/badge/web_reader-open-f0b99d?style=flat-square)](https://corepm.raziiabraham.com)
 
 **Re-own the judgment underneath product management.**
 

@@ -14,7 +14,7 @@ const FONTS_HREF =
   "&display=swap";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://core-pm-field-course.razii-abrhm.chatgpt.site"),
+  metadataBase: new URL("https://corepm.raziiabraham.com"),
   title: "CORE / PM — A Self-Paced Product Management Course",
   description: "43 lessons across framing, judgment, evidence, strategy, technology, delivery, and leadership — taught interactively by your coding agent. Install with: npx skills add raziiabraham/core-pm",
   openGraph: { title: "CORE / PM — Re-own the PM Core", description: "Seven phases. Forty-three lessons. One body of product judgment.", images: ["/og.png"] },
