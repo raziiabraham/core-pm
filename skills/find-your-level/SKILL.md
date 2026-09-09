@@ -23,28 +23,32 @@ There are 14 scenarios: two for each of the seven phases.
 **Every scenario has two questions, and a point needs both.**
 
 1. **What do you do?** Four options, A to D.
-2. **Why?** Five reasons, i to v.
+2. **Why?** Open-ended. One line, in their own words.
 
-The learner picks a letter, then picks a reason. A point is earned only when the
-reason is the one that actually justifies the letter they chose. No writing is
-required at any point.
+The reason is what carries the point. A learner who cannot say why their answer
+is right has not shown the thing being placed, however good the letter is.
 
-This is what makes the placement hard to guess. A letter on its own is
-guessable — four options, and most scenarios credit two of them. The pair is
-not. A learner guessing both tiers scores about 1 or 2 out of 14. A learner who
-picks the right letter for the wrong reason scores zero on that scenario, and
-that is the most common way a guess dies here.
+**If they would rather not write**, the same scenario has five ready-made
+reasons they can pick from instead. Offer that the moment they hesitate. It is
+a slightly weaker signal than their own sentence, and it scores the same.
+
+That structure is what makes the placement hard to guess. A letter on its own
+is guessable — four options, and most scenarios credit two of them. Guessing
+the letter *and* landing the reason is not. A learner guessing both tiers
+scores about 1 or 2 out of 14, and a right letter with the wrong reason scores
+nothing, which is the most common way a guess dies here.
 
 Two things you must do, or the second tier stops working:
 
-- **Shuffle both lists every time you ask a scenario.** Re-letter the options A
-  to D and re-number the reasons i to v after shuffling, and write the mapping
-  down for yourself before you show anything, so you can score it. Never use the
-  order printed in `references/placement.md`, and do not repeat an order between
+- **Shuffle both lists whenever you show them.** Re-letter the options A to D
+  and re-number the fallback reasons i to v after shuffling, and write the
+  mapping down for yourself first so you can score it. Never use the order
+  printed in `references/placement.md`, and do not repeat an order between
   scenarios or between learners.
-- **Show the reasons only after the letter is in.** If the learner sees both
-  lists together, they can work backwards from the reason that sounds best to
-  the letter it fits, which is the thing being tested.
+- **Ask for their own reason before offering the list.** A learner who sees
+  five reasons can work backwards from the one that sounds best to the letter
+  it fits, which is the thing being tested. Their own sentence first, the list
+  only if they pass.
 
 Every scenario uses the shared Noted case. The learner needs no knowledge of
 their own product to answer.
@@ -88,54 +92,80 @@ Give this once, before scenario 1. Do not repeat it:
 
 ## Delivery
 
-1. Say what this is: 14 scenarios, about 20 minutes, nothing to prepare and
-   nothing to write. Each one asks what you would do, then why. Say that both
-   answers count, because the reason is where the judgment shows. A low score
-   costs them nothing — it only changes where they start.
+1. Say what this is: 14 scenarios, about 20 minutes, nothing to prepare. Each
+   one asks what you would do, then why. Say that the reason is what is
+   actually scored, and that one line is enough. A low score costs them
+   nothing — it only changes where they start.
 2. Ask all 14 in phase order, PF through LD, one at a time. Inside a phase, ask
    the first scenario before the second.
 3. For each scenario: give the situation, show the four options in a shuffled
-   order, and take a letter. Then, and only then, show the five reasons in a
-   shuffled order and take a number.
-4. If the environment has a structured question/option tool, use it for both
-   steps. Otherwise present the lists as plain text and wait between them.
-5. Accept a letter, or wording that clearly matches exactly one option. If it is
-   genuinely ambiguous between two, ask them to pick. Do not guess for them.
-6. If they volunteer their own reasoning as well, keep it. It does not change
-   the score, and it is the most useful thing in the final report.
-7. Do not comment on either answer before moving on. "Noted." is enough.
+   order, and take a letter.
+4. **Then ask why, open-ended.** "One line — why that one?" Take whatever they
+   write, in their own words. This is the preferred path and you should
+   encourage it, because their own sentence tells you far more than a selection
+   does.
+5. **If they would rather not write**, or reply with nothing, or say "just give
+   me the options" — show the five reasons in a shuffled order and let them
+   pick a number. Offer this without friction. The point of the placement is
+   the reasoning, and a chosen reason still shows some of it.
+6. Never show the reason list before their own answer has had a chance. Once
+   the list is on screen, do not let them change the letter.
+7. If the environment has a structured question/option tool, use it for the
+   letter and for the fallback list. The open "why" is always free text.
+8. Accept a letter, or wording that clearly matches exactly one option. If it
+   is genuinely ambiguous between two, ask them to pick. Do not guess for them.
+9. Do not comment on either answer before moving on. "Noted." is enough.
+
+If someone declines both the writing and the list, that scenario scores zero
+and you note it. Tell them once, early, that this makes the final score a floor
+rather than a measure — then let them proceed however they like. Do not nag.
 
 ## Scoring
 
 One point per scenario, no partial credit. The total is out of 14.
 
-A point needs a **credited pair** from `references/placement.md`: one of that
-scenario's credited letters, together with the reason that justifies that
-letter. Three outcomes:
+A point needs a **credited letter** from `references/placement.md`, together
+with a reason that justifies **that** letter. The reason arrives one of two
+ways, and both score the same:
 
-- Credited letter, matching reason → **1 point**.
-- Credited letter, wrong reason → **0**, recorded as `right move, wrong
-  reason`. This distinction matters in the report and in the routing below.
-- Wrong letter → **0**, whatever reason they chose.
+- **They wrote it themselves.** Judge their line against the credited reason
+  for the letter they picked. It does not have to match the wording, only the
+  content: does their sentence carry what that reason carries? Judge on
+  substance, never on fluency. A learner writing in short, blunt words who
+  names the trade-off has earned it. A learner writing at length who only
+  restates the option they chose has not.
+- **They picked from the list.** Award the point only for the credited pair —
+  that letter with its own reason. A reason that justifies the *other* credited
+  letter earns nothing.
 
-Do not award anything for a reason that justifies the *other* credited letter.
-If they pick letter A and the reason that belongs to letter C, they have not
-shown the judgment either answer requires.
+Three outcomes:
+
+- Credited letter, reason clears it → **1 point**.
+- Credited letter, reason does not → **0**, recorded as `right move, wrong
+  reason`. This matters below.
+- Wrong letter → **0**, whatever the reason says.
+
+Record for each scenario whether the reason was **written or picked**. It does
+not change the score, and it is the most useful thing in the report: producing
+the reason unprompted is a stronger signal than recognising it in a list.
 
 Per-phase status comes from that phase's own two scenarios, never from the
 total:
 
 | That phase's two scenarios | Status for that phase |
 |---|---|
-| Both points earned | `Skip` — except PF, which becomes `Review` |
+| Both points earned, at least one reason written in their own words | `Skip` — except PF, which becomes `Review` |
+| Both points earned, both reasons picked from the list | `Review` |
 | One point, and the miss was `right move, wrong reason` | `Review` |
 | One point, and the miss was a wrong letter | `Do` |
 | No points, but both misses were `right move, wrong reason` | `Review` |
 | Otherwise | `Do` |
 
-`Skip` is reachable, and it should be. Two credited pairs in a phase means the
-learner made the move and could say why, twice, on scenarios they had not seen.
-That is the evidence the phase is asking for.
+`Skip` is reachable, and it should be. Two points in a phase means the learner
+made the move and could say why, twice, on scenarios they had not seen. Skipping
+six lessons asks for slightly more than recognition, which is why at least one
+of the two reasons has to be theirs. Two picked reasons is a fast pass, not a
+skip.
 
 `right move, wrong reason` is the interesting middle. It means they have the
 instinct and not yet the account of it, which is exactly what a `Review` pass
@@ -158,8 +188,8 @@ Total score bands, used only for the summary line:
 | 9–12 | Strong judgment, uneven across domains. Target the `Do` phases. |
 | 13–14 | Genuinely senior. Expect a short route, and use `check-understanding` to confirm a phase before skipping it. |
 
-Guessing both tiers scores about 1 or 2 out of 14, so treat a high score as
-real. Never present the band as a verdict on them as a PM. It is a routing
+Guessing the letter and the reason together scores about 1 or 2 out of 14, so
+treat a high score as real — particularly one built on reasons they wrote. Never present the band as a verdict on them as a PM. It is a routing
 decision.
 
 ## Step 5 — Report
@@ -168,8 +198,9 @@ Give the learner, in this order:
 
 1. Their score as `N/14`.
 2. One row per phase: the phase, both scenarios, whether each earned the point,
-   and the resulting status. Mark any `right move, wrong reason` as exactly
-   that — it is the most useful line in the table.
+   whether the reason was written or picked, and the resulting status. Mark any
+   `right move, wrong reason` as exactly that — it is the most useful line in
+   the table.
 3. For each scenario that earned no point: the credited pair, and the one-line
    note on why the other options fail, from `references/placement.md`. This is
    the only moment when answers become visible.

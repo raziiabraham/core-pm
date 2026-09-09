@@ -8,6 +8,11 @@ governs delivery.
 
 ## Two tiers, one point
 
+The five reasons under each scenario serve two purposes. They are the list a
+learner picks from if they would rather not write, and they are your rubric for
+judging a learner who does write. In the second case, ignore the wording and
+ask only whether their sentence carries what the credited reason carries.
+
 Each scenario has two questions:
 
 1. **What do you do?** Four options, A to D.
@@ -32,8 +37,9 @@ Two rules make it work, and both matter:
   starts broad", "larger samples are always better". A learner working from
   tone picks it.
 
-`SKILL.md` requires you to shuffle both lists before showing them. Never present
-them in the order written here.
+`SKILL.md` requires you to ask for their own reason before offering the list,
+and to shuffle both lists whenever you show them. Never present them in the
+order written here.
 
 ---
 
