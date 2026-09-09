@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import { notedSignals } from "@/lib/noted-signals";
+
 // A rotating exhibit in the hero. Each plate is one of the course's own
 // reasoning structures, drawn rather than described, so a first-time visitor
 // can see what a lesson actually contains before committing to anything.
@@ -70,36 +72,54 @@ function DecisionChain() {
 
 /** Fig. 02 — the four signals of the shared case, and why they conflict. */
 function CompetingSignals() {
-  const points = [
-    { x: 150, y: 178, label: "Summaries ×3", anchor: "start" as const },
-    { x: 232, y: 156, label: "Activation −11%", anchor: "start" as const },
-    { x: 366, y: 182, label: "P95 +34%", anchor: "end" as const },
-    { x: 392, y: 62, label: "Dependency, 10 wks", anchor: "end" as const },
-  ];
+  // The axis box in canvas units. Signal coordinates are normalised 0-1 in
+  // lib/noted-signals.ts and shared with the /noted quadrant chart, so both
+  // surfaces place the same signal at the same point.
+  const AXIS = { left: 64, right: 444, bottom: 206, top: 26 };
+  const px = (x: number) => AXIS.left + x * (AXIS.right - AXIS.left);
+  const py = (y: number) => AXIS.bottom - y * (AXIS.bottom - AXIS.top);
+
+  // Label placement is presentation, not data. At 460px wide the four labels
+  // collide if they all sit to the right of their dot at the same offset, so
+  // each gets a side and a small vertical nudge. Moving these never moves the
+  // point being plotted.
+  const layout: Record<number, { anchor: "start" | "end"; dy: number }> = {
+    1: { anchor: "start", dy: 5 },
+    2: { anchor: "start", dy: -9 },
+    3: { anchor: "start", dy: 18 },
+    4: { anchor: "end", dy: 5 },
+  };
 
   return <svg viewBox={`0 0 ${CANVAS.w} ${CANVAS.h}`} role="img" aria-label="The four signals of the shared case plotted by how much evidence is held against how much time pressure they carry.">
-    <line x1={64} y1={206} x2={444} y2={206} stroke={MUTED} strokeWidth="1" />
-    <line x1={64} y1={26} x2={64} y2={206} stroke={MUTED} strokeWidth="1" />
-    <line x1={254} y1={26} x2={254} y2={206} stroke={MUTED} strokeWidth="1" strokeDasharray="2 4" />
-    <line x1={64} y1={116} x2={444} y2={116} stroke={MUTED} strokeWidth="1" strokeDasharray="2 4" />
+    <line x1={AXIS.left} y1={AXIS.bottom} x2={AXIS.right} y2={AXIS.bottom} stroke={MUTED} strokeWidth="1" />
+    <line x1={AXIS.left} y1={AXIS.top} x2={AXIS.left} y2={AXIS.bottom} stroke={MUTED} strokeWidth="1" />
+    <line x1={px(0.5)} y1={AXIS.top} x2={px(0.5)} y2={AXIS.bottom} stroke={MUTED} strokeWidth="1" strokeDasharray="2 4" />
+    <line x1={AXIS.left} y1={py(0.5)} x2={AXIS.right} y2={py(0.5)} stroke={MUTED} strokeWidth="1" strokeDasharray="2 4" />
 
     <text x={68} y={224} fill={MUTED} fontSize="11">weak evidence</text>
     <text x={444} y={224} textAnchor="end" fill={MUTED} fontSize="11">strong evidence</text>
     <text x={56} y={26} textAnchor="end" fill={MUTED} fontSize="11" transform="rotate(-90 56 26)">hard deadline</text>
     <text x={56} y={206} textAnchor="start" fill={MUTED} fontSize="11" transform="rotate(-90 56 206)">no deadline</text>
 
-    {points.map((point) => <g key={point.label}>
-      <circle cx={point.x} cy={point.y} r="4.5" fill={ACCENT} />
-      <text
-        x={point.anchor === "start" ? point.x + 11 : point.x - 11}
-        y={point.y + 4.5}
-        textAnchor={point.anchor}
-        fill={INK}
-        fontSize="12.5"
-      >{point.label}</text>
-    </g>)}
+    {notedSignals.map((signal) => {
+      const { anchor, dy } = layout[signal.id];
+      const cx = px(signal.x);
+      const cy = py(signal.y);
+
+      return <g key={signal.id}>
+        <circle cx={cx} cy={cy} r="4.5" fill={ACCENT} />
+        <text
+          x={anchor === "start" ? cx + 11 : cx - 11}
+          y={cy + dy}
+          textAnchor={anchor}
+          fill={INK}
+          fontSize="12.5"
+        >{signal.heroLabel}</text>
+      </g>;
+    })}
   </svg>;
 }
+
 
 /** Fig. 03 — what every artifact in the course has to expose. */
 function SixExposures() {

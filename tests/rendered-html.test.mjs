@@ -357,3 +357,31 @@ test("every phase ships an assessment the check-understanding skill can run", as
     assert.match(body, /checks\.json/, `${phase.id}: recall should draw from checks.json`);
   }
 });
+
+test("the hero plate and the /noted chart place every signal identically", async () => {
+  const { notedSignals } = await import("../lib/noted-signals.ts");
+  const caseFile = await readFile(new URL("../lessons/noted/case.md", import.meta.url), "utf8");
+
+  const chart = caseFile.match(/```mermaid\n(quadrantChart[\s\S]*?)```/);
+  assert.ok(chart, "case.md must carry the quadrantChart the hero plate mirrors");
+
+  // Lines look like: `  1 Activation down 11 pct: [0.42, 0.30]`
+  const plotted = [...chart[1].matchAll(/^\s{2}(\d+) ([^:]+): \[([\d.]+), ([\d.]+)\]$/gm)].map((m) => ({
+    id: Number(m[1]),
+    label: m[2],
+    x: Number(m[3]),
+    y: Number(m[4]),
+  }));
+
+  assert.equal(plotted.length, notedSignals.length, "case.md plots a different number of signals");
+
+  for (const signal of notedSignals) {
+    const point = plotted.find((item) => item.id === signal.id);
+    assert.ok(point, `signal ${signal.id} is missing from case.md`);
+
+    // Same axis point on both surfaces. These drifted by up to 0.22 once.
+    assert.equal(point.x, signal.x, `signal ${signal.id} sits at a different x in case.md`);
+    assert.equal(point.y, signal.y, `signal ${signal.id} sits at a different y in case.md`);
+    assert.equal(point.label, signal.caseLabel, `signal ${signal.id} is labelled differently in case.md`);
+  }
+});
