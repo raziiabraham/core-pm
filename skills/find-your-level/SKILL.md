@@ -1,7 +1,7 @@
 ---
 name: find-your-level
 description: >
-  Judgment placement for CORE / PM. Seven scenarios, one per phase, scored on
+  Judgment placement for CORE / PM. 14 scenarios, two per phase, scored on
   reasoning rather than recall, mapped to an entry point and a per-phase
   Skip/Review/Do status. Usually run by start-learning, but can be run alone.
   Trigger phrases: "find my level", "placement quiz", "where should I start",
@@ -18,8 +18,12 @@ You are administering the CORE / PM placement. It measures **judgment**, not
 vocabulary. A PM who can define opportunity cost but funds the loudest request
 should place into Product Judgment, not out of it.
 
-Seven scenarios, one per phase. All seven use the shared Noted case, so no
-knowledge of the learner's own product is required.
+There are 14 scenarios: two for each of the seven phases. Two scenarios per
+phase is what makes a per-phase status trustworthy. One right answer can be a
+guess. Two right answers, with reasoning, is a pattern.
+
+Every scenario uses the shared Noted case. The learner needs no knowledge of
+their own product to answer.
 
 ## Answer-isolation contract
 
@@ -36,13 +40,14 @@ This contract is not optional. Violating it destroys the placement's value.
   that example.
 - Ask one scenario at a time. Do not show scenario N+1 until scenario N is
   answered.
-- Do not give the verdict after each answer. Hold all seven verdicts until the
-  end, so that early feedback does not teach them the pattern for later
-  scenarios.
+- Do not give a verdict after each answer. Hold all 14 verdicts until the end.
+  Early feedback teaches them the pattern for later scenarios.
+- The two scenarios in a phase are related. Never say how the first one went
+  before they answer the second.
 
 ## The Noted case in one paragraph
 
-Give this once, before scenario 1, and do not repeat it:
+Give this once, before scenario 1. Do not repeat it:
 
 > Noted is an AI-assisted document product. Four signals are live at once:
 > activation fell 11% in six weeks; three enterprise customers requested
@@ -52,9 +57,10 @@ Give this once, before scenario 1, and do not repeat it:
 
 ## Delivery
 
-1. Say what this is: seven scenarios, about 10 minutes, no preparation, and
-   there is no penalty for a low score — it only changes where they start.
-2. Ask the seven scenarios in order, PF through LD, one at a time.
+1. Say what this is: 14 scenarios, about 20 minutes, no preparation needed. A
+   low score costs them nothing. It only changes where they start.
+2. Ask all 14 in phase order, PF through LD, one at a time. Inside a phase, ask
+   the first scenario before the second.
 3. If the environment has a structured question/option tool, use it. Otherwise
    present lettered options as plain text and wait.
 4. Accept a letter, or a written answer that clearly matches one option. If the
@@ -65,32 +71,39 @@ Give this once, before scenario 1, and do not repeat it:
 
 ## Scoring
 
-One point per scenario, no partial credit. Total is out of 7.
+One point per scenario, no partial credit. The total is out of 14.
 
-Per-phase status comes from that phase's own scenario, not from the total:
+Per-phase status comes from that phase's own two scenarios, never from the
+total:
 
-| That phase's scenario | Status for that phase |
+| That phase's two scenarios | Status for that phase |
 |---|---|
-| Correct, with reasoning that named the right trade-off | `Review` |
-| Correct, letter only or thin reasoning | `Do` |
-| Incorrect | `Do` |
+| Both correct, and the reasoning named the right trade-off at least once | `Review` |
+| Both correct, but letters only or thin reasoning | `Do` |
+| One correct | `Do` |
+| Neither correct | `Do` |
 
-Problem Framing is special. **PF is never `Skip`.** A correct PF scenario makes
-it `Review`; anything else makes it `Do`. Its six lessons are the shared
-vocabulary that every later phase uses, and skipping them breaks later lessons.
+Two correct answers with no reasoning is still `Do`. The course teaches
+reasoning, so a learner who cannot say why they were right has not shown the
+thing being placed.
 
-Entry point is the **first** phase in canonical order (PF, PJ, EV, ST, TJ, DS,
-LD) whose status is `Do`. If every phase is `Review`, the entry point is PF and
-the route is a fast pass — say so plainly.
+Problem Framing is special. **PF is never `Skip`.** Two correct PF scenarios
+with reasoning make it `Review`. Anything else makes it `Do`. Its six lessons
+are the shared vocabulary that every later phase uses, so skipping them breaks
+later lessons.
 
-Total score bands, for the summary line only:
+The entry point is the **first** phase in order (PF, PJ, EV, ST, TJ, DS, LD)
+whose status is `Do`. If every phase is `Review`, the entry point is PF and the
+route is a fast pass. Say that plainly.
+
+Total score bands, used only for the summary line:
 
 | Score | Read it as |
 |---|---|
-| 0–2 | The rituals are familiar, the reasoning underneath is not. Full foundation. |
-| 3–4 | Solid instincts with gaps that show up under pressure. Foundation with some fast passes. |
-| 5–6 | Strong judgment, uneven across domains. Target the `Do` phases. |
-| 7 | Either genuinely senior, or lucky. Suggest `check-understanding` on any phase to confirm. |
+| 0–4 | The rituals are familiar. The reasoning underneath is not. Full foundation. |
+| 5–8 | Good instincts, with gaps that show up under pressure. Foundation, with some fast passes. |
+| 9–12 | Strong judgment, uneven across domains. Target the `Do` phases. |
+| 13–14 | Either genuinely senior, or lucky. Suggest `check-understanding` on any phase to confirm. |
 
 Never present the band as a verdict on them as a PM. It is a routing decision.
 
@@ -98,12 +111,13 @@ Never present the band as a verdict on them as a PM. It is a routing decision.
 
 Give the learner, in this order:
 
-1. Their score as `N/7`.
-2. A short table: phase, their answer, correct or not, resulting status.
-3. For each scenario they missed, the strongest answer and the one-line
-   rationale from `references/placement.md`. This is the only point at which
+1. Their score as `N/14`.
+2. A short table with one row per phase: phase, their two answers, how many were
+   correct, and the resulting status.
+3. For each scenario they got wrong, the strongest answer and the one-line
+   rationale from `references/placement.md`. This is the only moment when
    answers become visible.
-4. Their entry point and one sentence on why.
+4. Their entry point, and one sentence on why.
 
 ## Handing back
 

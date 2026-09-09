@@ -12,7 +12,7 @@ change.
 ## What this repo is
 
 A product-management curriculum designed to be **taught by a coding agent in a
-terminal**. A learner runs `npx skills add raziiabraham/core-pm`, then
+terminal**. A learner runs `npx skills add raziiabraham/core-pm --global`, then
 `/start-learning`, and the agent becomes their tutor: placement, a personalized
 route, interactive lessons, and a decision artifact written to disk after each
 one.

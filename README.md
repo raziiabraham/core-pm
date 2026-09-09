@@ -14,24 +14,27 @@
 
 ## Learn in your terminal
 
-Install into a folder you will come back to. Your plan and your artifacts are written where you run it, so this becomes your course directory:
+Install the six skills once, for every project:
 
 ```bash
-mkdir -p ~/core-pm && cd ~/core-pm
-npx skills add raziiabraham/core-pm
+npx skills add raziiabraham/core-pm --global
 ```
 
-Then, in Claude Code, Cursor, Codex, or any agent that reads `SKILL.md`:
+Then go to the directory where your course should live, and begin:
+
+```bash
+cd ~/my-product   # your own product repo is the best choice
+```
 
 ```text
 /start-learning
 ```
 
-That runs a short interview, gives you a seven-scenario judgment placement, and writes `PM-LEARNING.md` — your plan. From then on, `/learn` teaches the next lesson and picks up exactly where you left off.
+**Two directories matter, and they are not the same one.** `--global` puts the skills in `~/.claude/skills/`, so the course is available in every session. `/start-learning` writes your plan — `PM-LEARNING.md`, plus an `artifacts/` directory holding one decision object per lesson — into whatever directory you run it in. Choose that one deliberately: a fresh agent session often starts in a temporary scratch workspace that is deleted when the session ends, and your progress would go with it. Your own product repo is the best home, because every lesson asks you to practice on a live decision from it.
+
+That first run is a short interview and a 14-scenario judgment placement. From then on, `/learn` teaches the next lesson and picks up exactly where you left off, from any directory.
 
 No clone required. No server to run. No account. Every skill falls back to fetching lesson content straight from this repository.
-
-> **Scope:** the install is per-directory by default, which is why the `cd` matters. Add `-g` to install the skills once for every directory instead — but `PM-LEARNING.md` and `artifacts/` still land wherever you run `/start-learning`, so pick that spot deliberately either way.
 
 > **Codex and other hosts:** invocation syntax differs. Use `start-learning` and `learn` as plain skill names, or just say *"Use start-learning to begin the course."*
 
@@ -55,7 +58,7 @@ That loop is the course. The website is a reader for the same material.
 |---|---|
 | **`start-learning`** | Interview, judgment placement, writes your `PM-LEARNING.md` plan |
 | **`learn`** | Teaches one lesson interactively, ships the artifact, records progress |
-| **`find-your-level`** | Seven scenarios, one per phase, scored on reasoning rather than recall |
+| **`find-your-level`** | 14 scenarios, two per phase, scored on reasoning rather than recall |
 | **`check-understanding`** | Phase assessment on a case you have not seen — scenario, boundaries, recall |
 | **`review-artifact`** | Stress-tests any decision document against the inspectability standard |
 | **`course-guide`** | Routes a real problem ("nobody trusts our metrics") to the lesson that fixes it |
@@ -234,7 +237,7 @@ When changing a lesson, preserve its stable ID, prerequisites, and output contra
 ### A PM should be the person who makes the reasoning inspectable.
 
 ```bash
-npx skills add raziiabraham/core-pm
+npx skills add raziiabraham/core-pm --global
 ```
 
 </div>

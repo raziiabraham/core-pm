@@ -17,10 +17,13 @@ metadata:
 You are onboarding a practicing product manager into **CORE / PM**: 43 lessons
 across 7 phases that rebuild the judgment underneath product management.
 
-Your job in this skill is to produce `PM-LEARNING.md` in the current directory.
-It records why they are here, which real decision they will practice on, where
-they should start, and what their route looks like. Every later `learn` session
-reads and updates that file, so treat it as the learner's source of truth.
+Your job in this skill is to produce `PM-LEARNING.md` in the learner's course
+home — a directory that will still exist next week. It records why they are
+here, which real decision they will practice on, where they should start, and
+what their route looks like. Every later `learn` session reads and updates that
+file, so treat it as the learner's source of truth.
+
+Establish that directory before you ask anything else. See Step 0.
 
 Works with any agent. If your environment has a structured question/option tool,
 use it for every question. Otherwise present lettered options as plain text and
@@ -66,6 +69,42 @@ three options:
   `PM-LEARNING-<YYYY-MM-DD>.md` as an archive, then run full onboarding. Never
   delete or silently overwrite their history.
 
+## Step 0 — Establish the course home
+
+This course writes to disk. `PM-LEARNING.md` and an `artifacts/` directory are
+the learner's accumulating record, and they are worthless if they live somewhere
+that gets wiped. Many agent sessions start in a temporary scratch workspace, so
+check before you write.
+
+Look at the working directory. Treat it as **ephemeral** if any of these hold:
+
+- The path sits under `/tmp`, `/private/tmp`, `/var/folders`, or any directory
+  named `scratchpad`, `scratch`, or `session`.
+- The path contains a session identifier — a long hex or UUID-like segment.
+- It is an empty directory with no project of the learner's own in it.
+
+If the directory is ephemeral, say so plainly in one sentence — their progress
+would not survive the session — and ask where the course should live. Offer:
+
+- **Their own product repo** — the best answer. This course asks them to
+  practice on a live decision from their product, so the record belongs next to
+  that product.
+- **A dedicated directory**, such as `~/core-pm`.
+
+Wait for a real path. Create it if it does not exist, change into it, and
+confirm the absolute path back to them before continuing. Record it as
+`Course home` in `PM-LEARNING.md` so `learn` can find its way back from any
+directory.
+
+Do not write the plan into a clone of the CORE / PM repository itself. That repo
+is the course source, not learner state. If the working directory contains a
+`lessons/manifest.json` and a `skills/` directory, it is the course repo — read
+lesson content from it, but put `PM-LEARNING.md` and `artifacts/` somewhere that
+belongs to the learner.
+
+If the directory is durable, skip all of this. Do not interrogate someone who
+is already in a sensible place.
+
 ## Step 1 — The interview (4 questions, keep it short)
 
 1. **What decision are you currently getting wrong, or avoiding?** Free text.
@@ -87,7 +126,7 @@ captures intent and the working decision.
 ## Step 2 — Placement
 
 Run the placement from the `find-your-level` skill, which installs alongside
-this one: 7 scenarios, one per phase, scored on reasoning rather than recall.
+this one: 14 scenarios, two per phase, scored on reasoning rather than recall.
 
 Preserve that skill's answer-isolation contract. Do not preload the answer key,
 do not reveal which option is strongest before the learner answers, and do not
@@ -126,12 +165,16 @@ depth, never the bar.
 
 ## Step 4 — Write PM-LEARNING.md
 
-Create `PM-LEARNING.md` in the current directory with exactly these sections:
+Create `PM-LEARNING.md` in the course home from Step 0 with exactly these
+sections:
 
 ```markdown
 # My CORE / PM Path
 <!-- Managed by the CORE / PM learning skills.
      Repo: https://github.com/raziiabraham/core-pm -->
+
+## Course home
+<absolute path to the directory holding this file, from Step 0>
 
 ## Mission
 <their answer to question 1, in their own words>
@@ -145,7 +188,7 @@ Create `PM-LEARNING.md` in the current directory with exactly these sections:
 ## Placement
 - Date: <YYYY-MM-DD>
 - Route: <route name>
-- Score: <total>/7 with the per-phase breakdown, or exactly `self-selected`
+- Score: <total>/14 with the per-phase breakdown, or exactly `self-selected`
 - Entry point: <PHASE-ID> — <phase name>
 - Pace: ~<hours>/week
 

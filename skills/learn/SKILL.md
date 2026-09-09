@@ -55,7 +55,21 @@ directory from the manifest rather than guessing the slug.
 
 ## Step 0 — Locate state
 
-Read `PM-LEARNING.md` from the current directory.
+Find `PM-LEARNING.md` before assuming it is absent. A learner who returns in a
+new session is often in a different directory than the one they onboarded in,
+and treating that as "no plan" throws away their progress. Search in order:
+
+1. The current directory.
+2. Each parent directory, up to the home directory.
+3. The `Course home` path recorded in any plan you do find.
+
+Only if all three come up empty may you treat the plan as missing — and then ask
+"have you started this course before?" before offering to onboard. If they say
+yes, ask for the directory rather than rebuilding a plan they already own.
+
+Once found, work from that file's directory: read it, write artifacts beside it,
+and update it there. Never create a second `PM-LEARNING.md` in a different
+directory.
 
 - **Found** — the next lesson is the first not-yet-logged lesson of the first
   phase whose Status is `Do` or `Review`, in phase order then lesson order. If
@@ -66,9 +80,12 @@ Read `PM-LEARNING.md` from the current directory.
   `check-understanding <phase>`, or run `start-learning` to extend the route
   into skipped phases. Render both skill calls with the host invocation
   contract.
-- **Missing** — say that `start-learning` builds a personalized plan, render its
-  invocation, and offer two options: run it now, or start immediately at PF-01
-  with no plan. Never block the lesson on setup.
+- **Missing everywhere** — say that `start-learning` builds a personalized plan,
+  render its invocation, and offer two options: run it now, or start immediately
+  at PF-01 with no plan. Never block the lesson on setup. If you teach with no
+  plan, warn them once that nothing will be recorded until they run
+  `start-learning`, and check the working directory is not a temporary scratch
+  workspace before writing any artifact to it.
 
 If the plan's **Working decision** is still `not yet chosen`, ask for it once at
 the end of this lesson's Use step, not at the start. Ask once per session at
@@ -129,7 +146,8 @@ interactively.
      it to the Review queue, and continue.
 
 5. **Ship — write the artifact.** Load `artifact.md` and produce a real file.
-   - Default location `artifacts/<LESSON-ID>-<artifact-slug>.md` in the current
+   - Default location `artifacts/<LESSON-ID>-<artifact-slug>.md` beside
+     `PM-LEARNING.md` in the course home, not in the current
      directory. Create the directory if needed.
    - The learner supplies the judgment. You supply the structure, the prompting
      questions, and the writing. Never invent evidence, numbers, or quotes they

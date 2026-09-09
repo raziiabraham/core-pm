@@ -7,11 +7,11 @@ Everything is open. There is no gate, no password, and no account.
 ## How to take it
 
 ```bash
-mkdir -p ~/core-pm && cd ~/core-pm
-npx skills add raziiabraham/core-pm
+npx skills add raziiabraham/core-pm --global
+cd ~/my-product   # or wherever your course should live
 ```
 
-The install is per-directory by default, and `PM-LEARNING.md` plus `artifacts/` are written wherever you run it. Pick a folder you will come back to, or add `-g` to install the skills everywhere.
+`--global` installs the skills for every session. `/start-learning` then writes `PM-LEARNING.md` and `artifacts/` into whatever directory you run it in, so run it somewhere durable — your own product repo is the best choice, and never a temporary scratch workspace.
 
 Then `/start-learning` in Claude Code, or `start-learning` in Codex, or *"Use start-learning to begin the course"* in any other agent that reads `SKILL.md`.
 
@@ -21,7 +21,7 @@ Six skills carry the course:
 |---|---|
 | `start-learning` | Interview, judgment placement, writes your `PM-LEARNING.md` plan |
 | `learn` | Teaches one lesson interactively and ships its artifact |
-| `find-your-level` | Seven scenarios, one per phase, scored on reasoning |
+| `find-your-level` | 14 scenarios, two per phase, scored on reasoning |
 | `check-understanding` | Phase assessment on an unseen case |
 | `review-artifact` | Stress-tests any decision document against the standard |
 | `course-guide` | Routes a real problem to the lesson that addresses it |
