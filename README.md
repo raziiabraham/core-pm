@@ -1,43 +1,61 @@
+![CORE / PM — Re-own the PM core](assets/hero.svg)
+
 <div align="center">
-
-# CORE / PM
-
-### Re-own the judgment underneath product management.
-
-A self-paced curriculum for practicing PMs who know the rituals—and want to recover the reasoning that makes those rituals useful.
 
 [![Lessons](https://img.shields.io/badge/lessons-43-29332f?style=flat-square)](#the-curriculum)
 [![Phases](https://img.shields.io/badge/phases-7-c15f3c?style=flat-square)](#the-curriculum)
-[![Learning paths](https://img.shields.io/badge/learning_paths-4-526a61?style=flat-square)](#start-here-choose-your-route)
-[![Tests](https://img.shields.io/badge/rendered_tests-17_passing-2f6f55?style=flat-square)](#quality-standard)
-[![Website](https://img.shields.io/badge/course-reader-open-f0b99d?style=flat-square)](https://core-pm-field-course.razii-abrhm.chatgpt.site)
+[![Skills](https://img.shields.io/badge/agent_skills-6-526a61?style=flat-square)](#the-six-skills)
+[![Diagrams](https://img.shields.io/badge/diagrams-91-2f6f55?style=flat-square)](#what-a-lesson-contains)
+[![Reader](https://img.shields.io/badge/web_reader-open-f0b99d?style=flat-square)](https://core-pm-field-course.razii-abrhm.chatgpt.site)
 
-**[Start the course](https://core-pm-field-course.razii-abrhm.chatgpt.site)** · **[Browse the curriculum](CURRICULUM.md)** · **[Choose a learning path](learning-paths/README.md)**
+**Re-own the judgment underneath product management.**
 
 </div>
 
-![CORE / PM — Re-own the decision](public/og.png)
+## Learn in your terminal
 
-> **43 lessons. 7 phases. ~23 hours. 4 learning paths.**
->
-> Every lesson moves from a product failure to a decision artifact another person can inspect, challenge, and reuse.
+```bash
+npx skills add raziiabraham/core-pm
+```
 
-Product management is not the coordination around the decision. It is the judgment inside it.
+Then, in Claude Code, Cursor, Codex, or any agent that reads `SKILL.md`:
+
+```text
+/start-learning
+```
+
+That runs a short interview, gives you a seven-scenario judgment placement, and writes `PM-LEARNING.md` — your plan. From then on, `/learn` teaches the next lesson and picks up exactly where you left off.
+
+No clone required. No server to run. No account. Every skill falls back to fetching lesson content straight from this repository.
+
+> **Codex and other hosts:** invocation syntax differs. Use `start-learning` and `learn` as plain skill names, or just say *"Use start-learning to begin the course."*
 
 ---
 
-## Start here: choose your route
+## Why an agent instead of a website
 
-You do not need to scan all 43 lessons before beginning. Pick the work you need to become better at.
+Product judgment is not information you lack. It is a set of moves you have never been forced to make under pressure, with someone arguing back.
 
-| I want to… | Route | Lessons | Time | Start |
-|---|---|---:|---:|---|
-| Build the complete PM foundation | **Complete Foundation** | 43 | ~23h | [Begin with decision framing](https://core-pm-field-course.razii-abrhm.chatgpt.site/learn/pf-01-decision-before-method) |
-| Practice one consequential decision end to end | **Decision Field Path** | 12 | ~6h | [Begin the field path](https://core-pm-field-course.razii-abrhm.chatgpt.site/session-1/reading) |
-| Own technical and AI product choices | **Technical + AI Judgment** | 13 | ~7h | [Begin with technical abstraction](https://core-pm-field-course.razii-abrhm.chatgpt.site/learn/tj-01-technical-abstraction-without-ignorance) |
-| Scale judgment through other PMs | **Product Leadership** | 15 | ~8h | [Begin with decision architecture](https://core-pm-field-course.razii-abrhm.chatgpt.site/learn/pj-04-decision-architecture) |
+A web page cannot argue back. An agent can.
 
-Not sure? Start with **PF-01 — Decision before method**. It is the foundation for every route.
+In a lesson, the tutor gives you a real situation from the shared case, asks for your position **before** offering one, then takes the strongest argument against you. When you hedge, it presses for a commitment. When you ask it to just give you the answer, it hands the choice back. Then it writes your decision artifact to disk, and `review-artifact` tells you exactly what a skeptical reviewer would break.
+
+![Fig. 01 — decision before method](assets/figure-decision-chain.svg)
+
+That loop is the course. The website is a reader for the same material.
+
+## The six skills
+
+| Skill | What it does |
+|---|---|
+| **`start-learning`** | Interview, judgment placement, writes your `PM-LEARNING.md` plan |
+| **`learn`** | Teaches one lesson interactively, ships the artifact, records progress |
+| **`find-your-level`** | Seven scenarios, one per phase, scored on reasoning rather than recall |
+| **`check-understanding`** | Phase assessment on a case you have not seen — scenario, boundaries, recall |
+| **`review-artifact`** | Stress-tests any decision document against the inspectability standard |
+| **`course-guide`** | Routes a real problem ("nobody trusts our metrics") to the lesson that fixes it |
+
+`review-artifact` works on documents that have nothing to do with this course. Point it at a PRD you wrote last quarter.
 
 ## Use every lesson the same way
 
@@ -45,43 +63,56 @@ The content changes. The learning contract does not.
 
 ```mermaid
 flowchart LR
-  P["PROBLEM<br/>recognize the failure"] --> C["CONCEPT<br/>learn the model"]
-  C --> B["BUILD<br/>practice on Noted"]
-  B --> U["USE<br/>transfer to your product"]
-  U --> S["SHIP<br/>keep the artifact"]
-  S --> K["CHECK<br/>test the reasoning"]
+  P["Problem<br/>recognize the failure"] --> C["Concept<br/>learn the model"]
+  C --> B["Build<br/>decide on Noted"]
+  B --> U["Use<br/>transfer to your product"]
+  U --> S["Ship<br/>keep the artifact"]
+  S --> K["Check<br/>test the reasoning"]
 ```
 
-1. **Problem** — recognize the costly reasoning or operating failure.
-2. **Concept** — learn a durable model and where it stops being true.
-3. **Build** — make the decision on the shared Noted case.
-4. **Use** — transfer the same move to a live product decision.
-5. **Ship** — keep one reusable artifact in your Product Decision Case.
-6. **Check** — test whether the reasoning survives scrutiny.
+1. **Problem** — recognize the costly reasoning failure, stated as a failure and not a definition.
+2. **Concept** — learn a durable model, and the boundary where it stops being true.
+3. **Build** — make the decision on the shared Noted case, with the tutor arguing against you.
+4. **Use** — transfer the same move to a live decision in your own product.
+5. **Ship** — write one reusable artifact to `artifacts/`.
+6. **Check** — answer five questions that test reasoning rather than recall.
 
-The standard is not a beautiful template. Another PM should be able to see the choice, evidence, uncertainty, alternatives, owner, and condition that would change your mind.
+The standard is not a beautiful template. Another PM should be able to see the choice, the evidence, the uncertainty, the alternatives, the owner, and the condition that would change your mind.
 
----
+## What a lesson contains
 
-## Why this course exists
+All 43 lessons are authored to the same contract, which is enforced by `npm run validate:lessons`:
 
-Most PM education teaches recognizable activities: discovery, roadmaps, metrics, experiments, strategy documents, planning, and stakeholder management. The activities matter, but they are easy to imitate without owning the decision underneath them.
+| Element | Count | Why |
+|---|---:|---|
+| Mechanism diagrams | **91** | Show how the failure happens, not just that it does |
+| Worked comparisons | **43** | The same move done weakly and done well, on the shared case |
+| Structural tables | every lesson | A checklist you can run against your own work |
+| Check questions | **215** | Scenarios, not definitions; every distractor is one a competent PM would pick |
+| Boundary sections | every lesson | Where the model stops being true — a model without one gets misapplied |
+| Self-checks | every lesson | What a strong answer holds — collapsed on the web until you commit, withheld by the tutor until you do |
+| Copyable templates | every lesson | The artifact template rendered as a ready-to-paste `.md`, with its six-exposure quality bar |
 
-CORE / PM makes that hidden layer explicit:
+Diagrams are Mermaid. The website draws them; in the terminal the tutor walks you through one node at a time and stops at the branch to ask which way you would go.
 
-- what deserves product attention;
-- what the evidence can actually establish;
-- when confidence is sufficient for the next move;
-- which trade-off the team is making;
-- where product authority ends and specialist authority begins;
-- how a choice survives delivery, exposure, disagreement, and revision;
-- how leaders improve judgment without taking the work back.
+The full contract is [`lessons/AUTHORING.md`](lessons/AUTHORING.md).
 
-AI makes this more urgent. Plausible research, analysis, specifications, and prototypes are now cheap. Product judgment—not artifact production—is the constraint.
+## Choose a route
+
+You do not need to scan all 43 lessons before starting. `start-learning` recommends a route from your scope, and you can override it.
+
+| I want to… | Route | Lessons | Time |
+|---|---|---:|---:|
+| Build the complete PM foundation | **Complete foundation** | 43 | ~22 h |
+| Practice one consequential decision end to end | **Decision field path** | 12 | ~6 h |
+| Own technical and AI product choices | **Technical + AI judgment** | 13 | ~7 h |
+| Scale judgment through other PMs | **Product leadership** | 15 | ~8 h |
+
+Every route starts from the same place. Problem Framing is never skipped — it is the shared vocabulary the other six phases are built on.
 
 ## The curriculum
 
-Seven phases build from one bounded decision to a product system that can keep making good decisions.
+Seven phases build from one bounded decision to a product system that keeps making good ones.
 
 ```mermaid
 flowchart TB
@@ -107,13 +138,13 @@ flowchart TB
 | **06 · Product Delivery Systems** | DS-01–DS-06 | Carry intent through commitment, delivery, exposure, and learning. | System-change record |
 | **07 · Product Leadership** | LD-01–LD-07 | Create direction, autonomy, and accountability beyond one PM. | Executive decision memo |
 
-See the complete lesson inventory, prerequisites, durations, and outputs in [`CURRICULUM.md`](CURRICULUM.md). The canonical machine-readable source is [`lib/curriculum.ts`](lib/curriculum.ts).
+The complete inventory with prerequisites and durations is in [`CURRICULUM.md`](CURRICULUM.md). The machine-readable source every skill reads is [`lessons/manifest.json`](lessons/manifest.json), generated from [`lib/curriculum.ts`](lib/curriculum.ts).
 
 ## Every lesson ships something
 
-Reading is not completion. Each lesson produces a decision object designed to survive outside the course.
+Reading is not completion. Each lesson writes a decision object to `artifacts/` designed to survive outside the course.
 
-| Artifact family | What you keep |
+| Family | What you keep |
 |---|---|
 | **Frame** | Decision brief, mechanism map, evidence boundary, audience boundary, opportunity case |
 | **Judge** | Product view, definition of good, trade-off record, decision architecture, delegation contract |
@@ -123,123 +154,71 @@ Reading is not completion. Each lesson produces a decision object designed to su
 | **Deliver** | Commitment brief, delivery sequence, review protocol, staged launch plan, system-change record |
 | **Lead** | Decision rights, coaching plan, operating system, capability portfolio, intervention contract |
 
-Together these become one cumulative **Product Decision Case**: the history of a consequential choice from first signal through outcome and revision.
+Together they become one cumulative **Product Decision Case**: the history of a consequential choice from first signal through outcome and revision.
 
 ## One shared case, then your product
 
-Every learner can practice on **Noted**, a constructed AI-assisted document product with intentionally incomplete evidence. The same four signals persist through the course:
+Every learner practices on **Noted**, a constructed AI-assisted document product with intentionally incomplete evidence. Four signals compete for attention through the whole course:
 
-- activation is declining;
-- enterprise customers request automated summaries;
-- large workspaces are slowing down;
-- a platform dependency is nearing end-of-support.
+- activation fell 11% in six weeks;
+- three enterprise customers requested automated meeting summaries;
+- P95 response time rose 34% for large workspaces;
+- a platform dependency loses support in 10 weeks.
 
-The case is stable enough for comparison and incomplete enough to require judgment. Every exercise then asks you to repeat the move on a real decision from your own product.
+The case is stable enough that two learners can compare answers, and incomplete enough that neither can look up the right one. Read it in [`lessons/noted/case.md`](lessons/noted/case.md).
 
-**[Meet the Noted case →](https://core-pm-field-course.razii-abrhm.chatgpt.site/noted)**
-
----
-
-## Research foundation
-
-The curriculum is an original synthesis of **563 PDF resources across nine Reforge product-management programs**:
-
-| Product core | Evidence | Strategy and execution |
-|---|---|---|
-| Mastering Product Management | User Insights | Product Strategy |
-| Finding Product-Market Fit | Data for Product Managers | Technical Strategy |
-| Product Leadership | Experimentation + Testing | Scaling Product Delivery |
-
-The source programs inform the concepts—not the course sequence. CORE / PM reorganizes the material around one cumulative act of product judgment, preserves evidence boundaries, and names source programs in lesson notes where appropriate.
-
-CORE / PM is an independent educational project and is not affiliated with or endorsed by Reforge. Source PDFs are not distributed in this repository.
-
-## Current curriculum status
-
-This is a living edition. Scope and maturity are reported separately so lesson count does not imply equal depth.
-
-| Layer | Status |
-|---|---:|
-| Curriculum map and prerequisite graph | **43 / 43** |
-| Atomic web lesson routes | **43 / 43** |
-| Deep applied field-path lessons | **12 / 12** |
-| Learning paths | **4 / 4** |
-| Shared Noted case | **Complete** |
-| Rendered route checks | **17 passing** |
-
-The twelve-lesson Decision Field Path is currently the deepest authored route, with extended prose, exhibits, prompts, and source notes. The remaining atomic lessons establish the complete learning architecture and are being expanded toward that same depth.
-
-## Three ways to use the course
-
-### 1. Learn on the website
-
-Open the [course reader](https://core-pm-field-course.razii-abrhm.chatgpt.site), choose a route, and continue at your own pace. Progress stays in your browser.
-
-### 2. Read from the repository
-
-Use [`CURRICULUM.md`](CURRICULUM.md) as the guide, [`learning-paths/README.md`](learning-paths/README.md) as the route manifest, and [`lib/curriculum.ts`](lib/curriculum.ts) for the complete prerequisite-aware lesson source.
-
-### 3. Run the course locally
-
-```bash
-git clone https://github.com/raziiabraham/core-pm.git
-cd core-pm
-npm install
-npm run dev
-```
-
-Then open `http://localhost:3000`.
-
-Run the full rendered-route suite:
-
-```bash
-npm test
-```
+Every lesson then asks you to repeat the same move on a real decision from your own product. That transfer step is where the course pays for itself.
 
 ## Repository map
 
 ```text
 core-pm/
-├── app/
-│   ├── learn/[lesson]/      # atomic lesson reader
-│   ├── session-*/reading/   # deep 12-lesson field path
-│   ├── noted/               # shared product decision case
-│   └── components/          # curriculum and progress UI
+├── skills/                   # the six agent skills — source of truth
+│   └── <skill>/SKILL.md
+├── .claude/skills/           # generated mirror, for Claude Code in a clone
+├── lessons/
+│   ├── manifest.json         # generated index every skill reads
+│   ├── AUTHORING.md          # the lesson contract
+│   ├── noted/case.md         # the shared case
+│   └── <phase>/<lesson>/     # lesson.md · checks.json · artifact.md
 ├── lib/
-│   └── curriculum.ts        # 43 lessons, prerequisites, paths
-├── learning-paths/          # route definitions
-├── tests/                   # rendered curriculum invariants
-├── CURRICULUM.md            # repository course guide
-└── LESSON_TEMPLATE.md       # authoring contract
+│   ├── curriculum.ts         # 43 lessons, prerequisites, routes
+│   └── lesson-content.ts     # renders lessons/**/lesson.md for the website
+├── app/                      # the web reader: / · /learn/[lesson] · /noted
+├── assets/                   # generated README artwork
+├── scripts/                  # manifest, skill mirror, validators, artwork
+└── tests/                    # rendered invariants across every lesson page
 ```
 
-## Quality standard
-
-Every lesson must have:
-
-- a stable ID and explicit prerequisites;
-- a concrete product failure—not only a definition;
-- one durable model and a visible boundary;
-- a Noted exercise and real-product transfer;
-- one reusable output artifact;
-- checks that test reasoning rather than recall;
-- proportionate source lineage for direct and contestable claims.
-
-The rendered test suite protects the learner journey, lesson contract, Noted continuity, progress controls, deep field readings, and internal facilitator boundaries.
-
-Use [`LESSON_TEMPLATE.md`](LESSON_TEMPLATE.md) when proposing or expanding a lesson.
+Lesson prose is authored once. The `learn` skill reads `lesson.md` directly, and the website renders the same file, so the two surfaces cannot drift apart.
 
 ## Contributing
 
-Corrections, sharper examples, source challenges, and stronger exercises are welcome through [issues](https://github.com/raziiabraham/core-pm/issues).
+Corrections, sharper examples, and stronger exercises are welcome through [issues](https://github.com/raziiabraham/core-pm/issues).
 
-Before submitting a change:
+Read [`lessons/AUTHORING.md`](lessons/AUTHORING.md) before writing a lesson, and [`AGENTS.md`](AGENTS.md) before changing anything else.
 
 ```bash
+git clone https://github.com/raziiabraham/core-pm.git
+cd core-pm
+npm install
 npm test
 ```
 
-When changing a lesson, preserve its stable ID, prerequisites, output contract, and role in every learning path that includes it.
+`npm test` regenerates the manifest, validates every lesson against the authoring contract, parses all 91 diagrams, builds the site, and renders every lesson page. Individual steps:
+
+| Command | Does |
+|---|---|
+| `npm run build:manifest` | Regenerate `lessons/manifest.json` from `lib/curriculum.ts` |
+| `npm run sync:skills` | Mirror `skills/` into `.claude/skills/` |
+| `npm run validate:lessons` | Check structure, visuals, and check-question shape |
+| `npm run validate:diagrams` | Parse every Mermaid block with the real parser |
+| `npm run build:art` | Regenerate `assets/*.svg` |
+| `npm run dev` | Run the web reader on `http://localhost:3000` |
+
+Generated files (`lessons/manifest.json`, `.claude/skills/**`, `assets/*.svg`) are committed so a clone works without running anything. If you change their sources, regenerate and commit the result in the same change.
+
+When changing a lesson, preserve its stable ID, prerequisites, and output contract, and its role in every route that includes it.
 
 ---
 
@@ -249,6 +228,8 @@ When changing a lesson, preserve its stable ID, prerequisites, output contract, 
 
 ### A PM should be the person who makes the reasoning inspectable.
 
-**[Start learning](https://core-pm-field-course.razii-abrhm.chatgpt.site)** · **[Explore all 43 lessons](CURRICULUM.md)**
+```bash
+npx skills add raziiabraham/core-pm
+```
 
 </div>

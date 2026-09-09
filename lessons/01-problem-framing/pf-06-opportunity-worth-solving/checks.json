@@ -1,0 +1,66 @@
+{
+  "id": "PF-06",
+  "title": "Opportunity worth solving",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "Meeting summaries arrived as three customer requests. Large-workspace slowness arrived from monitoring, with no support tickets ever mentioning speed. What does the ticket silence justify concluding about priority?",
+      "options": [
+        "Meeting summaries are the higher priority, because demonstrated demand beats an internal metric",
+        "Nothing on its own — severity and visibility are independent, and a slow product is a problem people usually act on by using it less rather than by complaining",
+        "Slowness is the higher priority, because silent problems are always the dangerous ones",
+        "Both should be deprioritised until the team can collect comparable evidence for each"
+      ],
+      "correct": 1,
+      "explanation": "Channels measure visibility, not severity, so silence cannot be read as low severity or as high severity by itself. A is the tempting distractor and the one most teams pick: it treats request volume as demand evidence, when requests only reach you from customers who have a path to your inbox and expect asking to work."
+    },
+    {
+      "stage": "post",
+      "question": "A PM scores five opportunities on reach, impact, confidence and effort, multiplies, and ranks them. What is the core defect?",
+      "options": [
+        "The four factors should be weighted, since impact matters more than effort",
+        "Confidence should be assessed after the ranking, not inside it",
+        "The inputs are estimates in incompatible units, so the product is a comparable number with no meaning — and the debate moves to whether impact is a 3 or a 4",
+        "Five opportunities is too few for a scoring model to discriminate usefully"
+      ],
+      "correct": 2,
+      "explanation": "Multiplying incommensurable estimates launders assumptions into something that looks like analysis, and the resulting argument cannot be won or learned from. A is the tempting distractor because adding weights is the standard fix teams reach for, and it makes the false comparability worse rather than better."
+    },
+    {
+      "stage": "post",
+      "question": "Enterprise team leads currently paste meeting notes into a document and tidy them afterwards. How does this change the size of the meeting-summaries opportunity?",
+      "options": [
+        "It confirms the opportunity, since the manual workaround proves the need is real",
+        "It has no effect on size; the workaround is evidence of the problem, not of its value",
+        "It shrinks it to the gain over the workaround — and if the workaround is adequate, that gain may be small enough to change the ordering",
+        "It enlarges it, because the manual effort can be counted as time saved per meeting"
+      ],
+      "correct": 2,
+      "explanation": "Value is the improvement over what people do today, not the whole problem. A is the tempting distractor because a workaround genuinely does confirm the behaviour exists — it establishes reality and simultaneously caps the gain, and teams reliably take the first half and drop the second."
+    },
+    {
+      "stage": "post",
+      "question": "A core dependency loses support in ten weeks. Where does it belong in the comparison?",
+      "options": [
+        "Subtracted first as a constraint on capacity, because it has no alternative and its consequence appears only past a threshold",
+        "Ranked at the top, since regulatory and security work always outranks feature work",
+        "Ranked normally on the five tests, with urgency raising its consequence score",
+        "Excluded from product prioritisation entirely, as an engineering matter"
+      ],
+      "correct": 0,
+      "explanation": "Forced choices do not compete with opportunities; they reduce the capacity that opportunities are being ranked against. C is the tempting distractor because running the tests feels even-handed, but the alternatives row is empty by definition and the consequence row is a step function, so the scores it produces are not comparable with anything."
+    },
+    {
+      "stage": "post",
+      "question": "Investigation suggests large-workspace slowness and enterprise dissatisfaction may both stem from the same permission-checking behaviour. What does this do to the comparison?",
+      "options": [
+        "It strengthens the case for meeting summaries, since one build would address two signals",
+        "It changes nothing; the two signals still consume separate engineering capacity",
+        "It raises confidence in both consequence chains, so both should move up the ordering together",
+        "It makes ranking them against each other the wrong shape — they may be complements, so the shared mechanism has to be resolved before any comparison is meaningful"
+      ],
+      "correct": 3,
+      "explanation": "The five tests assume opportunities are substitutes competing for capacity. A shared mechanism breaks that assumption: solving one may shrink or remove the other. A is the tempting distractor because it reaches the right observation and draws the wrong conclusion — a shared mechanism argues for fixing the mechanism, not for building the feature that sat on top of it."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "ST-03",
+  "title": "Advantage and positioning choice",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A team's position reads: \"The AI-powered workspace for modern teams.\" What single test shows it is not yet strategic?",
+      "options": [
+        "It does not mention a measurable outcome for the customer",
+        "No real customer request is declined by it",
+        "It does not name the technology that powers the AI layer",
+        "It was written by product rather than by marketing"
+      ],
+      "correct": 1,
+      "explanation": "Information in a position comes from what it rules out, so the test is whether anything gets declined. A is the competent-sounding distractor: adding an outcome metric makes the sentence more specific without making it exclude anyone, so the same requests still qualify."
+    },
+    {
+      "stage": "post",
+      "question": "Noted's PM claims the sustaining capability for a small-team position is its team collaboration environment. What is wrong with this claim?",
+      "options": [
+        "Collaboration environments are commodity features and cannot ever be an advantage",
+        "Small teams have not requested collaboration features loudly enough to justify it",
+        "That environment is in design, not live, so the position is currently undefended",
+        "The capability belongs to engineering, so product cannot claim it"
+      ],
+      "correct": 2,
+      "explanation": "The case separates live, in design, and planned, and a capability that is in design is an intention. Betting on it can be legitimate, but it must be labelled a bet. A is tempting because it sounds hard-headed, but it is an unsupported general rule; the actual defect here is the status of the capability, not its category."
+    },
+    {
+      "stage": "post",
+      "question": "A PM decides to position around small teams and give up enterprise team leads. The account manager asks whether existing enterprise contracts must be dropped. What is the correct answer?",
+      "options": [
+        "Yes — serving them contradicts the position and will erode focus",
+        "No — giving up an audience means they stop shaping direction, not that their money is refused",
+        "Yes, but only after the contracts reach their renewal dates",
+        "No — the position applies to new customers only, so nothing changes"
+      ],
+      "correct": 1,
+      "explanation": "Sacrifice is about who has a claim on your roadmap and your default experience, not about revenue you already hold. D is the tempting distractor because it sounds pragmatic, but it makes the position apply to nobody who currently generates pressure, which removes the sacrifice entirely."
+    },
+    {
+      "stage": "post",
+      "question": "Which of these differences is closest to a genuine advantage?",
+      "options": [
+        "A faster editor built on a recently released open-source component",
+        "A more attractive empty-state design that tests well with new users",
+        "A broader feature set than the two nearest competitors",
+        "A retrieval quality benefit that comes from years of accumulated in-product usage data"
+      ],
+      "correct": 3,
+      "explanation": "It is valued, it rests on an asset that takes time to accumulate, and a competitor cannot buy the history. C is the tempting answer: breadth feels like strength, but it is copyable, expensive to hold, and usually the result of having declined nothing."
+    },
+    {
+      "stage": "post",
+      "question": "A seed-stage team cannot yet tell which of two audiences it serves. What does the boundary of this model permit?",
+      "options": [
+        "Holding both audiences indefinitely, since focus destroys early learning",
+        "Choosing the audience with the larger addressable market and committing now",
+        "Holding both with a stated resource split and a date at which one is dropped",
+        "Positioning against the alternative rather than the audience until this is resolved"
+      ],
+      "correct": 2,
+      "explanation": "Holding two candidates while testing is honest when it is time-boxed and the split is visible. A is the tempting version of the same idea, and it is where most teams end up: without a date, learning becomes the permanent excuse for never choosing."
+    }
+  ]
+}

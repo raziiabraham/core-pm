@@ -1,0 +1,66 @@
+{
+  "id": "PJ-05",
+  "title": "Decision quality under uncertainty",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A PM commits to a feature on the strength of three requests through one account manager, states high confidence, and the feature turns out to drive real expansion revenue. What should the review conclude?",
+      "options": [
+        "The process was sound, because the outcome validated the judgment",
+        "The process was sound, but the confidence should have been stated lower",
+        "The outcome was good and the process was bad; this is the cell that must not be imitated",
+        "The review cannot conclude anything until a second, similar decision resolves"
+      ],
+      "correct": 2,
+      "explanation": "A good outcome from bad reasoning is the most dangerous result there is, because it gets rewarded and turned into a heuristic. Option B is close and tempting, but it treats the problem as a labelling error — the confidence was not merely mis-worded, the evidence never supported a commitment at that level."
+    },
+    {
+      "stage": "post",
+      "question": "Reviewing the capacity decision, a PM writes: \"We couldn't have known activation was concentrated in one acquisition channel — the data wasn't segmented.\" How should this be classified?",
+      "options": [
+        "Uncollected, not unknown — the data existed and segmenting it was cheap, so this is a process failure",
+        "Unknown, because the segmentation genuinely had not been done at decision time",
+        "Neither, since segmentation would not have changed the capacity trade-off",
+        "Unknown, because analytics has a known 18% gap in actor identity"
+      ],
+      "correct": 0,
+      "explanation": "Something was knowable if it could have been learned inside the window for less than the decision's consequence. Option B is the tempting one — it is literally true that the segmentation had not been done, which is exactly how uncollected data gets laundered into unknown data in a review."
+    },
+    {
+      "stage": "post",
+      "question": "A PM writes a pre-outcome review that concludes: \"If performance improves, the shift was justified. If it doesn't, we'll have learned the constraint was elsewhere, which was also worth knowing.\" What is wrong?",
+      "options": [
+        "It fails to name a dated checkpoint for reading the result",
+        "It should have committed to a specific P95 threshold before reviewing",
+        "It treats a learning outcome as equivalent to a performance outcome",
+        "Every plausible outcome confirms it, so the review is insurance rather than analysis"
+      ],
+      "correct": 3,
+      "explanation": "A review that cannot be graded produces the appearance of rigor with none of the function. Option A names a genuine omission, but adding a date to an unfalsifiable review just tells you when to feel vindicated."
+    },
+    {
+      "stage": "post",
+      "question": "Over eighteen months, a PM's decisions labelled \"high confidence\" turn out wrong roughly half the time, though each decision document reads well. What does the boundary of this lesson say?",
+      "options": [
+        "Judge each decision on its process; individual outcomes are too noisy to indict the reasoning",
+        "Over a run of decisions, the outcomes are the calibration signal, and they indict the process despite the documents",
+        "The documents are the record, so the process is sound and the outcomes reflect a difficult environment",
+        "The PM should stop using confidence labels, since they have proven unreliable"
+      ],
+      "correct": 1,
+      "explanation": "Judge one decision by its process; judge a decision-maker by the match between stated confidence and record. Option A is the correct rule applied at the wrong scale — it is exactly the argument a poorly calibrated PM will make, one decision at a time, forever."
+    },
+    {
+      "stage": "post",
+      "question": "Why does a pre-outcome review insist on writing the bad-luck and bad-process lists before the result arrives?",
+      "options": [
+        "Because writing them early gives the team more time to prevent the bad-process failures",
+        "Because the lists have to be agreed with the consequence owner before commitment",
+        "Because bad-luck failures are more common than bad-process failures and need documenting",
+        "Because after the result, any outcome can be re-sorted into the category that protects the decision-maker"
+      ],
+      "correct": 3,
+      "explanation": "Once the outcome is known, the sorting is no longer honest — memory reorganises around what happened. Option A sounds sensible and is a real side benefit, but prevention is not why the lists are written in advance; being unable to move them afterwards is."
+    }
+  ]
+}

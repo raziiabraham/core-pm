@@ -1,0 +1,66 @@
+{
+  "id": "EV-06",
+  "title": "Experiment and causal judgment",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "Noted tests a new empty-state AI prompt, assigning individual users. Many users share team workspaces, so a treated member's documents appear in an untreated member's workspace. What has this broken?",
+      "options": [
+        "Statistical power, because shared workspaces correlate outcomes within a cluster",
+        "The assignment boundary, because arms are not independent, so the difference between them is not the effect of the treatment",
+        "The measurement boundary, because documents are attributed to the workspace rather than the user",
+        "Nothing, provided the share of users in shared workspaces is balanced across arms"
+      ],
+      "correct": 1,
+      "explanation": "Interference means the control arm is partly treated, so the contrast is no longer treatment against its absence. Option D is the answer of a PM who has learned to check balance: balancing the proportion of shared-workspace users does not stop the leakage between them, it just makes it equally present on both sides."
+    },
+    {
+      "stage": "post",
+      "question": "Only 35% of assigned users ever reach the empty document state where the new prompt appears. The analyst proposes comparing outcomes only among users who saw the prompt, in each arm. What is wrong with this?",
+      "options": [
+        "It reduces the sample to 35%, which will not reach significance",
+        "It is correct, because comparing exposed users in both arms preserves the randomisation",
+        "Exposure is a behaviour, so conditioning on it after assignment compares two self-selected groups rather than two randomised ones",
+        "It measures the effect on the exposed, which is the wrong quantity for a ship decision"
+      ],
+      "correct": 2,
+      "explanation": "Reaching the empty state is something users do, not something the coin decided, so filtering on it discards the protection randomisation provided. Option B is the trap: it sounds symmetric because the filter is applied to both arms, but the people who reach the empty state in each arm are not the same kind of people once the treatment itself changes who gets there."
+    },
+    {
+      "stage": "post",
+      "question": "The treatment ships a new code path that creates documents through the AI suggestion. What must be checked before launch?",
+      "options": [
+        "Whether documents created that way record the same actor and fire the same events as documents created the existing way",
+        "Whether the new path is fast enough not to affect response times",
+        "Whether users prefer the new path, using a short in-product survey",
+        "Whether the new path is available on all platforms in both arms"
+      ],
+      "correct": 0,
+      "explanation": "If the new path attaches a system actor instead of a user, the outcome disappears from a numerator built on distinct user identifiers, producing a measured difference with no behavioural difference. Option D is a real hygiene check and a much smaller risk: a platform gap changes exposure, while an instrumentation difference corrupts the outcome itself."
+    },
+    {
+      "stage": "post",
+      "question": "Before launch, the minimum detectable effect is 3 points. The team has said it would ship the change for a 1-point gain. What follows?",
+      "options": [
+        "Run the test and treat a positive point estimate below 3 points as directional support",
+        "Run the test; if the result is null, ship anyway since the bar was only 1 point",
+        "Lower the significance threshold so that smaller effects become detectable",
+        "The design cannot answer the question, so change the design or decide without the experiment"
+      ],
+      "correct": 3,
+      "explanation": "An experiment that cannot see the effect you would act on returns an uninterpretable null however cleanly it runs. Option C is the tempting technical fix and it trades one error for another: loosening the threshold buys detectability with false positives rather than with information."
+    },
+    {
+      "stage": "post",
+      "question": "A cleanly run experiment shows the new prompt raises seven-day return by 2 points. Which conclusion does the design support?",
+      "options": [
+        "Documents in Noted became more useful for the assigned population",
+        "Seven-day return rose by about 2 points for the assigned population, over the period run, on that metric",
+        "The prompt increases activation by 2 points across all Noted users including enterprise accounts",
+        "The previous prompt was the cause of the six-week activation decline"
+      ],
+      "correct": 1,
+      "explanation": "The estimate is bounded by population, period, and metric, and the memo may only claim what it measured. Option A is the seductive one because the metric was chosen to stand in for usefulness — but an experiment answers inside the measurement model and can never validate the model itself."
+    }
+  ]
+}

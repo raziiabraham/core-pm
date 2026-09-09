@@ -1,0 +1,66 @@
+{
+  "id": "ST-05",
+  "title": "Strategic sequencing and options",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A PM orders three bets by which one is most ready to start. What is the strategic cost of this ordering rule?",
+      "options": [
+        "Readiness ordering usually delays the highest-value work",
+        "It makes the delivery schedule harder to communicate to stakeholders",
+        "It ignores effort estimates, so capacity gets overcommitted",
+        "It decides what you will know at each commitment, and which commitments remain available, without anyone treating that as a decision"
+      ],
+      "correct": 3,
+      "explanation": "Order determines the information available at each commitment and which later moves are still open, both of which are strategic. A is the tempting answer because it sounds like prioritization discipline, but the deeper cost is not value ordering — it is committing while still ignorant and closing doors you have not yet decided you can lose."
+    },
+    {
+      "stage": "post",
+      "question": "Which uncertainty most deserves to be retired first?",
+      "options": [
+        "How much slower large workspaces feel to users, where either answer leads to the same fix",
+        "Whether the audience you committed to actually has the problem, where a negative answer invalidates the position",
+        "Which of two implementations of a feature performs better under load",
+        "How competitors will price a similar capability next year"
+      ],
+      "correct": 1,
+      "explanation": "Decision relevance means different resolutions lead to different next moves, and a false audience claim would stop the whole position. A is the tempting distractor: the uncertainty is genuinely large and feels important, but if both answers lead to the same fix, resolving it changes nothing."
+    },
+    {
+      "stage": "post",
+      "question": "Noted's dependency loses support in 10 weeks and the migration is estimated at three to five weeks with wide uncertainty. How is the latest start date derived?",
+      "options": [
+        "Ten weeks minus the midpoint estimate, since that is the expected duration",
+        "Ten weeks minus the optimistic estimate, leaving room to fund other bets first",
+        "Ten weeks minus the pessimistic estimate minus time to react if the estimate is wrong",
+        "It cannot be derived, because nothing breaks at the end-of-support date"
+      ],
+      "correct": 2,
+      "explanation": "The pessimistic estimate plus reaction time is what makes the date survivable when the estimate proves wrong, and the estimate is explicitly wide. D is tempting because the case says nothing breaks immediately, but an exposure that accumulates rather than detonates still has a start date you can miss."
+    },
+    {
+      "stage": "post",
+      "question": "A team says it will keep two architectural options open through the quarter. What must be stated for this to count as optionality rather than avoidance?",
+      "options": [
+        "The carrying cost of holding the option, and the condition under which it would be exercised",
+        "The probability that each option is chosen, so the work can be weighted",
+        "A commitment to decide by the end of the quarter",
+        "Which engineer owns each option"
+      ],
+      "correct": 0,
+      "explanation": "An option with no named exercise condition is an unresolved decision, and one with an unstated carrying cost looks free when it is not. C is the tempting answer, because a decision date feels like rigor, but a date without an exercise condition just relocates the same avoidance to a later meeting."
+    },
+    {
+      "stage": "post",
+      "question": "A PM plans to run a learning step whose result will not be measurable until three weeks after the following commitment begins. What does the boundary of this model say?",
+      "options": [
+        "Proceed, since partial signals will still inform the second commitment",
+        "The ordering provides no information benefit, so either move the step earlier or stop calling it a learning sequence",
+        "Shorten the measurement window so the result arrives in time",
+        "Run both steps in parallel to save calendar time"
+      ],
+      "correct": 1,
+      "explanation": "Sequencing pays off only when a result is observable before the next commitment; otherwise the work has been split, not sequenced. C is the tempting fix, and it is often worse: shortening the window to fit the plan produces a number on time that cannot support the claim it was meant to test."
+    }
+  ]
+}

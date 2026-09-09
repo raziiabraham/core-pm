@@ -1,0 +1,66 @@
+{
+  "id": "PJ-02",
+  "title": "Define good",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "Three initiatives are on the table: improve activation, reduce large-workspace response time, and add meeting summaries. Each is described as a direction with no threshold. What is the practical consequence?",
+      "options": [
+        "The team will pick the one with the clearest user demand",
+        "None of the three can lose the argument, so the choice is settled by who advocates hardest",
+        "The team will over-invest in whichever one is technically easiest to start",
+        "The team will need a scoring model to rank them"
+      ],
+      "correct": 1,
+      "explanation": "A direction never completes, so it always deserves more effort and can never be outranked. Option D is the answer a PM gives after learning prioritization vocabulary — but scoring three directions just moves the same undefined comparison into a spreadsheet and gives it a number."
+    },
+    {
+      "stage": "post",
+      "question": "Noted defines activation as creating a document and returning within seven days. What is the strongest objection to using this definition to judge the 11% decline?",
+      "options": [
+        "Seven days is too short a window for a document tool",
+        "The definition has never been validated against a control group",
+        "Aggregate activation should always be segmented before it is used",
+        "It measures activity, and nothing establishes that the activity corresponds to the job the product does"
+      ],
+      "correct": 3,
+      "explanation": "Noted's job is capture, direct, produce. Creating a document and returning can happen without a document ever becoming useful. Option C is tempting and true as far as it goes, but segmenting a definition that does not describe the job just gives you the same wrong measure split four ways."
+    },
+    {
+      "stage": "post",
+      "question": "A PM writes: \"Good means recovering 60% of the lost activation within one quarter.\" What is the most important thing still missing?",
+      "options": [
+        "The population the threshold applies to, and what must not get worse for the recovery to count",
+        "A confidence interval on the 60% figure",
+        "The engineering estimate required to hit it",
+        "Agreement from the founder that 60% is the right target"
+      ],
+      "correct": 0,
+      "explanation": "A threshold without a population lets a gain in one group hide a loss in another, and a threshold without floors lets the number be hit in a way that costs more than it earns. Option C is tempting because cost matters, but cost belongs in the trade-off, not in the definition of what good is."
+    },
+    {
+      "stage": "post",
+      "question": "Noted is about to build its first AI-first onboarding. Nobody has watched a user go through it. What does defining good require here?",
+      "options": [
+        "Set a threshold from the current activation baseline, then adjust it after launch",
+        "Skip the definition, since exploratory work is judged on learning rather than outcomes",
+        "Name the bar-setting moment: what you will observe, when, and what converts the observation into a threshold",
+        "Use the enterprise team lead population, because their behaviour is the most consequential"
+      ],
+      "correct": 2,
+      "explanation": "This is the boundary. You cannot know the bar before you watch the behaviour, but \"we'll know it when we see it\" is not a definition. Option A is the disciplined-sounding trap: a number invented from an unrelated baseline gets defended later as if it had meant something."
+    },
+    {
+      "stage": "post",
+      "question": "Two changes are proposed. One is a copy change on the empty document state, trivially reversible. One is a change to how documents are stored, costly to undo. A PM applies the same evidence bar to both. What is wrong?",
+      "options": [
+        "Nothing — a consistent bar is what makes decisions comparable across the roadmap",
+        "The bar should follow reversibility, so the copy change is being over-built and the storage change under-built",
+        "The storage change should not be a product decision at all",
+        "The copy change needs a higher bar, because it touches the surface every new user sees"
+      ],
+      "correct": 1,
+      "explanation": "How good is good enough depends on what it costs to be wrong and whether the correction is available. Option A is the trained answer — consistency sounds like rigor, but a uniform bar means you are simultaneously over-testing cheap reversible work and under-testing the work you cannot take back."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "PF-05",
+  "title": "User and context boundary",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "Which of these is a usable audience boundary rather than a label?",
+      "options": [
+        "Enterprise team leads who value staying organised across their meetings",
+        "Team leads on enterprise contracts in workspaces with more than 500 documents",
+        "People who run a recurring meeting series and afterwards write a record that someone who missed the meeting reads",
+        "Busy managers who need decisions and action owners to survive handoffs"
+      ],
+      "correct": 2,
+      "explanation": "C names a repeated behaviour and the context that makes the problem occur, so a recruiter or an analyst could sort a borderline case. B is the tempting distractor because it is precise and queryable, but every term in it is an attribute: it captures billing and workspace size, and large workspaces are the performance population, not necessarily the meeting population."
+    },
+    {
+      "stage": "post",
+      "question": "A PM's audience definition excludes nobody. What does that tell you?",
+      "options": [
+        "The definition has no edges, so it is a description of the whole user base with adjectives attached",
+        "The opportunity is unusually broad, which strengthens the case for building it",
+        "The definition is fine as long as the behaviour named in it is observable",
+        "The team should segment after launch, once usage data arrives"
+      ],
+      "correct": 0,
+      "explanation": "Exclusion is what gives a boundary edges; without it the definition expands until it means everyone. B is the tempting distractor because breadth reads as market size, but an audience that includes everyone cannot be wrong, which means it also cannot inform a design decision or a priority comparison."
+    },
+    {
+      "stage": "post",
+      "question": "Meeting type is not captured in the product's event data, and actor identity is missing for about 18% of events. A PM wants to size the meeting-summaries audience. What is the honest move?",
+      "options": [
+        "Estimate the audience from enterprise plan counts and note the estimate as approximate",
+        "Build first and instrument the behaviour afterwards, since the data will exist once the feature ships",
+        "Model the population from industry benchmarks for meeting frequency",
+        "Try a behavioural proxy and state its error direction; if none holds, declare the population size unobservable rather than estimating it"
+      ],
+      "correct": 3,
+      "explanation": "The preference order is observable proxy with a stated error direction, then a screening question, then declaring it unobservable — which is a legitimate answer. A is the tempting distractor: an approximate number from plan counts substitutes what you can produce for what you need, and \"approximate\" is stripped off in the first re-quote."
+    },
+    {
+      "stage": "post",
+      "question": "A team must ship a capability only for customers whose data has to stay in one jurisdiction. Someone objects that this is an attribute, not a behaviour. Who is right?",
+      "options": [
+        "The objector — attribute-based audiences always hide the behaviour that causes the problem",
+        "The team — the attribute is the actual constraint here, and translating it into behaviour would lose the thing that determines who is affected",
+        "The objector — the boundary should be people who store regulated data, which is behavioural",
+        "Neither — jurisdiction is a legal matter and does not require an audience boundary at all"
+      ],
+      "correct": 1,
+      "explanation": "This is the boundary of the model: use behaviour when behaviour determines whether the problem occurs, and attributes when the attribute determines it. C is the tempting distractor because it performs the behavioural rewrite correctly and still gets it wrong — the requirement attaches to the jurisdiction, not to what the customer does with the data."
+    },
+    {
+      "stage": "post",
+      "question": "A designer blends four behaviours observed in four different customer calls into one target user. What is the specific defect?",
+      "options": [
+        "Four calls is too small a sample to define an audience",
+        "The blended user should be validated with a survey before being used",
+        "The composite is internally consistent in a way no real person is, so it accommodates every proposal and can disconfirm nothing",
+        "The behaviours should have been weighted by the contract value of each account"
+      ],
+      "correct": 2,
+      "explanation": "A composite is assembled from the same intuitions the proposals come from, so design reviews always go smoothly and no proposal is ever ruled out. A is the tempting distractor because sample size is a real concern, but the defect survives at any sample size — adding more calls makes the composite more vivid, not more real."
+    }
+  ]
+}

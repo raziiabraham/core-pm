@@ -38,6 +38,6 @@ Produce one reusable artifact that can enter the learner's cumulative Product De
 
 Include three checks that test reasoning, not recall. At least one check must expose overclaiming and one must test whether the work changes a real decision.
 
-## Sources and Further Reading
+## Boundary and Further Reading
 
-Name the Reforge source programs and preserve claim-level provenance for direct or contestable claims. Do not turn source order into course order.
+Name where this model stops being true, and what a reader should study next if they want to go past that boundary. Do not present the model as universal.

@@ -1,18 +1,41 @@
 # CORE / PM Curriculum
 
-CORE / PM is a self-paced, repository-shaped curriculum for practicing product managers. The website is a reader for the curriculum; this repository is the source of truth.
+CORE / PM is a self-paced, repository-shaped curriculum for practicing product managers. It is designed to be taught by a coding agent in your terminal. The website is a reader for the same curriculum; this repository is the source of truth.
+
+Everything is open. There is no gate, no password, and no account.
+
+## How to take it
+
+```bash
+npx skills add raziiabraham/core-pm
+```
+
+Then `/start-learning` in Claude Code, or `start-learning` in Codex, or *"Use start-learning to begin the course"* in any other agent that reads `SKILL.md`.
+
+Six skills carry the course:
+
+| Skill | What it does |
+|---|---|
+| `start-learning` | Interview, judgment placement, writes your `PM-LEARNING.md` plan |
+| `learn` | Teaches one lesson interactively and ships its artifact |
+| `find-your-level` | Seven scenarios, one per phase, scored on reasoning |
+| `check-understanding` | Phase assessment on an unseen case |
+| `review-artifact` | Stress-tests any decision document against the standard |
+| `course-guide` | Routes a real problem to the lesson that addresses it |
+
+Progress lives in `PM-LEARNING.md` in your working directory. Artifacts land in `artifacts/`. Neither is stored anywhere but your own machine.
 
 ## Scope
 
 - 43 atomic lessons
 - 7 phases
 - 4 learning paths
-- approximately 23 hours for the complete foundation
+- approximately 22 hours for the complete foundation
 - one reusable artifact per lesson
 - one cumulative Product Decision Case
-- browser-local progress; no account required
+- no account, no gate, no sign-up
 
-The curriculum was synthesized from 563 PDFs across nine Reforge programs: Mastering Product Management, Finding Product-Market Fit, User Insights, Data for Product Managers, Experimentation + Testing, Product Strategy, Technical Strategy, Scaling Product Delivery, and Product Leadership.
+The curriculum covers nine domains of product work: product craft, product-market fit, user insight, data, experimentation, strategy, technical strategy, delivery, and leadership. It reorganizes them around one cumulative act of product judgment rather than around activities.
 
 ## Use every lesson the same way
 
@@ -35,7 +58,7 @@ The curriculum was synthesized from 563 PDFs across nine Reforge programs: Maste
 | 06 · Product Delivery Systems | DS-01–DS-06 | Carry intent through commitment, delivery, exposure, and learning. |
 | 07 · Product Leadership | LD-01–LD-07 | Create direction, autonomy, and accountability beyond one PM. |
 
-The full lesson manifest, prerequisites, descriptions, durations, artifacts, and learning paths live in [`lib/curriculum.ts`](lib/curriculum.ts). The richer original twelve-lesson field path remains available under the four `session-*` routes.
+The full lesson manifest, prerequisites, descriptions, durations, artifacts, and learning paths live in [`lib/curriculum.ts`](lib/curriculum.ts).
 
 ## Learning paths
 

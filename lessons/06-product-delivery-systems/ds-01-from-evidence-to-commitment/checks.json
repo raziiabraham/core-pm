@@ -1,0 +1,66 @@
+{
+  "id": "DS-01",
+  "title": "From evidence to commitment",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A team agrees a feature is worth building and adds it to the quarter's plan. Nothing else on the plan changes. What has actually happened?",
+      "options": [
+        "A commitment, because leadership approved it in a decision forum",
+        "A preference, because no capacity was withdrawn from anything else",
+        "A commitment, because the plan is the team's binding record",
+        "A prioritization, because the item now sits above other items"
+      ],
+      "correct": 1,
+      "explanation": "Capacity is finite, so a real commitment always removes something. If nothing was removed, the team agreed the idea was good. Option A is the tempting one: approval feels like the moment of commitment, and it is the moment most teams point to. But approval without displacement leaves four workstreams each running at a fraction, which is what the plan will show in three months."
+    },
+    {
+      "stage": "post",
+      "question": "A PM is confident a feature will work for the target population, but engineering has never touched the subsystem it depends on and cannot say what is in there. What does this state require?",
+      "options": [
+        "Commit with a wide date range so the uncertainty is disclosed",
+        "Commit, since value conviction is what determines whether work is worth doing",
+        "Do not commit yet; spend a bounded slice retiring the effort unknown first",
+        "Reduce scope until engineering is willing to give a firm estimate"
+      ],
+      "correct": 2,
+      "explanation": "Strong value conviction with weak effort conviction is the second row of the table, and the correct move is to buy effort knowledge before committing. Option A is the answer a careful PM gives after learning the vocabulary: it discloses the uncertainty honestly but still hands the organization a date that other people plan against. Option D is worse, because a firm estimate extracted under pressure is not effort conviction."
+    },
+    {
+      "stage": "post",
+      "question": "Noted's core dependency loses support in ten weeks. A PM writes a commitment brief for the migration that opens with the user value the migration will deliver. What is wrong with this?",
+      "options": [
+        "Nothing; every commitment should be justified by user value",
+        "The user value should be quantified rather than described",
+        "Migration work should be committed by engineering, not by product",
+        "Forced work has no value bet to argue about, so the invented story then competes for attention as if it were evidence"
+      ],
+      "correct": 3,
+      "explanation": "This is the boundary of the model. The honest frame for forced work is consequence exposure over time, not user outcome. Option A is tempting because 'always tie work to user value' is a rule most PMs are taught, and it is usually right. Here it manufactures a story that will be cited later as though someone had evidence for it."
+    },
+    {
+      "stage": "post",
+      "question": "Three enterprise customers request a feature. Their combined contracts are about 20% of revenue. All three requests came through the same account manager in one month. Which conclusion does this evidence support?",
+      "options": [
+        "That the problem is widespread among enterprise team leads",
+        "That the requested solution is the right one for the underlying problem",
+        "That three named accounts asked, through one channel, and that a revenue relationship is exposed",
+        "That the feature should be committed, because revenue concentration outweighs sample concerns"
+      ],
+      "correct": 2,
+      "explanation": "The requests establish that three accounts asked and that a commercial relationship carries risk. They do not establish prevalence, mechanism, or solution fit, because one channel is not an independent sample. Option D is the answer a commercially minded PM gives: it is not absurd, and account risk is a real input to a commitment. But it moves account risk into the value column, where it will later be quoted as evidence about the problem."
+    },
+    {
+      "stage": "post",
+      "question": "A commitment brief names the displaced work as \"other roadmap items, which we will fit in around this.\" What is the specific defect?",
+      "options": [
+        "The displacement is unnamed, so no one has been told their work stopped and the capacity edge has not been found",
+        "The brief should list every roadmap item, not a summary",
+        "The brief needs an estimate for the displaced items before it can be approved",
+        "Fitting work in around a commitment is acceptable if the team has slack"
+      ],
+      "correct": 0,
+      "explanation": "Displacement is the test that separates a commitment from an intention. 'Fit in around it' means the capacity edge was never located, so it will be found later, at a worse moment, by whoever was quietly depending on the displaced work. Option D is the tempting one because slack does sometimes exist; but a team that believes it has slack has not measured the edge either, and the belief is what fails."
+    }
+  ]
+}

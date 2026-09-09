@@ -1,0 +1,66 @@
+{
+  "id": "EV-01",
+  "title": "Evidence fit and sufficiency",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "Monitoring shows P95 response time up 34% for large workspaces. The team debates whether users are being harmed enough to justify moving engineering time. A PM proposes adding p99, per-endpoint, and per-region breakdowns. What is wrong with the proposal?",
+      "options": [
+        "The breakdowns are correct but should be run after the reallocation decision",
+        "More monitoring adds precision to a claim about system behaviour, not evidence for a claim about user harm",
+        "P99 is a poor choice because it is dominated by outliers",
+        "The sample of large workspaces is too small at 4% to support any breakdown"
+      ],
+      "correct": 1,
+      "explanation": "The disputed claim is about harm to users. Monitoring cannot observe it, so more monitoring cannot close the gap. Option D is the tempting answer for a PM who has learned to check sample size: the problem is not that the sample is too small, it is that the method is aimed at the wrong claim."
+    },
+    {
+      "stage": "post",
+      "question": "You need to know whether enterprise team leads would pay more for automated meeting summaries. Which method fits the claim best?",
+      "options": [
+        "Observed behaviour where a similar capability already carries a price or a real cost to obtain",
+        "A survey asking team leads to rate how valuable summaries would be",
+        "Counting how many accounts have requested summaries",
+        "Interviews asking team leads what they would be willing to pay"
+      ],
+      "correct": 0,
+      "explanation": "Willingness to pay is a preference claim, and stated preference is weak for prediction. Option D is the answer a competent PM gives after learning to 'talk to users' — but asking people to forecast their own spending measures their self-image, not their behaviour. Request counts (C) measure the sales channel, not prevalence or value."
+    },
+    {
+      "stage": "post",
+      "question": "No support ticket has ever mentioned slowness in large workspaces. How should this fact enter the evidence plan?",
+      "options": [
+        "As moderate evidence that the slowdown is not affecting users",
+        "As irrelevant, because monitoring is a stronger source than tickets",
+        "As an ambiguous observation that needs a second observation to interpret, since silence can mean no harm or no reporting path",
+        "As evidence that support triage is failing and should be fixed first"
+      ],
+      "correct": 2,
+      "explanation": "Absence of a report is not absence of the thing reported. Option A is the natural reading and the dangerous one: it converts a gap in a reporting channel into a finding about users. The fix is to name an observation — for example, whether affected users have ever filed tickets about anything — that separates the two readings."
+    },
+    {
+      "stage": "post",
+      "question": "A PM plans four weeks of research before a decision that is reversible within a sprint and affects one bounded user slice. The research is well designed and the method fits the claim. What is the strongest objection?",
+      "options": [
+        "Four weeks is too long for any product research",
+        "Reversible decisions should be made by engineering, not by product",
+        "The plan should be replaced with an experiment to establish causation",
+        "Sufficiency is set too high for a reversible, low-blast-radius decision, so the evidence costs more than the error it prevents"
+      ],
+      "correct": 3,
+      "explanation": "Fit and sufficiency are separate gates. This plan passes fit and fails sufficiency. Option C is tempting because experiments feel more rigorous — but a stronger method makes the mismatch worse, not better, by spending even more time on a decision that could be made and unwound cheaply."
+    },
+    {
+      "stage": "post",
+      "question": "Noted's core dependency loses support in ten weeks. Engineering estimates migration at three to five weeks with wide uncertainty. A PM proposes two weeks of estimation work to narrow the range before deciding how to sequence it. What does the fit-and-sufficiency model say here?",
+      "options": [
+        "The model does not apply cleanly: the deadline is fixed and the evidence consumes the resource in question, so choose for recoverability instead of certainty",
+        "Sufficiency is high because the consequence is security-related, so the estimation work is justified",
+        "Estimation is a magnitude claim, so time studies are the correctly fitted method",
+        "The decision should be delegated to engineering because it is a technical estimate"
+      ],
+      "correct": 0,
+      "explanation": "This is the boundary of the model. Buying certainty here spends the same weeks the decision is about, and no result moves the end-of-support date. Option C is the trap for someone who has memorised the claim-type table: the classification is right and still leads to a worse decision, because the cost of the evidence is the constraint."
+    }
+  ]
+}

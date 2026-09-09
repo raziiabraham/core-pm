@@ -46,6 +46,7 @@ export default defineConfig(async () => {
     const { nitro } = await import("nitro/vite");
 
     return {
+      assetsInclude: ["**/*.md"],
       plugins: [vinext(), nitro()],
     };
   }
@@ -54,6 +55,9 @@ export default defineConfig(async () => {
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {
+    // Lesson bodies are imported with ?raw; without this Vite tries to parse
+    // them as JS during HMR.
+    assetsInclude: ["**/*.md"],
     server: isCodexSeatbeltSandbox
       ? { watch: { useFsEvents: false, usePolling: true } }
       : undefined,

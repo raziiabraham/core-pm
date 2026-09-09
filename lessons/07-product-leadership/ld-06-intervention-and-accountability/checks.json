@@ -1,0 +1,66 @@
+{
+  "id": "LD-06",
+  "title": "Intervention and accountability",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A PM's decision is drifting. Over four weeks the leader joins the customer calls to listen, tidies the analysis section of the draft, and chairs the working session. Nothing is announced. What has happened?",
+      "options": [
+        "Appropriate hands-on support that preserves the PM's ownership",
+        "A silent takeover — the decision has moved with no failure named, no scope, no duration, and no way back",
+        "An informal rung 2 intervention, which is proportionate to the problem",
+        "Nothing yet; rights only change when the leader makes the final call"
+      ],
+      "correct": 1,
+      "explanation": "Each act was generous and none was announced, which is exactly what makes it a demotion nobody can appeal. A is the trap this whole phase keeps returning to: support that quietly relocates the decision. D is tempting on a technicality, but the team's model of who owns this has already updated, and so has the PM's."
+    },
+    {
+      "stage": "post",
+      "question": "A leader wants to intervene. Which failure statement can actually be acted on?",
+      "options": [
+        "\"You are not being strategic enough about this problem\"",
+        "\"The team has lost confidence in the direction of this work\"",
+        "\"In six weeks the problem statement has been rewritten three times and no decision has been proposed\"",
+        "\"This work is not meeting the standard I expect from someone at your level\""
+      ],
+      "correct": 2,
+      "explanation": "C is an observable pattern with instances, so it can be addressed by Friday. A and D are traits and standards — they can only be defended, not corrected. B is the tempting one because it sounds like evidence, but it reports other people's feelings and gives the person nothing specific to change."
+    },
+    {
+      "stage": "post",
+      "question": "A leader is confident a raised evidence standard would address the named failure mode, but moves the decision to recommend-and-I-decide instead, because the deadline is close. What is wrong?",
+      "options": [
+        "Nothing — with a deadline close, the leader should hold the decision",
+        "The rung is not proportionate to the failure mode, and the reason given is about the clock rather than about this person's pattern",
+        "The leader should have gone further and taken the decision outright",
+        "The evidence standard should have been raised earlier in the cycle"
+      ],
+      "correct": 1,
+      "explanation": "Pick the lowest rung that addresses the failure you named. A is tempting because deadline pressure is real and the choice is defensible on grounds of risk — but then say that is the reason, because a deadline is not evidence about the person, and the intervention record will read as if it were."
+    },
+    {
+      "stage": "post",
+      "question": "Which exit condition makes an intervention genuinely temporary?",
+      "options": [
+        "\"We'll revisit once I'm confident the work is back on track\"",
+        "\"This is in place for the rest of the quarter, and we'll see where things stand\"",
+        "\"You'll get it back when the team is comfortable with the direction again\"",
+        "\"When the next two decisions in this class arrive with a proposed option and its rejected alternative, ownership returns on the 14th — I decide, and I'll say so in the same channel where this was announced\""
+      ],
+      "correct": 3,
+      "explanation": "D gives an observable the person can watch themselves, a date that arrives whether or not anyone raises it, a named decider, and a public return matching a public intervention. A and C are the common wordings and both make the exit depend on a feeling in someone else's head, which is indistinguishable from permanent."
+    },
+    {
+      "stage": "post",
+      "question": "Before writing an intervention contract, a leader asks whether a capable person in that seat, with this direction, these rights, and this evidence, would have hit the same wall. Why does this test come first?",
+      "options": [
+        "Because intervening on a person for a system failure fixes nothing and teaches the team that system problems get settled by correcting someone",
+        "Because it gives the person the benefit of the doubt, which is fairer",
+        "Because it slows the leader down and reduces the chance of an emotional decision",
+        "Because most performance problems turn out to be motivation problems"
+      ],
+      "correct": 0,
+      "explanation": "The test protects the diagnosis, not the person's feelings. B is the tempting answer because fairness is a real benefit, but it frames the test as generosity — which makes it easy to skip when the leader feels certain. The cost of skipping it is a system failure that stays in place while a person absorbs it."
+    }
+  ]
+}

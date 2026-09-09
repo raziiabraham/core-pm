@@ -1,0 +1,66 @@
+{
+  "id": "LD-07",
+  "title": "Executive and cross-functional leadership",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A PM sends a founder a well-researched document on a dependency that loses support in ten weeks. It gives two approaches with balanced pros and cons and ends with \"happy to discuss Thursday.\" Why does nothing happen for three weeks?",
+      "options": [
+        "The document contained no decision, so the cheapest available response was to schedule a meeting",
+        "The founder did not understand the technical risk well enough to act",
+        "The two options were too similar in cost to choose between",
+        "The document should have been shorter and more visual"
+      ],
+      "correct": 0,
+      "explanation": "Balanced options with no recommendation ask the reader to supply both the position and the request. B is the tempting answer because it explains inaction by a gap in the reader, and it lets the author keep the document — but the memo never asked for anything, so there was nothing to say yes or no to."
+    },
+    {
+      "stage": "post",
+      "question": "Two engineers disagree with your recommended approach. What handling of that dissent most increases your influence with the decision-maker?",
+      "options": [
+        "Leave it out; internal disagreement is noise at the executive level and can be handled separately",
+        "Mention that \"some concerns were raised about timing\" and note that they were addressed",
+        "Name them, state their case in a form they would sign, say what would make them right, and say what you did about it",
+        "Present both positions with equal weight and let the executive choose between them"
+      ],
+      "correct": 2,
+      "explanation": "The reader's real question is how much they have to check themselves; surfaced dissent answers it in your favour. B is the common compromise and it is worse than omission — the reader can tell an argument was softened. D abandons the recommendation, which returns you to the status-update failure."
+    },
+    {
+      "stage": "post",
+      "question": "Which line does the most work at the end of an executive memo?",
+      "options": [
+        "\"Let me know if you have any questions or want to discuss further\"",
+        "\"I recommend we proceed and will keep you updated on progress\"",
+        "\"I'd welcome your thoughts before we finalize the approach\"",
+        "\"If I do not hear otherwise by Tuesday the 14th, we start on the split plan on Wednesday\""
+      ],
+      "correct": 3,
+      "explanation": "D converts silence into a decision and makes the cost of delay visible. The most common failure of upward communication is not rejection but nothing happening, and A and C both leave that outcome available. B is the tempting one — it looks decisive, but with no date it gives the reader nothing to respond to before the option expires."
+    },
+    {
+      "stage": "post",
+      "question": "A PM is about to escalate a decision that, under the team's own decision-rights map, is theirs to make. What does the model say?",
+      "options": [
+        "Escalate anyway; keeping executives informed of significant calls is good practice",
+        "Escalate, since a second opinion on a consequential decision reduces risk",
+        "Apply the cover test — would this memo exist if they were confident? If not, decide and inform",
+        "Rewrite the memo as a note-only update so it does not read as an escalation"
+      ],
+      "correct": 2,
+      "explanation": "A memo written from low confidence about a decision you own is a request for company, and readers learn to detect it. D is the tempting answer because it is technically honest and keeps the executive informed — but it still spends the reader's attention to relieve the author's discomfort, and the decision is still not made."
+    },
+    {
+      "stage": "post",
+      "question": "An engineering lead carries the consequence of a recommendation but does not decide it. When should they see the memo?",
+      "options": [
+        "Before the decision-maker, so their objection travels inside the memo rather than around it",
+        "At the same time as the decision-maker, so nobody is given an advantage",
+        "After the decision, so the recommendation is not weakened before it is heard",
+        "Only if they ask, since the decision is not theirs"
+      ],
+      "correct": 0,
+      "explanation": "Sequence is what turns a peer's disagreement into content rather than an ambush. B is the tempting distractor — simultaneous circulation feels even-handed and transparent, but it gives the consequence-carrier no route to object except in front of the decision-maker, which is exactly when their objection is aimed at you rather than at the argument."
+    }
+  ]
+}

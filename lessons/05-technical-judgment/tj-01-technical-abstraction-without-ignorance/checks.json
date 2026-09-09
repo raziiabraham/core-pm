@@ -1,0 +1,66 @@
+{
+  "id": "TJ-01",
+  "title": "Technical abstraction without ignorance",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "An engineer mentions that the AI suggestion on the empty document state \"sometimes takes a while.\" Which follow-up question belongs to the PM?",
+      "options": [
+        "Can we cache the suggestion so it returns instantly?",
+        "Which model are we calling, and is there a faster one available?",
+        "What does the user see while the suggestion is loading, and what do they see if it never arrives?",
+        "What is the right way to escalate this to the engineering lead, since it is a performance issue?"
+      ],
+      "correct": 2,
+      "explanation": "The PM owns what the user experiences during and after a failure. The tempting answer is A: it sounds informed, but it commits the team to a mechanism the PM cannot evaluate and closes off the question of what the empty state should do while waiting. D hands away a product question that was never engineering's to answer."
+    },
+    {
+      "stage": "post",
+      "question": "Two ways of building summaries are on the table. One returns in under a second but reads only the twenty most recent notes. The other reads the whole workspace but takes fifteen seconds. The engineering lead asks the PM to weigh in. What should the PM do?",
+      "options": [
+        "Take part in the choice, because the mechanism here decides what can be promised to the user",
+        "Decline, because both are implementation options and implementation belongs to engineering",
+        "Ask for a third option that is both fast and complete",
+        "Choose the faster one, since latency is a product concern and completeness is a technical one"
+      ],
+      "correct": 0,
+      "explanation": "This is the boundary of the model. The tempting answer is B — the vocabulary answer, \"stay out of implementation.\" But the two options let you promise the user different things, so the choice is a product decision wearing technical clothes. D splits the currencies wrongly: completeness is exactly what the user notices."
+    },
+    {
+      "stage": "post",
+      "question": "Noted's event pipeline is missing actor identity for about 18% of events. A PM calls this an engineering problem and moves on. What is wrong with that?",
+      "options": [
+        "Nothing — instrumentation is owned by engineering, and the PM should escalate it and wait",
+        "The PM should specify the fix, such as attaching identity at the client before the event is sent",
+        "It only matters once the gap passes 20%",
+        "The measurement system is part of the system the PM reasons with, and an 18% identity gap changes which claims the activation number can support"
+      ],
+      "correct": 3,
+      "explanation": "Measurement is a component with its own failure modes, and its failure lands on every product claim built from it. The tempting answer is A, which is correct about ownership of the repair and wrong about ownership of the consequence. B is the opposite error: specifying the mechanism. C invents a threshold nobody set."
+    },
+    {
+      "stage": "post",
+      "question": "A PM draws a system diagram from outside the code and brings it to the engineering team. What is the correct posture?",
+      "options": [
+        "Present it as settled, since the PM owns the product and needs a shared picture",
+        "Present it as a hypothesis to be corrected, and record what changed and why",
+        "Do not draw it; ask engineering to draw the accurate version instead",
+        "Draw it only after reading enough of the code to be confident it is right"
+      ],
+      "correct": 1,
+      "explanation": "The corrections are the point: they show exactly where the PM's model of the product was wrong. The tempting answer is C, which sounds humble but produces a diagram the PM cannot reason from and never reveals which of their assumptions were false. A asserts authority over mechanism the PM does not hold."
+    },
+    {
+      "stage": "post",
+      "question": "An engineer responds to a request with \"we can't do that.\" What should the PM establish first?",
+      "options": [
+        "Whether another engineer on the team disagrees",
+        "How long it would take if the team tried anyway",
+        "Whether the limit is fixed or was chosen, and what it would cost to change it",
+        "Whether the request can be reduced to something smaller that fits"
+      ],
+      "correct": 2,
+      "explanation": "\"Can't\" covers both a law of the system and a decision someone made last year. The tempting answer is D: descoping feels cooperative, but shrinking the product before you know whether the limit is movable gives up value for no reason. A undermines the specialist instead of interrogating the constraint."
+    }
+  ]
+}

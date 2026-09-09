@@ -1,0 +1,66 @@
+{
+  "id": "EV-02",
+  "title": "Qualitative evidence and synthesis",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "In eight sessions about meeting follow-up, six people describe losing action owners. Two describe a standing agenda document that keeps everything in one place. The write-up reports the six and omits the two as outliers. What was lost?",
+      "options": [
+        "Statistical power, since eight sessions cannot support a 6-of-8 split",
+        "The boundary of the mechanism, since the two cases show a condition under which the problem does not occur",
+        "Nothing important, because two of eight is within normal variation for qualitative work",
+        "Balance in the write-up, which should present both sides equally"
+      ],
+      "correct": 1,
+      "explanation": "The contradicting cases mark where the mechanism stops operating, which is the most decision-relevant thing in the set. Option C is the trained-sounding answer: it applies a sampling intuition to data that was never a sample, and uses it to justify deleting the informative cases."
+    },
+    {
+      "stage": "post",
+      "question": "Which of these is an observation, with no interpretation attached?",
+      "options": [
+        "Team leads do not trust the meeting notes as a record",
+        "She rewrites the action list into a task tool after the Monday sync",
+        "The current notes format fails enterprise workflows",
+        "Users find follow-up frustrating"
+      ],
+      "correct": 1,
+      "explanation": "Only B states what was seen or said, attributably and without a cause. Option A is the most tempting because it sounds like a research finding — but 'do not trust' is an interpretation of the rewriting behaviour, and once it is written as an observation nobody can check the step that produced it."
+    },
+    {
+      "stage": "post",
+      "question": "You want to know whether enterprise team leads would use an automated meeting summary. Which question produces the most trustworthy evidence?",
+      "options": [
+        "\"How valuable would an automatic summary be to your team, on a scale of one to five?\"",
+        "\"If Noted generated a summary after each recurring meeting, would you use it?\"",
+        "\"Walk me through what happened after your last recurring meeting, step by step.\"",
+        "\"What is the biggest problem with your current meeting process?\""
+      ],
+      "correct": 2,
+      "explanation": "An episode is recalled; everything else on this list is constructed on the spot. Option B is the answer a PM gives after learning to 'validate with users' — but asking someone to predict their own adoption measures self-image, not behaviour, and the question also plants the feature it is testing."
+    },
+    {
+      "stage": "post",
+      "question": "After twelve sessions, no new mechanisms are appearing. What does this justify concluding?",
+      "options": [
+        "The mechanisms present in your recruiting frame are probably mapped, and nothing about how common any of them is",
+        "The problem is confirmed as widespread among enterprise team leads",
+        "The sample is now large enough to size the opportunity",
+        "You can stop, because twelve sessions is the standard threshold for qualitative validity"
+      ],
+      "correct": 0,
+      "explanation": "Saturation is a stopping rule bounded by who you recruited. Option B is the standard overreach: repetition inside one recruiting frame gets read as prevalence in the population, when repetition may simply be a property of how those twelve people were reached — in Noted's case, one account manager, one month."
+    },
+    {
+      "stage": "post",
+      "question": "A synthesis reports: \"Team leads lose action owners after recurring meetings.\" Which addition would most improve it as evidence?",
+      "options": [
+        "A count of how many times the theme appeared across all quotes",
+        "A confidence rating attached to the theme",
+        "A supporting quote chosen for how clearly it expresses the theme",
+        "The session identifiers behind it, the recruiting frame, and the sessions where it did not hold"
+      ],
+      "correct": 3,
+      "explanation": "Anchors, frame, and contradictions let a reader who was not present check the claim and see its boundary. Option A is tempting and actively harmful: counting quotes rather than sessions lets one talkative participant become a trend."
+    }
+  ]
+}

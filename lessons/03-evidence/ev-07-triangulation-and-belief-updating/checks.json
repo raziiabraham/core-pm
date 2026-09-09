@@ -1,0 +1,66 @@
+{
+  "id": "EV-07",
+  "title": "Triangulation and belief updating",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "Behavioural data shows activation stepped down in the week the new signup flow shipped. Sessions with recent signups describe that flow as faster and clearer, and nobody who churned mentioned it. A PM concludes: \"the flow is likely a contributing factor, though not the whole story.\" What is wrong with the conclusion?",
+      "options": [
+        "It gives too much weight to qualitative evidence from a small number of sessions",
+        "It should have specified how much of the decline the flow accounts for",
+        "It invents a position neither source produced, and it is consistent with every possible future observation",
+        "It fails to note that the sessions were recruited after the change and cannot describe the previous flow"
+      ],
+      "correct": 2,
+      "explanation": "Averaging manufactures a belief no evidence supports and nothing can refute, which is why the team can act on it indefinitely without learning. Option D is a real methodological point and does not touch the failure: even with a perfect recruiting frame, splitting the difference would still produce an untestable claim."
+    },
+    {
+      "stage": "post",
+      "question": "Which pair of sources gives genuine triangulation on the claim that enterprise team leads lose decisions after recurring meetings?",
+      "options": [
+        "The account manager's summary of the three requests, and follow-up calls with those same three accounts",
+        "An in-product survey shown on the document surface, and event data from that same surface",
+        "The three requests, and a competitor's public announcement of a summaries feature",
+        "Interviews recruited from accounts outside the requesting channel, and a behavioural check on documents linked to recurring calendar events"
+      ],
+      "correct": 3,
+      "explanation": "Triangulation needs sources whose failure modes differ, and these two fail in different directions: recruiting bias for one, instrumentation coverage for the other. Option A feels like corroboration and is the same channel, the same relationship, and the same interpretation asked twice."
+    },
+    {
+      "stage": "post",
+      "question": "Activation fell after the signup change while signup completion rate rose in the same week. Which candidate model explains both observations without strain?",
+      "options": [
+        "The new flow lowered friction and admitted more low-intent users, changing who enters the activation denominator",
+        "The new flow confused users, who completed signup but could not find the document surface afterwards",
+        "The AI suggestion prompt shipped in the same window and suppressed document creation",
+        "Seasonality reduced activation while a marketing campaign raised signup completion"
+      ],
+      "correct": 0,
+      "explanation": "A composition shift produces both movements from one cause and predicts a further observation: activation should be flat within a fixed channel and intent segment. Option B is the most tempting because it keeps the flow as the culprit — but it predicts confusion in the sessions, and the sessions reported the opposite."
+    },
+    {
+      "stage": "post",
+      "question": "You are weighing two models of the activation decline. A new finding arrives that is roughly as likely under either model. How should it change your belief?",
+      "options": [
+        "It should strengthen whichever model it was collected to test",
+        "It should not change the balance between the models at all",
+        "It should strengthen both models equally, raising overall confidence",
+        "It should weaken both models, since neither predicted it specifically"
+      ],
+      "correct": 1,
+      "explanation": "Diagnosticity is the ratio of likelihoods, so evidence equally expected under both models carries no information about which is true. Option C is the intuitive error: a vivid, expensive, or recent finding feels like it must add something, and adding it to both sides is how unwarranted confidence accumulates."
+    },
+    {
+      "stage": "post",
+      "question": "A PM has updated her beliefs eleven times this quarter. Every update raised confidence in a position she already held. What is the most useful reading?",
+      "options": [
+        "Her original judgment was strong, which is what a calibrated PM should aim for",
+        "The updates are fine as long as each one cites a real observation",
+        "She is probably not updating, since a functioning belief system produces downgrades, and her candidate models may all share an assumption",
+        "She should reduce her stated confidence by a fixed amount to correct for overconfidence"
+      ],
+      "correct": 2,
+      "explanation": "A process that only ever confirms is collecting, not updating, and the likely cause is a candidate set that never contained a model she did not want to be true. Option D is a familiar debiasing move and it treats the symptom: adjusting the number leaves the reasoning that produced it untouched."
+    }
+  ]
+}

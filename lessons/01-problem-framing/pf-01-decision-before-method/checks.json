@@ -1,0 +1,66 @@
+{
+  "id": "PF-01",
+  "title": "Decision before method",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A PM writes: \"Investigate why activation dropped.\" What is missing before a method can be chosen?",
+      "options": [
+        "The choice this investigation could change, and its alternatives",
+        "A hypothesis about the likely cause",
+        "A deadline and an owner",
+        "Segmentation of the activation decline"
+      ],
+      "correct": 0,
+      "explanation": "\"Investigate why\" is a topic, not a decision. Without the choice and its live alternatives, any method will produce findings nobody can act on. The most tempting distractor is D: segmentation is genuinely good practice, but it is a method selected before the decision exists, so its output cannot move anything."
+    },
+    {
+      "stage": "post",
+      "question": "Which of these is an observation, with no interpretation attached?",
+      "options": [
+        "Onboarding is confusing new users",
+        "The new signup flow hurt activation",
+        "Activation fell 11% over six weeks",
+        "Users don't understand the value of AI suggestions"
+      ],
+      "correct": 2,
+      "explanation": "Only C states what was measured. A, B, and D each attach a cause to the observation. Smuggling the mechanism into the observation is how the first plausible story wins before it has been tested."
+    },
+    {
+      "stage": "post",
+      "question": "You have written a decision statement. What is the sharpest test that it is genuinely decision-linked?",
+      "options": [
+        "It fits on one page and names an owner",
+        "You can name two plausible findings that would lead to different actions",
+        "It cites the metric and the time window",
+        "Your engineering lead agrees it is worth investigating"
+      ],
+      "correct": 1,
+      "explanation": "If every plausible finding leads to the same action, the evidence cannot change anything and the work is decoration. The other options are hygiene — useful, but they do not test the link between evidence and choice."
+    },
+    {
+      "stage": "post",
+      "question": "A PM is entering a genuinely new market and cannot name the decision the research will change. What does decision-first require?",
+      "options": [
+        "Write a decision statement anyway; every research effort needs one",
+        "Skip the research until a decision emerges from the roadmap",
+        "Label the work as exploration, and do not later present it as settling a decision",
+        "Choose the cheapest method available and see what turns up"
+      ],
+      "correct": 2,
+      "explanation": "This is the boundary of the model. Exploration is legitimate. Manufacturing a fake decision statement to authorize it (A) is worse than labelling it honestly. The failure mode is presenting exploratory output as if it settled a decision it was never designed to settle."
+    },
+    {
+      "stage": "post",
+      "question": "A research readout concludes: \"Users want a faster onboarding experience.\" Why is this weak as a finding?",
+      "options": [
+        "It is not quantified with a percentage",
+        "Onboarding is an engineering concern, not a product one",
+        "It should have come from behavioural data rather than interviews",
+        "It states a preference as a conclusion without naming the decision it changes or what it rules out"
+      ],
+      "correct": 3,
+      "explanation": "A finding phrased as a universal preference cannot displace any alternative, so no decision moves. The most tempting distractor is C — blaming the method. But behavioural data phrased the same way would fail for exactly the same reason, so the method is not the failure here."
+    }
+  ]
+}

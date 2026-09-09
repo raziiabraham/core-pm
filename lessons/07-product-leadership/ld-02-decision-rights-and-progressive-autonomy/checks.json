@@ -1,0 +1,66 @@
+{
+  "id": "LD-02",
+  "title": "Decision rights and progressive autonomy",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A leader says: \"You own the migration call — decide and let me know, but run the final answer past me before you announce it.\" What authority level has actually been granted?",
+      "options": [
+        "Level 2, decide and inform, with a courtesy notification",
+        "Level 4, recommend and the leader decides, described as level 2",
+        "Level 3, decide after named consultation",
+        "Level 1, since the leader is only asking to be kept informed"
+      ],
+      "correct": 1,
+      "explanation": "A required pre-announcement check is a veto point, which makes the call the leader's. A is the tempting answer because the sentence sounds like level 2 and is meant kindly. But the person will discover the real level only when they are overruled, and a person told level 4 honestly does better work than one corrected repeatedly at level 2."
+    },
+    {
+      "stage": "post",
+      "question": "A PM meets the stated evidence standard in full and chooses the option the leader dislikes. What is the honest response?",
+      "options": [
+        "Add the missing analysis the leader now realizes was needed, then re-decide together",
+        "Let it stand, or overrule openly and say so — but do not retroactively declare the process insufficient",
+        "Accept the decision but reduce the PM's level in this class immediately",
+        "Ask the PM to socialize the decision more widely before it takes effect"
+      ],
+      "correct": 1,
+      "explanation": "The standard exists so that disagreement after it is met is about judgment, not process. A is the tempting distractor and the phase's recurring trap: it sounds collaborative and rigorous, but \"re-decide together\" after the standard was met takes the decision back while appearing to support it. Overruling is legitimate; disguising it is not."
+    },
+    {
+      "stage": "post",
+      "question": "Which movement rule best grows judgment rather than compliance?",
+      "options": [
+        "Move up after two quarters in the role with no major incidents",
+        "Move up when the leader feels comfortable that the person 'gets it'",
+        "Move up when the last three decisions in the class carried predictions written in advance and outcomes fell inside the stated confidence",
+        "Move up when the person's last three decisions turned out to be correct"
+      ],
+      "correct": 2,
+      "explanation": "C rewards calibration — honest uncertainty that proves honest. D is the answer a competent PM gives, and it is close, but being right is partly luck and it quietly punishes anyone who states uncertainty. Someone right 90% of the time who always claims certainty is worse calibrated than someone right 70% who said 70%."
+    },
+    {
+      "stage": "post",
+      "question": "A PM will hold authority over a build choice whose maintenance cost lands entirely on engineering, and the PM has no way to observe that cost. What is the right move?",
+      "options": [
+        "Grant the authority anyway; ownership is how people learn",
+        "Split the decision so engineering decides the technical half and the PM decides scope",
+        "Place the PM at level 3 with the engineer who carries the cost, or change what the PM can see before granting it",
+        "Grant it, and review the outcome in six months"
+      ],
+      "correct": 2,
+      "explanation": "Authority without visible consequence builds an uncorrected habit, because the feedback lands on someone else. B is tempting and often sensible elsewhere, but here it dodges the actual problem — the PM still cannot see the cost of the half they keep. Fix the visibility or name the consultation."
+    },
+    {
+      "stage": "post",
+      "question": "A decision-rights map was written when a migration had not started and was cheap to reverse. Work is now three weeks in. What does the map most need?",
+      "options": [
+        "A stated expiry condition, because the class has become one-way",
+        "A wider set of consulted people, since more is now at stake",
+        "Nothing — the rights were correctly assigned at the time",
+        "A shift of consequence ownership to the person doing the work"
+      ],
+      "correct": 0,
+      "explanation": "Rights are written against a situation, and reversibility is part of that situation. Once the work is committed, the decision class changed and the row should have voided. C is tempting because the original assignment genuinely was correct; the failure is that nothing told anyone when it stopped being correct."
+    }
+  ]
+}

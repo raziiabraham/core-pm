@@ -1,0 +1,66 @@
+{
+  "id": "DS-05",
+  "title": "Launch, exposure, and learning",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A feature misbehaves for one enterprise account at 4pm Friday. The team's only lever is to roll back the release, which also removes two unrelated fixes. What does this tell you about the launch plan?",
+      "options": [
+        "The release should have contained only this feature, so rollback would be clean",
+        "Exposure was never separated from deployment, so there is one control and one reversal path for four different failure modes",
+        "The team needs a faster deployment pipeline so rollback is less disruptive",
+        "The on-call rotation was not staffed for Friday evening"
+      ],
+      "correct": 1,
+      "explanation": "Deployment answers whether code runs; exposure answers who can reach it. When they share a control, the only reversal available is the blunt one. Option A is the answer a disciplined release engineer gives, and it is tempting because smaller releases are genuinely good practice; but a single-feature release still cannot turn the feature off for one account while leaving it on for others."
+    },
+    {
+      "stage": "post",
+      "question": "A PM says the team is ready to launch because the runbook, alerts, and support scripts are complete and the code is not yet deployed. What is the correct sequencing?",
+      "options": [
+        "Readiness must be complete before deployment, since production is where risk begins",
+        "Readiness and deployment must happen together, since untested code in production is itself the risk",
+        "Readiness gates exposure, not deployment; you may deploy before the runbook exists but must not expose",
+        "Readiness is only required before the announced stage, since silent exposure carries no operational load"
+      ],
+      "correct": 2,
+      "explanation": "Readiness answers what happens when this goes wrong, and that becomes urgent when a real user is behind the code. Option A is the careful-sounding rule, and enforcing it is what pushes teams toward rare, large releases; deploying behind a closed flag with no runbook is safe because nobody can reach it. Option D is wrong because silent exposure still exposes real users."
+    },
+    {
+      "stage": "post",
+      "question": "An AI summary feature assigns action owners. For some meetings it assigns them confidently and wrongly; the system returns a well-formed response and reports success. Why is an error-rate alarm an insufficient stop rule?",
+      "options": [
+        "The failure raises no exception, so every error-based monitor stays green while wrong output reaches users",
+        "Error rates lag by several minutes, which is too slow for this failure",
+        "Error rate is the wrong denominator; it should be measured per account rather than per request",
+        "Error rates cannot be attributed to the feature when other releases ship in the same window"
+      ],
+      "correct": 0,
+      "explanation": "Probabilistic output fails inside a successful response. The stop rule needs a human quality gate applied to a sample, at a rate that starts high and falls as evidence accumulates. Option C is the answer a measurement-literate PM gives, and it is a real refinement of an error rate — but refining a metric that is structurally blind to the failure does not make it see it."
+    },
+    {
+      "stage": "post",
+      "question": "A team plans to measure impact over two weeks. During those two weeks the rollout goes from 5% to 50% to all enterprise workspaces. What is the problem?",
+      "options": [
+        "Two weeks is too short a window for an enterprise feature",
+        "The 5% stage is too small to produce a usable sample",
+        "Every move of the exposure dial restarts the window, so there is no stable exposed group to compare",
+        "The unexposed group shrinks, which biases the estimate upward"
+      ],
+      "correct": 2,
+      "explanation": "Impact learning needs a stable exposure window, and this plan puts exposure changes and measurement in the same period. This is the deepest cost of treating launch as one dated event. Option D names a real secondary effect and is tempting because it sounds technical, but the primary defect is that no single exposed population existed long enough to measure at all."
+    },
+    {
+      "stage": "post",
+      "question": "A team wants to change the ordering of items in a personal sidebar. A PM proposes flags, an exposure ladder, a runbook, and a measurement plan. What is the right judgment?",
+      "options": [
+        "Proceed; the four-way separation is the standard for all user-facing change",
+        "Proceed, but shorten the ladder to two stages to reduce overhead",
+        "Skip only the measurement plan, since sidebar ordering has no measurable impact",
+        "The separation is not earned here: exposure is reversible, failure is visible, and the risk lands on the person who chose it"
+      ],
+      "correct": 3,
+      "explanation": "The separation costs machinery, and long-lived flags become permanent untested branches that cause their own outages. It earns its cost when exposure is hard to reverse, the failure is silent, or the consequence lands on someone who did not choose the risk. Option A is the answer a learner gives when a model has just been taught convincingly, and applying it everywhere is how a team slows down without becoming safer."
+    }
+  ]
+}

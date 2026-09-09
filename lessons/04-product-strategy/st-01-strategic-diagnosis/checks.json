@@ -1,0 +1,66 @@
+{
+  "id": "ST-01",
+  "title": "Strategic diagnosis",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A team's strategy document lists four goals with numbers and owners, plus a themed roadmap for the quarter. Two funding requests arrive and both advance at least one goal. What is the document missing?",
+      "options": [
+        "A claim about what is deciding outcomes now, which would tell you what to stop",
+        "Tighter targets, so the goals discriminate between requests",
+        "A prioritization framework applied to the two requests",
+        "Executive sign-off, so the goals carry authority"
+      ],
+      "correct": 0,
+      "explanation": "Goals and a roadmap are specific about targets and dates but say nothing about why the targets are hard, so any request that touches a goal qualifies. The tempting answer is C: a prioritization framework will produce a ranking, but it will rank against the same undifferentiated goals, so the same argument recurs next month."
+    },
+    {
+      "stage": "post",
+      "question": "Noted's PM proposes: \"Our binding constraint is that enterprise team leads lose decisions after recurring meetings.\" What is the strongest objection?",
+      "options": [
+        "Enterprise contracts are only about 20% of revenue, so the constraint is too small",
+        "Meeting summaries are an engineering problem, not a strategy problem",
+        "The claim has never been tested, and three requests through one account manager measure access to the team rather than prevalence",
+        "The constraint should be stated as a metric target so progress can be tracked"
+      ],
+      "correct": 2,
+      "explanation": "The case states the underlying claim is untested and that all three requests came through one account manager within a month. That is one channel, not an independent sample. A is tempting and wrong in structure: revenue share alone neither qualifies nor disqualifies a constraint, and 20% is not small."
+    },
+    {
+      "stage": "post",
+      "question": "You are testing three candidate constraints. What does the binding-constraint test actually require you to do?",
+      "options": [
+        "Rank them by expected value and pick the highest",
+        "Assume each is fully solved tomorrow at no cost, and ask whether the outcome you care about moves",
+        "Check which one has the most supporting evidence today",
+        "Ask which one the team can deliver fastest this cycle"
+      ],
+      "correct": 1,
+      "explanation": "Binding means relieving it changes the result while relieving the others does not, so you test by removing cost and delivery difficulty from the comparison. C is the tempting answer: the best-evidenced problem is often just the best-instrumented one, and evidence availability is not the same as causal weight."
+    },
+    {
+      "stage": "post",
+      "question": "A PM concludes the binding constraint on their product is the pricing of an infrastructure provider, which another function negotiates. What does the model say to do?",
+      "options": [
+        "Restate a smaller product-side problem as the binding constraint so the strategy is actionable",
+        "Drop the diagnosis and work from goals until the pricing question is resolved",
+        "Say the constraint plainly, name who controls it, then diagnose the strongest constraint inside your control",
+        "Escalate and pause product strategy work until the other function responds"
+      ],
+      "correct": 2,
+      "explanation": "This is the boundary of the model: a true diagnosis can be one you cannot act on. A is the tempting failure, because the resulting document reads well and is honest-looking, but it hides the real driver from anyone who later has to explain why the strategy underperformed."
+    },
+    {
+      "stage": "post",
+      "question": "Which statement is a diagnosis rather than a restated observation?",
+      "options": [
+        "Activation fell 11% over six weeks and needs to recover to its prior level",
+        "Our activation definition is inherited and undefended, so the number is unreliable",
+        "Two changes shipped during the decline window and one of them is likely responsible",
+        "New users are not reaching a first useful document, so nothing pulls them back within the return window"
+      ],
+      "correct": 3,
+      "explanation": "D proposes a mechanism a reader can disagree with and test. C is the tempting distractor: it sounds causal but only narrows the suspect list without saying what dynamic is operating, and it also assumes the cause sits inside the shipped changes."
+    }
+  ]
+}

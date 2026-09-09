@@ -1,0 +1,972 @@
+{
+  "course": "CORE / PM",
+  "tagline": "Re-own the judgment underneath product management.",
+  "repo": "https://github.com/raziiabraham/core-pm",
+  "rawBase": "https://raw.githubusercontent.com/raziiabraham/core-pm/main/",
+  "generatedBy": "scripts/build-lesson-manifest.mjs",
+  "stateFile": "PM-LEARNING.md",
+  "case": {
+    "name": "Noted",
+    "path": "lessons/noted/case.md"
+  },
+  "totals": {
+    "phases": 7,
+    "lessons": 43,
+    "minutes": 1325,
+    "hours": 22,
+    "authored": 43
+  },
+  "routes": [
+    {
+      "id": "complete",
+      "title": "Complete foundation",
+      "description": "All 43 lessons in dependency order.",
+      "hours": 22,
+      "lessons": [
+        "PF-01",
+        "PF-02",
+        "PF-03",
+        "PF-04",
+        "PF-05",
+        "PF-06",
+        "PJ-01",
+        "PJ-02",
+        "PJ-03",
+        "PJ-04",
+        "PJ-05",
+        "PJ-06",
+        "EV-01",
+        "EV-02",
+        "EV-03",
+        "EV-04",
+        "EV-05",
+        "EV-06",
+        "EV-07",
+        "ST-01",
+        "ST-02",
+        "ST-03",
+        "ST-04",
+        "ST-05",
+        "ST-06",
+        "TJ-01",
+        "TJ-02",
+        "TJ-03",
+        "TJ-04",
+        "TJ-05",
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05",
+        "DS-06",
+        "LD-01",
+        "LD-02",
+        "LD-03",
+        "LD-04",
+        "LD-05",
+        "LD-06",
+        "LD-07"
+      ]
+    },
+    {
+      "id": "field",
+      "title": "Decision field path",
+      "description": "Twelve applied lessons carrying one consequential decision from first signal to outcome.",
+      "hours": 6,
+      "lessons": [
+        "PF-01",
+        "PJ-01",
+        "PF-06",
+        "EV-01",
+        "EV-02",
+        "EV-07",
+        "ST-01",
+        "ST-04",
+        "TJ-05",
+        "DS-01",
+        "DS-04",
+        "DS-05"
+      ]
+    },
+    {
+      "id": "technical",
+      "title": "Technical + AI judgment",
+      "description": "For PMs working closely with engineering and AI systems.",
+      "hours": 7,
+      "lessons": [
+        "PF-01",
+        "PJ-03",
+        "PJ-06",
+        "EV-03",
+        "EV-04",
+        "EV-05",
+        "TJ-01",
+        "TJ-02",
+        "TJ-03",
+        "TJ-04",
+        "TJ-05",
+        "DS-02",
+        "DS-05"
+      ]
+    },
+    {
+      "id": "leadership",
+      "title": "Product leadership",
+      "description": "For group PMs and product leaders scaling judgment through others.",
+      "hours": 8,
+      "lessons": [
+        "PJ-04",
+        "PJ-05",
+        "PJ-06",
+        "ST-04",
+        "ST-06",
+        "DS-03",
+        "DS-04",
+        "DS-06",
+        "LD-01",
+        "LD-02",
+        "LD-03",
+        "LD-04",
+        "LD-05",
+        "LD-06",
+        "LD-07"
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "id": "PF",
+      "number": "01",
+      "slug": "01-problem-framing",
+      "title": "Problem Framing",
+      "promise": "Turn noise, requests, and symptoms into a bounded decision worth investigating.",
+      "domains": [
+        "Decision framing",
+        "User insight",
+        "Opportunity assessment"
+      ],
+      "path": "lessons/01-problem-framing",
+      "hasAssessment": true,
+      "lessonCount": 6,
+      "minutes": 153,
+      "lessons": [
+        {
+          "id": "PF-01",
+          "slug": "pf-01-decision-before-method",
+          "title": "Decision before method",
+          "minutes": 22,
+          "prerequisites": [],
+          "premise": "Research begins with the decision the evidence could change—not a favorite method or a preselected answer.",
+          "artifact": "Decision brief",
+          "artifactSlug": "decision-brief",
+          "path": "lessons/01-problem-framing/pf-01-decision-before-method",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "PF-02",
+          "slug": "pf-02-problem-mechanism-alternatives",
+          "title": "Problem, mechanism, alternatives",
+          "minutes": 26,
+          "prerequisites": [
+            "PF-01"
+          ],
+          "premise": "A symptom becomes useful only when you can name a plausible mechanism and competing explanations.",
+          "artifact": "Problem mechanism map",
+          "artifactSlug": "problem-mechanism-map",
+          "path": "lessons/01-problem-framing/pf-02-problem-mechanism-alternatives",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "PF-03",
+          "slug": "pf-03-evidence-boundaries",
+          "title": "Evidence boundaries",
+          "minutes": 24,
+          "prerequisites": [
+            "PF-01"
+          ],
+          "premise": "Every claim needs a visible population, time window, source, and limit before it can carry product weight.",
+          "artifact": "Evidence boundary note",
+          "artifactSlug": "evidence-boundary-note",
+          "path": "lessons/01-problem-framing/pf-03-evidence-boundaries",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "PF-04",
+          "slug": "pf-04-right-sized-framing",
+          "title": "Right-sized framing",
+          "minutes": 24,
+          "prerequisites": [
+            "PF-01",
+            "PF-02"
+          ],
+          "premise": "The frame should be no broader than the next consequential and reversible choice requires.",
+          "artifact": "Framing scale check",
+          "artifactSlug": "framing-scale-check",
+          "path": "lessons/01-problem-framing/pf-04-right-sized-framing",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "PF-05",
+          "slug": "pf-05-user-and-context-boundary",
+          "title": "User and context boundary",
+          "minutes": 27,
+          "prerequisites": [
+            "PF-02"
+          ],
+          "premise": "A useful audience is a behavior-and-context boundary, not a demographic label or an imagined average user.",
+          "artifact": "Audience boundary",
+          "artifactSlug": "audience-boundary",
+          "path": "lessons/01-problem-framing/pf-05-user-and-context-boundary",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "PF-06",
+          "slug": "pf-06-opportunity-worth-solving",
+          "title": "Opportunity worth solving",
+          "minutes": 30,
+          "prerequisites": [
+            "PF-02",
+            "PF-04",
+            "PF-05"
+          ],
+          "premise": "Opportunity earns priority through consequence, frequency, ownership, alternatives, and strategic fit—not request volume alone.",
+          "artifact": "Opportunity case",
+          "artifactSlug": "opportunity-case",
+          "path": "lessons/01-problem-framing/pf-06-opportunity-worth-solving",
+          "depth": "full",
+          "hasChecks": true
+        }
+      ]
+    },
+    {
+      "id": "PJ",
+      "number": "02",
+      "slug": "02-product-judgment",
+      "title": "Product Judgment",
+      "promise": "Take a position without manufacturing certainty, then make the reasoning inspectable.",
+      "domains": [
+        "Calibrated judgment",
+        "Trade-off reasoning",
+        "Decision architecture"
+      ],
+      "path": "lessons/02-product-judgment",
+      "hasAssessment": true,
+      "lessonCount": 6,
+      "minutes": 161,
+      "lessons": [
+        {
+          "id": "PJ-01",
+          "slug": "pj-01-calibrated-product-judgment",
+          "title": "Calibrated product judgment",
+          "minutes": 28,
+          "prerequisites": [
+            "PF-03",
+            "PF-05"
+          ],
+          "premise": "Judgment integrates evidence, accumulated exposure, strategic context, and accountability while preserving uncertainty.",
+          "artifact": "Calibrated product view",
+          "artifactSlug": "calibrated-product-view",
+          "path": "lessons/02-product-judgment/pj-01-calibrated-product-judgment",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "PJ-02",
+          "slug": "pj-02-define-good",
+          "title": "Define good",
+          "minutes": 24,
+          "prerequisites": [
+            "PF-02",
+            "PF-05"
+          ],
+          "premise": "Teams cannot trade off intelligently until the desired change and its quality bar are explicit.",
+          "artifact": "Definition of good",
+          "artifactSlug": "definition-of-good",
+          "path": "lessons/02-product-judgment/pj-02-define-good",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "PJ-03",
+          "slug": "pj-03-trade-offs-and-opportunity-cost",
+          "title": "Trade-offs and opportunity cost",
+          "minutes": 29,
+          "prerequisites": [
+            "PF-04",
+            "PF-06",
+            "PJ-02"
+          ],
+          "premise": "A choice is only real when the displaced option, resource, risk, and future flexibility are visible.",
+          "artifact": "Trade-off record",
+          "artifactSlug": "trade-off-record",
+          "path": "lessons/02-product-judgment/pj-03-trade-offs-and-opportunity-cost",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "PJ-04",
+          "slug": "pj-04-decision-architecture",
+          "title": "Decision architecture",
+          "minutes": 27,
+          "prerequisites": [
+            "PF-01",
+            "PF-04"
+          ],
+          "premise": "Impact, reversibility, uncertainty, timing, and expertise should determine rigor, participation, and review depth.",
+          "artifact": "Decision architecture",
+          "artifactSlug": "decision-architecture",
+          "path": "lessons/02-product-judgment/pj-04-decision-architecture",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "PJ-05",
+          "slug": "pj-05-decision-quality-under-uncertainty",
+          "title": "Decision quality under uncertainty",
+          "minutes": 28,
+          "prerequisites": [
+            "PJ-01",
+            "PJ-04"
+          ],
+          "premise": "Judge the reasoning from what was knowable at the time, then separate process quality from luck and outcome.",
+          "artifact": "Pre-outcome decision review",
+          "artifactSlug": "pre-outcome-decision-review",
+          "path": "lessons/02-product-judgment/pj-05-decision-quality-under-uncertainty",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "PJ-06",
+          "slug": "pj-06-delegation-readiness",
+          "title": "Delegation readiness",
+          "minutes": 25,
+          "prerequisites": [
+            "PJ-02",
+            "PJ-04",
+            "PJ-05"
+          ],
+          "premise": "Work is ready to delegate when intent, constraints, interfaces, evidence, and escalation conditions are portable.",
+          "artifact": "Delegation contract",
+          "artifactSlug": "delegation-contract",
+          "path": "lessons/02-product-judgment/pj-06-delegation-readiness",
+          "depth": "full",
+          "hasChecks": true
+        }
+      ]
+    },
+    {
+      "id": "EV",
+      "number": "03",
+      "slug": "03-evidence",
+      "title": "Evidence",
+      "promise": "Choose evidence that can answer the claim, then update belief without overclaiming.",
+      "domains": [
+        "Qualitative research",
+        "Measurement design",
+        "Causal inference"
+      ],
+      "path": "lessons/03-evidence",
+      "hasAssessment": true,
+      "lessonCount": 7,
+      "minutes": 235,
+      "lessons": [
+        {
+          "id": "EV-01",
+          "slug": "ev-01-evidence-fit-and-sufficiency",
+          "title": "Evidence fit and sufficiency",
+          "minutes": 28,
+          "prerequisites": [
+            "PF-01",
+            "PF-04"
+          ],
+          "premise": "Evidence quality depends on whether the method can answer the claim and whether the decision needs more certainty.",
+          "artifact": "Evidence plan",
+          "artifactSlug": "evidence-plan",
+          "path": "lessons/03-evidence/ev-01-evidence-fit-and-sufficiency",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "EV-02",
+          "slug": "ev-02-qualitative-evidence-and-synthesis",
+          "title": "Qualitative evidence and synthesis",
+          "minutes": 34,
+          "prerequisites": [
+            "PF-03",
+            "PF-05",
+            "EV-01"
+          ],
+          "premise": "Qualitative work reveals mechanism and context when observations stay separate from interpretation and contradiction survives synthesis.",
+          "artifact": "Insight synthesis",
+          "artifactSlug": "insight-synthesis",
+          "path": "lessons/03-evidence/ev-02-qualitative-evidence-and-synthesis",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "EV-03",
+          "slug": "ev-03-measurement-models-and-metrics",
+          "title": "Measurement models and metrics",
+          "minutes": 32,
+          "prerequisites": [
+            "PF-02",
+            "PJ-02",
+            "EV-01"
+          ],
+          "premise": "A metric is meaningful only when its population, event, window, aggregation, and connection to value are explicit.",
+          "artifact": "Metric definition",
+          "artifactSlug": "metric-definition",
+          "path": "lessons/03-evidence/ev-03-measurement-models-and-metrics",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "EV-04",
+          "slug": "ev-04-instrumentation-and-data-contracts",
+          "title": "Instrumentation and data contracts",
+          "minutes": 30,
+          "prerequisites": [
+            "EV-03"
+          ],
+          "premise": "Instrumentation is a product contract about what happened, to whom, when, and with which identity—not an analytics afterthought.",
+          "artifact": "Tracking contract",
+          "artifactSlug": "tracking-contract",
+          "path": "lessons/03-evidence/ev-04-instrumentation-and-data-contracts",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "EV-05",
+          "slug": "ev-05-data-reasoning-and-sql-supervision",
+          "title": "Data reasoning and SQL supervision",
+          "minutes": 38,
+          "prerequisites": [
+            "EV-03",
+            "EV-04"
+          ],
+          "premise": "PMs need enough data literacy to specify the question, inspect joins and denominators, and challenge plausible but wrong output.",
+          "artifact": "Analysis review sheet",
+          "artifactSlug": "analysis-review-sheet",
+          "path": "lessons/03-evidence/ev-05-data-reasoning-and-sql-supervision",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "EV-06",
+          "slug": "ev-06-experiment-and-causal-judgment",
+          "title": "Experiment and causal judgment",
+          "minutes": 42,
+          "prerequisites": [
+            "PJ-05",
+            "EV-03",
+            "EV-04",
+            "EV-05"
+          ],
+          "premise": "Experiments estimate causal effects only inside their assignment, exposure, measurement, and inference boundaries.",
+          "artifact": "Experiment decision memo",
+          "artifactSlug": "experiment-decision-memo",
+          "path": "lessons/03-evidence/ev-06-experiment-and-causal-judgment",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "EV-07",
+          "slug": "ev-07-triangulation-and-belief-updating",
+          "title": "Triangulation and belief updating",
+          "minutes": 31,
+          "prerequisites": [
+            "EV-01",
+            "EV-02",
+            "EV-05",
+            "EV-06"
+          ],
+          "premise": "Conflicting evidence should change the model of the world, not be averaged into false consensus.",
+          "artifact": "Belief update ledger",
+          "artifactSlug": "belief-update-ledger",
+          "path": "lessons/03-evidence/ev-07-triangulation-and-belief-updating",
+          "depth": "full",
+          "hasChecks": true
+        }
+      ]
+    },
+    {
+      "id": "ST",
+      "number": "04",
+      "slug": "04-product-strategy",
+      "title": "Product Strategy",
+      "promise": "Convert evidence into a coherent choice about how the product will win—and what it will not do.",
+      "domains": [
+        "Strategic diagnosis",
+        "Positioning",
+        "Portfolio and sequencing"
+      ],
+      "path": "lessons/04-product-strategy",
+      "hasAssessment": true,
+      "lessonCount": 6,
+      "minutes": 189,
+      "lessons": [
+        {
+          "id": "ST-01",
+          "slug": "st-01-strategic-diagnosis",
+          "title": "Strategic diagnosis",
+          "minutes": 31,
+          "prerequisites": [
+            "PF-02",
+            "PF-03",
+            "EV-07"
+          ],
+          "premise": "Strategy starts by identifying the constraint or dynamic that matters most, not by writing an aspiration.",
+          "artifact": "Strategic diagnosis",
+          "artifactSlug": "strategic-diagnosis",
+          "path": "lessons/04-product-strategy/st-01-strategic-diagnosis",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "ST-02",
+          "slug": "st-02-product-market-hypothesis-system",
+          "title": "Product-market hypothesis system",
+          "minutes": 35,
+          "prerequisites": [
+            "PF-05",
+            "EV-03",
+            "EV-07",
+            "ST-01"
+          ],
+          "premise": "Audience, problem, value, acquisition, retention, and economics are linked hypotheses that can fail independently.",
+          "artifact": "Product-market hypothesis map",
+          "artifactSlug": "product-market-hypothesis-map",
+          "path": "lessons/04-product-strategy/st-02-product-market-hypothesis-system",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "ST-03",
+          "slug": "st-03-advantage-and-positioning-choice",
+          "title": "Advantage and positioning choice",
+          "minutes": 32,
+          "prerequisites": [
+            "PJ-03",
+            "ST-01",
+            "ST-02"
+          ],
+          "premise": "Positioning becomes strategic when it commits to an audience, alternative, valued difference, and capability the company can sustain.",
+          "artifact": "Positioning choice",
+          "artifactSlug": "positioning-choice",
+          "path": "lessons/04-product-strategy/st-03-advantage-and-positioning-choice",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "ST-04",
+          "slug": "st-04-product-bets-and-portfolio",
+          "title": "Product bets and portfolio",
+          "minutes": 34,
+          "prerequisites": [
+            "PJ-03",
+            "ST-02",
+            "ST-03"
+          ],
+          "premise": "A healthy portfolio funds feature, growth, scale, risk, and enabling work according to the constraint—not politics or visibility.",
+          "artifact": "Product bet portfolio",
+          "artifactSlug": "product-bet-portfolio",
+          "path": "lessons/04-product-strategy/st-04-product-bets-and-portfolio",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "ST-05",
+          "slug": "st-05-strategic-sequencing-and-options",
+          "title": "Strategic sequencing and options",
+          "minutes": 29,
+          "prerequisites": [
+            "PJ-04",
+            "PJ-05",
+            "ST-04"
+          ],
+          "premise": "Sequence should retire the most decision-relevant uncertainty while preserving future options.",
+          "artifact": "Strategic sequence",
+          "artifactSlug": "strategic-sequence",
+          "path": "lessons/04-product-strategy/st-05-strategic-sequencing-and-options",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "ST-06",
+          "slug": "st-06-strategy-communication-and-revision",
+          "title": "Strategy communication and revision",
+          "minutes": 28,
+          "prerequisites": [
+            "ST-01",
+            "ST-02",
+            "ST-03",
+            "ST-04",
+            "ST-05"
+          ],
+          "premise": "Strategy is useful when another team can make a trade-off from it and knows which evidence should trigger revision.",
+          "artifact": "Strategy narrative",
+          "artifactSlug": "strategy-narrative",
+          "path": "lessons/04-product-strategy/st-06-strategy-communication-and-revision",
+          "depth": "full",
+          "hasChecks": true
+        }
+      ]
+    },
+    {
+      "id": "TJ",
+      "number": "05",
+      "slug": "05-technical-judgment",
+      "title": "Technical Judgment",
+      "promise": "Reason about systems, build choices, and AI without pretending to own specialist expertise.",
+      "domains": [
+        "Systems reasoning",
+        "Build trade-offs",
+        "AI system evaluation"
+      ],
+      "path": "lessons/05-technical-judgment",
+      "hasAssessment": true,
+      "lessonCount": 5,
+      "minutes": 171,
+      "lessons": [
+        {
+          "id": "TJ-01",
+          "slug": "tj-01-technical-abstraction-without-ignorance",
+          "title": "Technical abstraction without ignorance",
+          "minutes": 30,
+          "prerequisites": [
+            "PF-02",
+            "PJ-02"
+          ],
+          "premise": "A PM should understand boundaries, failure modes, constraints, and consequences deeply enough to ask better product questions.",
+          "artifact": "System boundary sketch",
+          "artifactSlug": "system-boundary-sketch",
+          "path": "lessons/05-technical-judgment/tj-01-technical-abstraction-without-ignorance",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "TJ-02",
+          "slug": "tj-02-system-boundaries-and-trade-offs",
+          "title": "System boundaries and trade-offs",
+          "minutes": 34,
+          "prerequisites": [
+            "PJ-03",
+            "TJ-01"
+          ],
+          "premise": "Technical choices move cost, latency, reliability, security, and ownership across system boundaries rather than removing them.",
+          "artifact": "Technical trade-off map",
+          "artifactSlug": "technical-trade-off-map",
+          "path": "lessons/05-technical-judgment/tj-02-system-boundaries-and-trade-offs",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "TJ-03",
+          "slug": "tj-03-technical-portfolio-and-thresholds",
+          "title": "Technical portfolio and thresholds",
+          "minutes": 31,
+          "prerequisites": [
+            "ST-04",
+            "ST-05",
+            "TJ-01"
+          ],
+          "premise": "Scale, risk, debt, and enabling work should be funded against explicit consequence thresholds.",
+          "artifact": "Technical portfolio",
+          "artifactSlug": "technical-portfolio",
+          "path": "lessons/05-technical-judgment/tj-03-technical-portfolio-and-thresholds",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "TJ-04",
+          "slug": "tj-04-repository-and-delivery-system-literacy",
+          "title": "Repository and delivery-system literacy",
+          "minutes": 36,
+          "prerequisites": [
+            "TJ-01"
+          ],
+          "premise": "Repository structure, tests, release paths, observability, and ownership reveal the real cost of changing a product.",
+          "artifact": "Repository orientation note",
+          "artifactSlug": "repository-orientation-note",
+          "path": "lessons/05-technical-judgment/tj-04-repository-and-delivery-system-literacy",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "TJ-05",
+          "slug": "tj-05-ai-system-judgment",
+          "title": "AI system judgment",
+          "minutes": 40,
+          "prerequisites": [
+            "PJ-06",
+            "EV-01",
+            "EV-05",
+            "TJ-01"
+          ],
+          "premise": "AI output must be evaluated as a probabilistic system with context, evaluation, human authority, failure, and cost boundaries.",
+          "artifact": "AI system decision record",
+          "artifactSlug": "ai-system-decision-record",
+          "path": "lessons/05-technical-judgment/tj-05-ai-system-judgment",
+          "depth": "full",
+          "hasChecks": true
+        }
+      ]
+    },
+    {
+      "id": "DS",
+      "number": "06",
+      "slug": "06-product-delivery-systems",
+      "title": "Product Delivery Systems",
+      "promise": "Carry intent through slicing, commitment, exposure, adaptation, and learning.",
+      "domains": [
+        "Delivery systems",
+        "Staged exposure",
+        "Operational learning"
+      ],
+      "path": "lessons/06-product-delivery-systems",
+      "hasAssessment": true,
+      "lessonCount": 6,
+      "minutes": 192,
+      "lessons": [
+        {
+          "id": "DS-01",
+          "slug": "ds-01-from-evidence-to-commitment",
+          "title": "From evidence to commitment",
+          "minutes": 28,
+          "prerequisites": [
+            "PJ-02",
+            "PJ-05",
+            "EV-07",
+            "ST-06"
+          ],
+          "premise": "Commitment begins when product value and effort conviction are strong enough to displace real alternatives.",
+          "artifact": "Commitment brief",
+          "artifactSlug": "commitment-brief",
+          "path": "lessons/06-product-delivery-systems/ds-01-from-evidence-to-commitment",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "DS-02",
+          "slug": "ds-02-sequence-slice-and-dependencies",
+          "title": "Sequence, slice, and dependencies",
+          "minutes": 35,
+          "prerequisites": [
+            "ST-05",
+            "TJ-02",
+            "TJ-03",
+            "DS-01"
+          ],
+          "premise": "Smaller sequential delivery should create evidence, option value, and safe integration—not merely smaller tickets.",
+          "artifact": "Delivery sequence",
+          "artifactSlug": "delivery-sequence",
+          "path": "lessons/06-product-delivery-systems/ds-02-sequence-slice-and-dependencies",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "DS-03",
+          "slug": "ds-03-delivery-system-design",
+          "title": "Delivery system design",
+          "minutes": 34,
+          "prerequisites": [
+            "TJ-04",
+            "DS-01",
+            "DS-02"
+          ],
+          "premise": "A delivery system coordinates decisions, work, integration, and learning across explicit ownership and interfaces.",
+          "artifact": "Delivery system map",
+          "artifactSlug": "delivery-system-map",
+          "path": "lessons/06-product-delivery-systems/ds-03-delivery-system-design",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "DS-04",
+          "slug": "ds-04-review-adaptation-and-escalation",
+          "title": "Review, adaptation, and escalation",
+          "minutes": 30,
+          "prerequisites": [
+            "PJ-04",
+            "DS-03"
+          ],
+          "premise": "Review should improve the work and expose risk while preserving ownership; escalation should name the exact decision needed.",
+          "artifact": "Review and escalation protocol",
+          "artifactSlug": "review-and-escalation-protocol",
+          "path": "lessons/06-product-delivery-systems/ds-04-review-adaptation-and-escalation",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "DS-05",
+          "slug": "ds-05-launch-exposure-and-learning",
+          "title": "Launch, exposure, and learning",
+          "minutes": 36,
+          "prerequisites": [
+            "EV-04",
+            "EV-06",
+            "TJ-05",
+            "DS-03",
+            "DS-04"
+          ],
+          "premise": "Deployment, user exposure, operational readiness, and impact learning are separate decisions with separate controls.",
+          "artifact": "Staged launch plan",
+          "artifactSlug": "staged-launch-plan",
+          "path": "lessons/06-product-delivery-systems/ds-05-launch-exposure-and-learning",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "DS-06",
+          "slug": "ds-06-system-improvement",
+          "title": "System improvement",
+          "minutes": 29,
+          "prerequisites": [
+            "DS-05"
+          ],
+          "premise": "Retrospectives matter when they change an operating rule, interface, threshold, or capability—not when they only record sentiment.",
+          "artifact": "System change record",
+          "artifactSlug": "system-change-record",
+          "path": "lessons/06-product-delivery-systems/ds-06-system-improvement",
+          "depth": "full",
+          "hasChecks": true
+        }
+      ]
+    },
+    {
+      "id": "LD",
+      "number": "07",
+      "slug": "07-product-leadership",
+      "title": "Product Leadership",
+      "promise": "Create direction, autonomy, and accountability that improve judgment beyond one PM.",
+      "domains": [
+        "Direction setting",
+        "Decision rights",
+        "Judgment coaching"
+      ],
+      "path": "lessons/07-product-leadership",
+      "hasAssessment": true,
+      "lessonCount": 7,
+      "minutes": 224,
+      "lessons": [
+        {
+          "id": "LD-01",
+          "slug": "ld-01-direction-that-enables-decisions",
+          "title": "Direction that enables decisions",
+          "minutes": 29,
+          "prerequisites": [
+            "ST-06"
+          ],
+          "premise": "Direction succeeds when people can use it to resolve a real trade-off without asking the leader to decide again.",
+          "artifact": "Decision-enabling direction",
+          "artifactSlug": "decision-enabling-direction",
+          "path": "lessons/07-product-leadership/ld-01-direction-that-enables-decisions",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "LD-02",
+          "slug": "ld-02-decision-rights-and-progressive-autonomy",
+          "title": "Decision rights and progressive autonomy",
+          "minutes": 32,
+          "prerequisites": [
+            "PJ-04",
+            "PJ-06"
+          ],
+          "premise": "Autonomy grows when authority, consequence, evidence standards, and escalation boundaries are explicit.",
+          "artifact": "Decision-rights map",
+          "artifactSlug": "decision-rights-map",
+          "path": "lessons/07-product-leadership/ld-02-decision-rights-and-progressive-autonomy",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "LD-03",
+          "slug": "ld-03-developing-judgment-in-others",
+          "title": "Developing judgment in others",
+          "minutes": 33,
+          "prerequisites": [
+            "PJ-05",
+            "LD-02"
+          ],
+          "premise": "Leaders develop judgment by exposing reasoning, asking calibrated questions, and reviewing decisions without taking them back.",
+          "artifact": "Judgment coaching plan",
+          "artifactSlug": "judgment-coaching-plan",
+          "path": "lessons/07-product-leadership/ld-03-developing-judgment-in-others",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "LD-04",
+          "slug": "ld-04-operating-systems-for-good-product-work",
+          "title": "Operating systems for good product work",
+          "minutes": 34,
+          "prerequisites": [
+            "DS-03",
+            "DS-06"
+          ],
+          "premise": "Cadence, artifacts, forums, and information flow should make the next important decision easier—not add ritual.",
+          "artifact": "Product operating system",
+          "artifactSlug": "product-operating-system",
+          "path": "lessons/07-product-leadership/ld-04-operating-systems-for-good-product-work",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "LD-05",
+          "slug": "ld-05-team-capability-architecture",
+          "title": "Team capability architecture",
+          "minutes": 31,
+          "prerequisites": [
+            "LD-03",
+            "LD-04"
+          ],
+          "premise": "A team needs a portfolio of capabilities, not identical PMs; gaps should be addressed through development, hiring, or interfaces.",
+          "artifact": "Capability portfolio",
+          "artifactSlug": "capability-portfolio",
+          "path": "lessons/07-product-leadership/ld-05-team-capability-architecture",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "LD-06",
+          "slug": "ld-06-intervention-and-accountability",
+          "title": "Intervention and accountability",
+          "minutes": 30,
+          "prerequisites": [
+            "LD-02",
+            "LD-03"
+          ],
+          "premise": "Intervention should be proportionate, temporary, explicit about the failure mode, and designed to return ownership.",
+          "artifact": "Intervention contract",
+          "artifactSlug": "intervention-contract",
+          "path": "lessons/07-product-leadership/ld-06-intervention-and-accountability",
+          "depth": "full",
+          "hasChecks": true
+        },
+        {
+          "id": "LD-07",
+          "slug": "ld-07-executive-and-cross-functional-leadership",
+          "title": "Executive and cross-functional leadership",
+          "minutes": 35,
+          "prerequisites": [
+            "LD-01",
+            "LD-02",
+            "DS-04"
+          ],
+          "premise": "Influence rises when context, recommendation, trade-offs, confidence, dissent, and the exact ask are clear.",
+          "artifact": "Executive decision memo",
+          "artifactSlug": "executive-decision-memo",
+          "path": "lessons/07-product-leadership/ld-07-executive-and-cross-functional-leadership",
+          "depth": "full",
+          "hasChecks": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "PJ-03",
+  "title": "Trade-offs and opportunity cost",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "Forced to choose between large-workspace performance and enterprise summaries, a PM says: \"Performance first, then summaries.\" Why is this not yet a decision?",
+      "options": [
+        "Because the engineering estimate for performance work has not been produced",
+        "Because summaries have a larger revenue base and should therefore go first",
+        "Because sequencing decisions require sign-off from the account manager",
+        "Because it names an order without naming what the delay to summaries costs, or who bears it"
+      ],
+      "correct": 3,
+      "explanation": "Sequencing displaces the second option by the duration of the first, and that delay has a cost and a payer. Option A is the tempting one: an estimate would sharpen the sequence, but you could have a perfect estimate and still have recorded no trade-off."
+    },
+    {
+      "stage": "post",
+      "question": "A PM justifies the performance work: \"Slow workspaces put paid seats at risk, so this is clearly worth doing.\" What is the reasoning error?",
+      "options": [
+        "The 34% figure came from monitoring rather than from customers",
+        "The work is being compared to doing nothing, not to the best alternative use of the same engineers",
+        "P95 response time is not a user-facing metric",
+        "4% of workspaces is too small a population to justify a cycle of work"
+      ],
+      "correct": 1,
+      "explanation": "An option can be positive against inaction and still be a loss against what those same engineers would otherwise have built. Option D is the answer a PM gives after learning to check population size — but a small population holding a disproportionate share of paid seats may well be worth it. The error is the missing comparison, not the size."
+    },
+    {
+      "stage": "post",
+      "question": "An engineering lead says the team can shift \"about 40% of capacity\" from the migration to performance work. What should the PM check first?",
+      "options": [
+        "Whether 40% is enough to complete the performance work this cycle",
+        "Whether the remaining 60% still meets the migration deadline",
+        "Whether the same specific engineers are the only ones who can do both, making the capacity non-substitutable",
+        "Whether 40% has been agreed with the founder before it is committed"
+      ],
+      "correct": 2,
+      "explanation": "Capacity expressed as a percentage hides whether the resource is a pool of hours or two specific people. If they are the same two, moving 40% may mean moving all of the only people who can do either. Options A and B both reason correctly inside a false premise — they treat the percentage as real before checking whether it is."
+    },
+    {
+      "stage": "post",
+      "question": "A PM writes a full five-face trade-off record for a decision about which of two empty-state copy variants to ship. Both are reversible within a day. What is the problem?",
+      "options": [
+        "The record costs more than the decision, and the habit slows the team where speed was free",
+        "Copy changes should be owned by design, so the record is written by the wrong person",
+        "Nothing — consistent documentation is what makes trade-offs comparable over time",
+        "The record should have used a single face, reversal cost, rather than all five"
+      ],
+      "correct": 0,
+      "explanation": "The boundary of the model is consequence multiplied by reversal cost. Option C is the trained answer — consistency sounds like discipline, but a team that documents every trade-off documents them badly and pays the process cost exactly where it earns nothing."
+    },
+    {
+      "stage": "post",
+      "question": "After the decision to fund performance work is announced, the PM writes a trade-off record explaining why summaries lost. How should this document be treated?",
+      "options": [
+        "As a decision record, since it contains all five faces of the trade-off",
+        "As evidence that the decision was sound, since it survived being written down",
+        "As invalid, because trade-off records written after a decision have no use",
+        "As a rationale, labelled as such, and kept out of the evidence base as if it were a decision record"
+      ],
+      "correct": 3,
+      "explanation": "Once a choice is announced, every face of it can be described so that the choice looks correct. The document may still be useful for communicating the decision. Option C over-corrects — the failure is not writing it, it is letting a defence enter the record as if it were analysis."
+    }
+  ]
+}

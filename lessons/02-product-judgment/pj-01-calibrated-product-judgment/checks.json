@@ -1,0 +1,66 @@
+{
+  "id": "PJ-01",
+  "title": "Calibrated product judgment",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "Asked for a recommendation on the enterprise summaries request, a PM says: \"The evidence isn't conclusive yet, so I'd want more discovery before committing.\" What has actually happened?",
+      "options": [
+        "The PM has correctly preserved uncertainty instead of overstating a weak case",
+        "The PM has taken the \"no roadmap change\" position, which is the safest available",
+        "The PM has withheld a position, so the decision moves to whoever speaks with confidence",
+        "The PM has escalated the decision to the person holding the strongest evidence"
+      ],
+      "correct": 2,
+      "explanation": "The decision does not pause because you declined to answer it. It gets made elsewhere, usually by the least calibrated voice. Option A is the tempting one — it sounds like rigor. But preserving uncertainty means keeping the position and attaching a confidence to it, not removing the position."
+    },
+    {
+      "stage": "post",
+      "question": "A PM's position on enterprise summaries rests mostly on having shipped a similar capability at a previous company, where it drove expansion revenue. What does calibration require?",
+      "options": [
+        "Disclose accumulated exposure as the load-bearing input, and state what would make that pattern fail to transfer",
+        "Discard the prior experience, because it is not evidence about Noted's users",
+        "Re-label the experience as evidence by finding Noted data that matches the pattern",
+        "Drop confidence to low, because personal experience cannot support a position"
+      ],
+      "correct": 0,
+      "explanation": "Accumulated exposure is a legitimate input. It becomes dangerous only when it is hidden or dressed as evidence. Option C is what a PM does once they have learned that \"evidence\" is the respectable word — going to find confirming data for a conclusion already held is exactly how the pattern stops being checkable."
+    },
+    {
+      "stage": "post",
+      "question": "The three enterprise contracts are worth roughly 20% of current revenue. A PM writes: \"20% of revenue is at risk if we don't build this.\" What is wrong with that sentence?",
+      "options": [
+        "The percentage is too imprecise to carry weight in a decision document",
+        "Revenue concentration is a finance concern rather than a product input",
+        "Contract value should be weighed against engineering cost before it is quoted",
+        "The case establishes contract value, not churn risk; the sentence converts one into the other with no source"
+      ],
+      "correct": 3,
+      "explanation": "Nothing in the case says these accounts will leave. Turning \"these customers are large\" into \"this revenue is at risk\" manufactures a consequence no source supports. Option C is tempting because weighing value against cost is good practice, but it accepts the false premise instead of catching it."
+    },
+    {
+      "stage": "post",
+      "question": "A decision must be made before an option expires, and the PM's evidence is genuinely thin. What does the boundary of calibration say?",
+      "options": [
+        "Report low confidence and wait, since acting on thin evidence is what calibration exists to prevent",
+        "Take a position, state the low confidence, and price waiting as one of the options rather than treating it as neutral",
+        "Hand the decision to the engineering lead, because low confidence means the PM lacks standing",
+        "Raise confidence to moderate so the team can move, then revise if the evidence changes"
+      ],
+      "correct": 1,
+      "explanation": "When the option set is shrinking, waiting is a choice with a cost and must be stated like any other. Option A is the trained-but-not-calibrated answer: it treats low confidence as a reason not to decide, which hides a choice inside a process."
+    },
+    {
+      "stage": "post",
+      "question": "Which of these positions is calibrated in the sense this lesson means?",
+      "options": [
+        "\"I'm about 70% confident that enterprise summaries will increase retention.\"",
+        "\"Build summaries. High confidence, based on strong signals from our most valuable customers.\"",
+        "\"Run a bounded test of the lost-decisions claim before committing engineering capacity. Moderate confidence. If a second, independent channel surfaces the same loss of decisions and owners, I move to high and go straight to build.\"",
+        "\"Don't build summaries yet. We should revisit once we have more data on enterprise usage patterns.\""
+      ],
+      "correct": 2,
+      "explanation": "Only C states a choice from the live alternatives, a confidence, and a specific observation that would move it in a named direction. Option A is the trap — a number looks like calibration, but a percentage with no stated inputs and no update condition cannot be checked by anyone. Precision is not accuracy."
+    }
+  ]
+}

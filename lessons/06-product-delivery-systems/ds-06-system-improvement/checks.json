@@ -1,0 +1,66 @@
+{
+  "id": "DS-06",
+  "title": "System improvement",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A retrospective produces three actions: be more proactive about surfacing risk, improve documentation, and communicate earlier with support. Why will these change nothing?",
+      "options": [
+        "They were not assigned to individual owners with due dates",
+        "They are intentions; none can block anything, fire on anything, or be checked by anyone",
+        "They were written at the end of the meeting when attention was low",
+        "They repeat items from previous retrospectives, so the team has stopped believing them"
+      ],
+      "correct": 1,
+      "explanation": "A system change takes one of four forms — rule, interface, threshold, or capability — and each is verifiable. Option A is the standard fix teams reach for, and it is the most tempting: assigning an owner and a date to \"be more proactive\" produces an owned intention, which still cannot block or fire on anything."
+    },
+    {
+      "stage": "post",
+      "question": "After an incident where an AI feature assigned wrong action owners, the team corrects the affected summaries and closes the retrospective. What is missing?",
+      "options": [
+        "Nothing; the problem is resolved and users are no longer affected",
+        "A root-cause analysis document explaining the model's behaviour",
+        "A system change, because the correction repaired the instance and left the mechanism that produced it in place",
+        "Communication to the affected accounts about what happened"
+      ],
+      "correct": 2,
+      "explanation": "Repair removes the problem; improvement prevents the next occurrence, catches it earlier, or makes it cheaper. Option A is what the board actually looks like after a competent incident response, and it is exactly the substitution the lesson names: the same incident returns at the next exposure stage with different details."
+    },
+    {
+      "stage": "post",
+      "question": "A team repeatedly ships confused metric definitions. The retrospective adopts a rule: \"every metric definition must be reviewed before use.\" Nobody on the team owns metric definitions or has written one. What happens?",
+      "options": [
+        "The rule works, because review forces the team to build the skill over time",
+        "The rule is followed sincerely and does not work, because it stands in for a missing capability",
+        "The rule works if the review is assigned to the most senior person available",
+        "The rule fails because it lacks a threshold that specifies which metrics require review"
+      ],
+      "correct": 1,
+      "explanation": "Before writing a rule, ask whether anyone can comply with it. Here the gap is capability, and a rule that mandates a review nobody can perform produces a signed-off definition that is still wrong. Option A is the tempting one, because rules sometimes do build habits; but a review by people who cannot evaluate the object teaches nothing and adds a step."
+    },
+    {
+      "stage": "post",
+      "question": "A team adopts a well-designed operating rule after a genuine failure. What must be added for the rule not to become process debt?",
+      "options": [
+        "A written rationale so future members understand why it exists",
+        "An exception process for cases the rule does not fit",
+        "A named enforcer with authority to apply it consistently",
+        "A removal review date and the evidence that would retire it"
+      ],
+      "correct": 3,
+      "explanation": "Rules accumulate, and every rule in a paralysing pile was justified when written. A rule adopted with no condition for removal is debt with no repayment schedule. Option B is the answer most process-aware teams give, and exceptions are useful — but an exception process makes a bad rule survivable rather than removable, which is how the pile grows."
+    },
+    {
+      "stage": "post",
+      "question": "A one-off failure occurred because a contractor with unusual access misconfigured an environment during a week that will not repeat. The team drafts a new approval step. What is the correct judgment?",
+      "options": [
+        "Record the incident and change nothing, because the condition will not recur",
+        "Adopt the approval step; approvals are cheap and prevent a class of error",
+        "Adopt a threshold instead, so the misconfiguration would be detected automatically",
+        "Adopt the step but scope it to contractors only, limiting the cost"
+      ],
+      "correct": 0,
+      "explanation": "Two tests apply: would the change have prevented the problem, and will the condition recur. Here the second fails, so the rule costs forever and prevents nothing. Option D is the sophisticated-looking compromise and the most tempting, because narrowing scope feels like managing the cost — but a narrow rule guarding a condition that will not return is still permanent overhead."
+    }
+  ]
+}

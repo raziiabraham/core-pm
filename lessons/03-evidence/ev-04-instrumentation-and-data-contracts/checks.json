@@ -1,0 +1,66 @@
+{
+  "id": "EV-04",
+  "title": "Instrumentation and data contracts",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "About 18% of Noted's events have no actor identity. An analyst proposes computing per-user activation on the 82% that do, with a footnote. What is the strongest objection?",
+      "options": [
+        "82% is below the coverage threshold required for any per-user metric",
+        "The footnote will be lost when the number is quoted in a review",
+        "The 18% is unlikely to be a random slice, so the remaining 82% is a biased population rather than a smaller one",
+        "The missing events should be assigned to a synthetic user so the total is preserved"
+      ],
+      "correct": 2,
+      "explanation": "Events lose identity for structural reasons — signed-out sessions, public pages, system or integration writes — and each reason describes a kind of user or moment. Option B is a real risk and a weak objection: fixing the footnote does not fix the bias, and treating this as a communication problem is how the bias survives."
+    },
+    {
+      "stage": "post",
+      "question": "Which missingness pattern should most strongly stop you from computing a per-entity rate at all?",
+      "options": [
+        "A field missing at 3% for reasons nobody can explain",
+        "A field missing at 18% because public page views carry no actor",
+        "A field missing at 25% for signed-out sessions only",
+        "A field missing at 12% because an integration writes on behalf of an account"
+      ],
+      "correct": 0,
+      "explanation": "A known structural reason gives you a nameable direction of bias, which you can exclude or model. An unexplained gap has unbounded direction and size, even at a low rate. Option C is tempting because 25% is the largest number on the list — but size is less dangerous than unknown shape."
+    },
+    {
+      "stage": "post",
+      "question": "Meeting type is not captured anywhere in Noted's event data. A PM files a ticket to add a `meeting_type` property to document events. What is missing from this plan?",
+      "options": [
+        "A backfill job to populate the property for historical documents",
+        "A decision about whether Noted has a product concept of a meeting at all, which must exist before anything can be typed",
+        "A privacy review of the new property",
+        "Agreement from the account manager on the list of meeting types"
+      ],
+      "correct": 1,
+      "explanation": "You cannot instrument a concept the product does not represent. The gap is a product modelling decision wearing a data costume. Option A is the answer of a PM who understands backfills but not the sequence: there is nothing to backfill from, because the distinction was never observed."
+    },
+    {
+      "stage": "post",
+      "question": "Noted starts recording a new field today, and the metric that uses it needs a fourteen-day window. The enterprise decision is being asked for this week. What follows?",
+      "options": [
+        "Ship the field and report a preliminary reading in a few days",
+        "The decision should wait until the data is available, since deciding without it is guessing",
+        "The earliest defensible reading is at least two weeks away, so this week's decision must be made on other evidence or deliberately deferred",
+        "Backfill from document timestamps to approximate the missing history"
+      ],
+      "correct": 2,
+      "explanation": "Instrumentation has no history, and the window sets a floor on when an answer can exist. Option B is the disciplined-sounding trap: it converts a data constraint into an indefinite hold, when the real choice is to decide on other evidence or to defer explicitly with a date."
+    },
+    {
+      "stage": "post",
+      "question": "A team writes a complete tracking contract: every event named, every identifier specified, timestamps and stitching rules stated, missingness monitored. What can this still not deliver?",
+      "options": [
+        "Consistent counts between two analysts querying the same table",
+        "Detection of an event that changes meaning after a UI change",
+        "A stable population definition across releases",
+        "Why a user did something, or whether the action was worth taking"
+      ],
+      "correct": 3,
+      "explanation": "A contract makes data checkable, not meaningful. Intent and value are outside what any instrumentation records. Option B is tempting because semantic drift is a genuine failure — but that is exactly what a contract with a stated event definition and an owner is built to catch."
+    }
+  ]
+}

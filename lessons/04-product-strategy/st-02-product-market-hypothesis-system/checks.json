@@ -1,0 +1,66 @@
+{
+  "id": "ST-02",
+  "title": "Product-market hypothesis system",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A capability is adopted heavily by the customers who requested it, and those accounts cost more to serve than they return. Which hypothesis failed?",
+      "options": [
+        "Problem — the requested need was not real",
+        "Value — the capability does not work well enough",
+        "Economics — value captured does not exceed cost to serve at this unit",
+        "Retention — usage will decay once novelty fades"
+      ],
+      "correct": 2,
+      "explanation": "Adoption supports problem and value; the failure is below them in the chain. B is the tempting answer because teams reach for a product-quality explanation first, but a capability can work exactly as intended and still be unaffordable to deliver."
+    },
+    {
+      "stage": "post",
+      "question": "Noted's PM writes the audience hypothesis as \"enterprise team leads who run recurring meetings.\" Why is this not yet usable?",
+      "options": [
+        "It is a label, and the product does not capture meeting type, so no one in the product can be identified as a member",
+        "Enterprise is too small a population to build a strategy on",
+        "It names a role rather than a company size band",
+        "Recurring meetings are a behaviour of the team, not of the lead"
+      ],
+      "correct": 0,
+      "explanation": "An audience hypothesis has to be stated by observable behaviour, and the case says meeting type is not captured at all. D is tempting and half-true, but the fatal problem is not whose behaviour it is — it is that no available data can sort anyone into or out of the group."
+    },
+    {
+      "stage": "post",
+      "question": "Which pairing of hypothesis and evidence type is correct?",
+      "options": [
+        "Value — satisfaction scores from users of the capability",
+        "Retention — a claim about how often the underlying job recurs",
+        "Problem — the number of inbound requests received this quarter",
+        "Acquisition — interview quotes about why customers like the product"
+      ],
+      "correct": 1,
+      "explanation": "Retention rests on recurrence: if the job does not come back, no amount of product quality produces return usage. A is the tempting distractor, because satisfaction is easy to collect and feels like value evidence, but value is a comparison against the alternative the person uses now, not a rating of your product."
+    },
+    {
+      "stage": "post",
+      "question": "A team must choose what to test next. Which hypothesis should decide that choice?",
+      "options": [
+        "The one with the most existing data, so the test can run quickly",
+        "The one the executive team asks about most often",
+        "The one where confidence is high and consequence-if-false is high",
+        "The one where confidence is low and consequence-if-false is high"
+      ],
+      "correct": 3,
+      "explanation": "Low confidence plus high consequence is where the strategy is actually exposed. A is what most teams do, because progress is fastest where instrumentation already exists — but testing a well-evidenced link mostly reconfirms what you already believe."
+    },
+    {
+      "stage": "post",
+      "question": "A collaboration product tests retention on single-user accounts and finds it weak. What does the boundary of this model say?",
+      "options": [
+        "The retention hypothesis is disproved and the position should be abandoned",
+        "Value and retention are coupled here, so the test unit should be a team rather than a user",
+        "The result is valid but should be weighted less because the sample is small",
+        "Retention should be re-tested after acquisition improves"
+      ],
+      "correct": 1,
+      "explanation": "When value depends on other participants, a single-user test measures a condition the strategy never claimed would work. A is the tempting reading — it treats a precise number as a decisive one, which is exactly the error the coupling boundary warns about."
+    }
+  ]
+}

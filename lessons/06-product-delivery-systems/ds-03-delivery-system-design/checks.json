@@ -1,0 +1,66 @@
+{
+  "id": "DS-03",
+  "title": "Delivery system design",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A team has stable cycle time, reviewed pull requests, and a clean board. Mid-build, a blocked engineer picks an interpretation of an unanswered product question and ships it. What does this reveal?",
+      "options": [
+        "A work-flow problem; the ticket should have been better specified",
+        "An engineering discipline problem; the engineer should have waited",
+        "A missing decision flow; open questions have no owner, date, or visible state, so they are answered by whoever is blocked",
+        "A prioritization problem; the question should have been resolved before the quarter started"
+      ],
+      "correct": 2,
+      "explanation": "Boards track work items, and an open decision is not a work item, so it becomes visible only after it has been answered by default. Option A is the answer a competent PM gives, and it is the wrong layer: better tickets reduce the number of open questions but do not create a path for the ones that remain. Option B blames a person for a system with no channel."
+    },
+    {
+      "stage": "post",
+      "question": "A team adds a weekly decision review meeting. Which condition determines whether this creates a decision flow?",
+      "options": [
+        "Whether the right people attend consistently",
+        "Whether each open question has a latency and a default that fires when the latency is exceeded",
+        "Whether decisions are recorded in writing after the meeting",
+        "Whether the meeting is held before the sprint planning session"
+      ],
+      "correct": 1,
+      "explanation": "A ceremony is one way to implement an interface; it is not the interface. Without a latency and an automatic default, a weekly meeting is a place where decisions may or may not happen. Option C is the tempting one because written records are genuinely valuable, and a team that records decisions well can still leave a blocked engineer waiting with no bound and no fallback."
+    },
+    {
+      "stage": "post",
+      "question": "A PM maps a delivery system and names herself as owner of the decision flow, the work flow, and the learning flow. What is the strongest objection?",
+      "options": [
+        "Product should not own the learning flow; data should",
+        "Three owners is too few; each flow needs a dedicated person",
+        "The integration flow is missing from her map",
+        "Naming one person for three flows is the same as leaving them unowned when that person is the bottleneck for all three"
+      ],
+      "correct": 3,
+      "explanation": "The purpose of naming an owner is to give a request a bounded path. If every path leads to the same person, the latency of all three is that person's availability, and nothing has been designed. Option B is the trap for a reader who has learned the four-flow model as a staffing rule: a small team legitimately collapses flows, but it must then say so and accept a shared list, not pretend there are three owners."
+    },
+    {
+      "stage": "post",
+      "question": "A team designs a learning flow with a named owner and a monthly readout. Nobody on the team can define the measure, and the instrumentation does not exist. What has been created?",
+      "options": [
+        "A working learning flow; the measure can be defined at the first readout",
+        "A meeting, because the gap is a capability gap and ownership does not close it",
+        "An interface, because it has an owner and a latency",
+        "A decision flow, because the readout will generate decisions"
+      ],
+      "correct": 1,
+      "explanation": "A named owner produces an answer only if someone can produce the answer. Where the measure and the instrumentation are absent, the readout becomes a discussion. Option A is the optimistic version most teams actually take, and it postpones the capability problem to the moment when a decision depends on it."
+    },
+    {
+      "stage": "post",
+      "question": "Noted's team has strong delivery discipline and a thin evidence system. Which pair of flows is most likely to be weak, and why?",
+      "options": [
+        "Decision flow and learning flow, because they fail quietly while delivery metrics stay healthy",
+        "Work flow and integration flow, because discipline creates rigidity",
+        "Integration flow and learning flow, because both depend on tooling",
+        "Decision flow and work flow, because both depend on the PM"
+      ],
+      "correct": 0,
+      "explanation": "Work and integration flows break loudly, so disciplined teams fix them. Decision and learning flows break silently, and their absence is compatible with excellent cycle time. Option C is plausible on the surface because both do involve tooling, but a team with strong delivery discipline almost always has a working integration flow; that is the flow discipline is usually measured by."
+    }
+  ]
+}

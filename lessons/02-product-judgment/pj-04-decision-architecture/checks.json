@@ -1,0 +1,66 @@
+{
+  "id": "PJ-04",
+  "title": "Decision architecture",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "The dependency loses support in ten weeks. Migration is estimated at three to five weeks. When does the decision itself expire?",
+      "options": [
+        "Around week five, because after that the pessimistic five-week path no longer fits inside the window",
+        "At week ten, when support actually ends",
+        "Around week seven, using the midpoint of the three-to-five week estimate",
+        "There is no expiry, because nothing breaks immediately at end-of-support"
+      ],
+      "correct": 0,
+      "explanation": "A time-boxed decision expires before its deadline by the duration of the work it authorises, and you size that duration from the pessimistic end, not the average. Option C is the tempting one — using the midpoint looks balanced, but it quietly bets on the optimistic half of an estimate that engineering already called wide."
+    },
+    {
+      "stage": "post",
+      "question": "Four engineers disagree about migration timing. The PM says: \"You four know the code, so decide it among yourselves and tell me.\" What is wrong?",
+      "options": [
+        "Nothing — specialist authority should decide questions inside its expertise",
+        "The PM should decide it, because roadmap timing is a product responsibility",
+        "The engineers hold specialist authority but not the roadmap consequence, so a decider with that consequence still has to sign",
+        "The disagreement should be escalated to the engineering lead's manager"
+      ],
+      "correct": 2,
+      "explanation": "Specialist authority and decider are different roles. The engineers can settle what is technically possible; none of them carries the cost of the cycle being spent this way. Option A is the answer a PM gives after learning to respect expertise — it sounds humble, but it leaves a consequential call with no accountable signer."
+    },
+    {
+      "stage": "post",
+      "question": "A PM escalates a contentious decision to the head of product, who makes the call. It goes badly. What is the PM's position?",
+      "options": [
+        "The consequence transferred with the decision, so accountability now sits with the head of product",
+        "The PM still owns the outcome in their area; escalation added a name to the record, not a transfer of consequence",
+        "The escalation was the error, since consequential decisions should never move upward",
+        "Accountability is shared equally between the two, since both took part"
+      ],
+      "correct": 1,
+      "explanation": "Architecture is not a permission system. Escalate to get a decision that genuinely is not yours, not to distribute blame. Option D is the comfortable answer that most teams settle for, and it produces a record in which nobody can be asked what they learned."
+    },
+    {
+      "stage": "post",
+      "question": "A decision has been discussed in three long meetings with wide participation and still has no answer. The PM proposes adding a formal review stage. What should be checked first?",
+      "options": [
+        "Whether the right specialists have been in the room",
+        "Whether the participants have enough evidence to reach a conclusion",
+        "Whether the review would fit before the deadline",
+        "Whether the decision is stated as a choice with live alternatives, or is still a topic"
+      ],
+      "correct": 3,
+      "explanation": "Process cannot rescue a badly framed decision. Adding rigor to \"what should we do about the dependency\" produces a more expensive version of the same confusion. Option B is the trained answer — but a group given a real choice and a date will usually decide on the evidence they already hold."
+    },
+    {
+      "stage": "post",
+      "question": "Which pair of decisions is being routed correctly?",
+      "options": [
+        "Empty-state copy variant: decided by the PM in a day, reviewed from its outcome. Storage-layer change: decided with the engineering lead as specialist authority, reviewed before commitment",
+        "Empty-state copy variant: taken to the weekly forum for team alignment. Storage-layer change: decided by the two engineers closest to it in a direct message",
+        "Both taken to the weekly forum, so that decisions stay comparable and the team stays informed",
+        "Both decided by the PM, since the PM owns the roadmap consequence in each case"
+      ],
+      "correct": 0,
+      "explanation": "Rigor and review depth should follow consequence and reversibility: reversible work is reviewed from its outcome, one-way work before commitment. Option C is the tempting answer because consistency reads as discipline — but a uniform forum over-spends process on the cheap decision and adds no real scrutiny to the expensive one."
+    }
+  ]
+}

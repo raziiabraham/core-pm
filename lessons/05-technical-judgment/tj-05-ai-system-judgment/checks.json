@@ -1,0 +1,66 @@
+{
+  "id": "TJ-05",
+  "title": "AI system judgment",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A team is about to build automated meeting summaries. What should be settled before anyone builds?",
+      "options": [
+        "Ship a first version and let real users reveal what quality is needed",
+        "Match the summary quality of the closest competitor",
+        "Write the quality bar: which fields must never be wrong, which may be imperfect, the target rate, the sample it is scored on, and who judges",
+        "Ask engineering what accuracy the model reaches on a standard benchmark"
+      ],
+      "correct": 2,
+      "explanation": "Without a bar, \"it looks good\" becomes the standard, and the first complaining customer sets the real one. The tempting answer is D: a benchmark number sounds like a measurement, but it says nothing about which errors this job can tolerate, and it hands a product decision to a specialist as if it were a technical fact."
+    },
+    {
+      "stage": "post",
+      "question": "Which statement about the context boundary is correct?",
+      "options": [
+        "Most wrong output comes from the system seeing the wrong material, and what it may see is a product decision about scope, freshness, and permissions",
+        "Context is a model parameter, so it belongs to engineering",
+        "Give the system access to everything in the workspace so it has the best chance of being right",
+        "Context only matters for very long documents"
+      ],
+      "correct": 0,
+      "explanation": "Context failures produce more wrong answers than model failures, and they are decided by product. The tempting answer is C, which sounds generous and creates a permission failure mode: in a shared workspace, not everyone attended every meeting, so maximal context can surface material a reader is not entitled to see. B gives away the decision by calling it a parameter."
+    },
+    {
+      "stage": "post",
+      "question": "Should a generated meeting summary be posted to the team automatically, or approved by a human first?",
+      "options": [
+        "Posted automatically, because requiring review removes the time saving that justifies the feature",
+        "Approved by a human, because AI output should always be reviewed before anyone else sees it",
+        "It is a design detail that can be settled after the model quality is known",
+        "It depends on how expensive the error is and how easily it can be undone: approval where a mistake is public and late, autonomy where correction is cheap and visible"
+      ],
+      "correct": 3,
+      "explanation": "Authority follows error cost and reversibility, which is why the same summary in a private draft and posted to twelve colleagues are different decisions. The tempting answer is B: a blanket approval rule feels safe but is not judgment, and it removes the value from every case where an error costs nothing and is fixed in one gesture."
+    },
+    {
+      "stage": "post",
+      "question": "Which failure mode most needs a named detection signal and a named person watching it?",
+      "options": [
+        "The feature refuses to produce a summary, which the user sees straight away",
+        "Quality falling over time as real meeting content drifts away from what was tested, with no code change involved",
+        "A slow response, which existing performance monitoring already reports",
+        "A summary the user finds stylistically clumsy"
+      ],
+      "correct": 1,
+      "explanation": "Drift is the normal condition of a deployed model, and nothing about it announces itself: no error is raised, no user reports it, and no code changed. The tempting answer is A, because a refusal feels like the more serious breakage — but a user sees it immediately and can act, which is exactly what makes it the cheaper failure to manage."
+    },
+    {
+      "stage": "post",
+      "question": "The summary feature passes its rubric and usage rises steadily after launch. What is the correct reading?",
+      "options": [
+        "The rubric score confirms the feature is working as intended",
+        "Rising usage shows the job is being completed",
+        "It can pass the rubric and still fail the job: the claim that enterprise leads lose decisions and owners after meetings was never tested, so both score and usage can rise while the underlying problem stays",
+        "No conclusion is possible, because meeting type is not captured in the event data"
+      ],
+      "correct": 2,
+      "explanation": "A rubric score is evidence that the system does what you specified, not that what you specified was worth doing. The tempting answer is B, and it is the trap the whole product sits in: activity around the document is not the same as the document completing its job. D overcorrects — a missing dimension limits how a sample can be stratified, but it does not make evaluation impossible."
+    }
+  ]
+}

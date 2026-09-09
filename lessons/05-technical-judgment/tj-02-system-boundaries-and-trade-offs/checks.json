@@ -1,0 +1,66 @@
+{
+  "id": "TJ-02",
+  "title": "System boundaries and trade-offs",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "P95 response time rose 34% for workspaces with more than 500 documents. No support tickets mention speed. What does the absence of tickets establish?",
+      "options": [
+        "That users are not affected, and the signal is a monitoring artifact",
+        "Only that nobody reported it through the support channel",
+        "That the problem is below the threshold that would justify moving engineering time",
+        "That paid users are more tolerant of latency than free users"
+      ],
+      "correct": 1,
+      "explanation": "Silence is a fact about the reporting channel, not about harm. The tempting answer is C, because it converts silence into a priority judgment and lets the team keep its plan without arguing for it. Users leave, work around, or absorb slowness far more often than they file tickets."
+    },
+    {
+      "stage": "post",
+      "question": "An engineer proposes precomputing the document list in the background so it loads instantly. What must the trade-off map record?",
+      "options": [
+        "The estimate in engineering weeks",
+        "Whether P95 will return below its previous level",
+        "Whether the engineering lead approves the approach",
+        "What improves, what degrades, who holds the new cost, and when that cost arrives"
+      ],
+      "correct": 3,
+      "explanation": "Precomputing converts latency into staleness plus a background job somebody must own and monitor. The tempting answer is B: a latency target is an outcome, not a trade-off, and every option that hits the target sends a different bill. A treats effort as if it distinguished the options, which it does not."
+    },
+    {
+      "stage": "post",
+      "question": "A team frames a slow query as scale work competing with feature work, and spends a week deciding. It turns out the query was written wrong and the fix takes an afternoon. What does this show about the trade-off model?",
+      "options": [
+        "Some changes are genuine improvements with no meaningful cost, and forcing them into a trade-off frame hides real waste",
+        "Every technical change costs something somewhere, so the map must always name a loser",
+        "Trade-off analysis applies to features, not to infrastructure work",
+        "If no cost is visible, the option is too small to be worth deciding"
+      ],
+      "correct": 0,
+      "explanation": "This is the boundary of the model. The tempting answer is B, which sounds rigorous and is the reason the team lost a week: the balance language gave a broken thing permission to stay broken. When the only cost you can name is effort, you are looking at a correction, not a transfer."
+    },
+    {
+      "stage": "post",
+      "question": "Two options are on the table for a new capability: use a managed third-party service, or build it in-house. Which judgment is sound?",
+      "options": [
+        "The managed service is better, because it ships sooner",
+        "Building in-house is better, because it avoids depending on a vendor",
+        "Neither is better in the abstract: the service moves cost to a recurring bill and an external dependency, and building moves it to permanent ownership and on-call load",
+        "Engineering should decide, since the choice is about implementation"
+      ],
+      "correct": 2,
+      "explanation": "The two options send different bills to different people at different times. The tempting answer is D, which sounds like respect for specialist authority but gives away the currency ranking, which is the part only the PM can supply. B is a slogan, not an analysis of who pays and when."
+    },
+    {
+      "stage": "post",
+      "question": "The large workspaces that slowed down hold a disproportionate share of paid seats. What should the PM do with that fact?",
+      "options": [
+        "Restrict document creation in those workspaces until performance recovers",
+        "Establish what those users do differently, and what the latency stops them from finishing",
+        "Prioritise the work immediately, since the revenue exposure is clear",
+        "Wait until a support ticket confirms the problem is real"
+      ],
+      "correct": 1,
+      "explanation": "Revenue concentration tells you who could be harmed, not whether they are harmed or what the harm looks like in the job the product does. The tempting answer is C, which promotes exposure into evidence and skips the step where you learn what a user with 800 documents actually fails to finish. D waits for a channel that has already been shown to be silent."
+    }
+  ]
+}

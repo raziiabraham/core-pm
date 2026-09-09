@@ -1,0 +1,66 @@
+{
+  "id": "TJ-04",
+  "title": "Repository and delivery-system literacy",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "What does reading a repository and its delivery system actually tell a PM?",
+      "options": [
+        "How expensive it is to change this part of the product, and how quickly you would learn whether the change worked",
+        "Whether the engineering team is working to a good standard",
+        "Whether the change being proposed is the right change to make",
+        "How long the work will take"
+      ],
+      "correct": 0,
+      "explanation": "Structure, tests, release path, observability, and ownership price the act of changing the product. The tempting answer is D: the reads feel like they should produce a number, but an estimate is specialist output, and converting a structural observation into weeks is claiming authority you do not hold. B turns a fact about a codebase's history into a judgment about people."
+    },
+    {
+      "stage": "post",
+      "question": "A PM cannot read code well. What is the productive way to orient in a repository?",
+      "options": [
+        "Read the main source files line by line until the logic is clear",
+        "Ask the engineering lead for a summary and record it as the answer",
+        "Read the surfaces that need no code fluency — folder structure, test file names, CI configuration, ownership files, commit history for the area — and convert what cannot be read into questions with decisions attached",
+        "Ask for a fresh architecture document to be written before planning"
+      ],
+      "correct": 2,
+      "explanation": "The decision-relevant facts are structural, and structure is readable. The tempting answer is B: it is fast and it defers to the specialist, but one person's summary is an interpretation, it hides what they also do not know, and it leaves the PM unable to tell which parts are unverified."
+    },
+    {
+      "stage": "post",
+      "question": "Two teams ship the same feature. Team A can release it behind a switch that turns it off without a deploy. Team B cannot. What follows?",
+      "options": [
+        "Nothing much — release mechanics are an engineering preference",
+        "Team B's change costs more than its build effort, because both attributing its effect and undoing it become expensive",
+        "Team A's approach is riskier, because a switch adds a code path that can itself fail",
+        "The difference only matters for changes that are user-facing"
+      ],
+      "correct": 1,
+      "explanation": "Reversibility and separability are part of the cost of a change, and they change what you can learn from it. The tempting answer is C, which names a real cost of switches but treats a second-order risk as if it outweighed losing the ability to undo a bad release. A is the assumption that keeps PMs out of the delivery system entirely."
+    },
+    {
+      "stage": "post",
+      "question": "Two changes shipped during the six weeks in which activation fell 11%: a revised signup flow and a new AI-suggestion prompt. What should the PM do first?",
+      "options": [
+        "Roll both changes back and see whether activation recovers",
+        "Ask engineering which of the two caused it",
+        "Assume the AI-suggestion prompt is responsible, since it sits closest to the empty document state",
+        "Establish whether the two changes reached the same users at the same time, and whether the event data separates them — and if not, state that this data cannot attribute the decline"
+      ],
+      "correct": 3,
+      "explanation": "Attribution is a property of how the changes were exposed and instrumented, and that is knowable before any analysis is run. The tempting answer is A: it feels decisive, but rolling both back destroys the comparison, gives up whatever value the changes created, and still leaves you unable to say which one mattered. B hands a measurement question to people who do not own the measurement."
+    },
+    {
+      "stage": "post",
+      "question": "Which statement respects the limits of repository reading?",
+      "options": [
+        "A tidy, well-tested repository can still be expensive to change if reviews and releases are slow, and a messy one can be cheap if the area is small and one person ships it daily",
+        "Repository quality is a reliable proxy for how fast a team can deliver",
+        "Reading the repository removes the need for most conversations with engineers",
+        "An area with few tests always signals unacceptable risk"
+      ],
+      "correct": 0,
+      "explanation": "The five surfaces have to be read together; any one of them alone supports a confident wrong conclusion. The tempting answer is D, which sounds like appropriate caution but ignores that risk depends on what the code does, how reversible the change is, and who owns it. B compresses five independent surfaces into one score."
+    }
+  ]
+}

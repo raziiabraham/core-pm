@@ -1,0 +1,66 @@
+{
+  "id": "TJ-03",
+  "title": "Technical portfolio and thresholds",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A dependency loses support in 10 weeks. Engineering estimates the migration at three to five weeks with wide uncertainty. Which question is the PM's to ask?",
+      "options": [
+        "Which of the two engineer camps has the better plan",
+        "Whether the estimate could be brought down to three weeks",
+        "Whether the dependency could be swapped for a different one instead",
+        "What happens if the estimate is wrong at the top of its range or beyond it, and how much schedule buffer that requires"
+      ],
+      "correct": 3,
+      "explanation": "The estimate belongs to the specialist; the consequence of it being wrong belongs to the PM. The tempting answer is B, which feels like normal prioritisation pressure but is re-estimating — doing specialist work with less information. C is an implementation proposal the PM is not positioned to evaluate."
+    },
+    {
+      "stage": "post",
+      "question": "Which of these is a usable threshold?",
+      "options": [
+        "We will monitor security advisories and act if something serious appears",
+        "If the migration has not reached the integration step by week 5, we stop feature work and finish it",
+        "We will complete the migration before end of support",
+        "Security work always takes priority over feature work"
+      ],
+      "correct": 1,
+      "explanation": "B names an observable, a level, a date, and the action — all decided before the pressure arrives. The tempting answer is C, which sounds like a firm commitment but is the goal restated: it names no checkpoint, so nobody can tell in week 6 whether the plan is failing. A has no level and no action."
+    },
+    {
+      "stage": "post",
+      "question": "When does the threshold model stop working?",
+      "options": [
+        "It works everywhere, as long as the observable is chosen carefully",
+        "It only works for technical work, not for feature work",
+        "Some consequences are cliffs rather than curves — where crossing the line is unbounded or non-recoverable, commit by date instead of by threshold",
+        "It never applies to security work, because security risk is uncapped by definition"
+      ],
+      "correct": 2,
+      "explanation": "A threshold assumes you can watch something approach a level and still act. Where the first observable event is the loss itself, there is nothing to watch. The tempting answer is D, which is the same insight overcorrected: an end-of-support date after which patches stop and nothing breaks immediately is a rising curve, not a cliff, and calling everything a cliff means losing the argument the first time you are wrong."
+    },
+    {
+      "stage": "post",
+      "question": "A portfolio for this cycle contains no scale work and no enabling work. What is the right judgment?",
+      "options": [
+        "It is not automatically wrong; it is wrong if the constraint the company actually faces is one that only that work relieves",
+        "It is wrong: every cycle should reserve a fixed share of capacity for technical work",
+        "It is fine as long as technical work is funded from a separate budget so it does not compete",
+        "Engineering should set the technical share and product should set the feature share"
+      ],
+      "correct": 0,
+      "explanation": "Composition follows the constraint, and the constraint has to be named. The tempting answer is B, the percentage rule: it protects a budget without saying what the budget buys, so the first real launch pressure takes it back. D splits the decision so that nobody owns the trade-off between the two halves."
+    },
+    {
+      "stage": "post",
+      "question": "Two engineers want to migrate now; two want to spread the work across the quarter. How should the PM frame this?",
+      "options": [
+        "Spreading is safer, because feature delivery keeps running alongside it",
+        "Migrating now is safer, because the work finishes sooner",
+        "Split the difference and do half the migration now",
+        "The two options fail differently: spread work risks reaching week 10 unfinished, and focused work risks stopping other delivery for a stretch you must be able to defend"
+      ],
+      "correct": 3,
+      "explanation": "Neither option is the safe one; they carry different failures, and choosing means choosing which failure you can survive. The tempting answer is A, because continued feature delivery is visible and the risk of arriving unfinished is not. C avoids the decision and inherits both failure modes."
+    }
+  ]
+}

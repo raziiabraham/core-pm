@@ -1,0 +1,66 @@
+{
+  "id": "EV-05",
+  "title": "Data reasoning and SQL supervision",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "An activation-by-channel query computes its denominator as COUNT(DISTINCT s.user_id) from a signups table that is inner-joined to a documents table. What does this do to the rate?",
+      "options": [
+        "Nothing, because COUNT(DISTINCT) removes any duplicate rows the join created",
+        "It lowers the rate, because signups with several documents are counted once in the numerator",
+        "It raises the rate, because signups with no document are dropped before the denominator is counted",
+        "It leaves the rate correct but makes the absolute counts too small"
+      ],
+      "correct": 2,
+      "explanation": "An inner join filters the denominator by the numerator's own condition, so the rate is computed only over users who already did the thing. Option A is the most common wrong answer: DISTINCT fixes duplicate counting but cannot restore rows the join already removed."
+    },
+    {
+      "stage": "post",
+      "question": "The same query joins documents to signups on workspace_id while the question is about users. Which distortion does this produce?",
+      "options": [
+        "A user is credited with activation when any member of their workspace created a document, inflating the rate most for team and enterprise workspaces",
+        "Documents in personal workspaces are excluded, deflating the rate for individual knowledge workers",
+        "Workspaces with several signups are counted once, so the denominator is too small",
+        "The join has no effect on the rate because each user belongs to exactly one workspace"
+      ],
+      "correct": 0,
+      "explanation": "Joining on the wrong grain attributes every teammate's action to every member. The distortion is largest exactly where the paid seats are, which is why it survives review. Option C names a real class of error — denominator collapse — but it is not what this join key does."
+    },
+    {
+      "stage": "post",
+      "question": "The query filters signups to the last six weeks and measures a seven-day return window. Which reading is correct?",
+      "options": [
+        "The filter is fine because six weeks is longer than seven days",
+        "The most recent cohorts have incomplete return windows, so recent weeks look worse and a decline appears even with unchanged behaviour",
+        "The filter should be widened to twelve weeks to increase statistical power",
+        "The filter should use signup date rather than event date, which it already does"
+      ],
+      "correct": 1,
+      "explanation": "Any cohort whose outcome window has not finished is measured on partial data, and partial always reads as lower. This defect alone can manufacture the trend the analysis was built to explain. Option C is a competent-sounding instinct that makes it worse: more weeks of the same truncation does not remove the truncation at the edge."
+    },
+    {
+      "stage": "post",
+      "question": "Actor identity is NULL for about 18% of Noted's document events. The numerator uses COUNT(DISTINCT d.created_by_user_id). What is the effect?",
+      "options": [
+        "NULLs are counted as a single distinct value, adding one to every group",
+        "NULLs raise the numerator because they are treated as unmatched users",
+        "The effect cancels out because the denominator is affected equally",
+        "NULLs are skipped, so activations recorded without an actor are lost from the numerator while those users remain in the denominator"
+      ],
+      "correct": 3,
+      "explanation": "COUNT(DISTINCT) ignores NULLs, so the numerator loses a structurally specific population while the denominator keeps it, pushing the rate down. Option C is the tempting symmetry argument: the two sides are built from different tables, so the loss does not cancel."
+    },
+    {
+      "stage": "post",
+      "question": "You have found four defects in an analyst's query. What is the right next move?",
+      "options": [
+        "Rewrite the query yourself and share the corrected numbers with the analyst",
+        "Send the checks you want run, withhold the conclusion, and leave correctness with the analyst",
+        "Discard the analysis and commission a controlled experiment instead",
+        "Present the original result with the caveats attached so the team is not blocked"
+      ],
+      "correct": 1,
+      "explanation": "Reading the query is your job; owning its correctness is theirs. Option A is the most tempting because it is fastest and you were right — but it takes specialist accountability without specialist expertise and removes the person best placed to catch the next error."
+    }
+  ]
+}

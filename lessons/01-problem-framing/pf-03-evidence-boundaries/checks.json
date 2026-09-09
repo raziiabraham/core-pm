@@ -1,0 +1,66 @@
+{
+  "id": "PF-03",
+  "title": "Evidence boundaries",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "Three enterprise accounts asked for meeting summaries through one account manager in one month. Which conclusion does this evidence actually support?",
+      "options": [
+        "Enterprise team leads lose decisions after recurring meetings often enough to justify roadmap capacity",
+        "At least three accounts reached by this account manager articulated a want for meeting summaries in that month",
+        "Meeting summaries are the highest-value unmet need in the enterprise segment",
+        "Enterprise customers will churn without meeting summaries"
+      ],
+      "correct": 1,
+      "explanation": "The evidence establishes that the want was expressed, by whom, through what channel, and when — nothing further. A is the tempting distractor because it sounds like a measured version of the same thing, but it asserts prevalence, and requests arriving through one channel are not a sample. Frequency of asking is not frequency of happening."
+    },
+    {
+      "stage": "post",
+      "question": "A PM writes: \"Enterprise customers need automated meeting summaries.\" Which single edit removes the most unearned weight?",
+      "options": [
+        "Change \"need\" to \"would benefit from\", to soften the strength of the claim",
+        "Add the roughly 20% revenue figure, so readers can see the stakes",
+        "Replace \"enterprise customers\" with \"three accounts, all reached through one account manager in January\"",
+        "Add a footnote pointing to the account manager's call notes"
+      ],
+      "correct": 2,
+      "explanation": "The category name is what turns three cases into a population, and it is the piece that survives every downstream summary. C puts population, count, channel and window into the sentence itself. D is the tempting distractor: a footnote is stripped off in the first re-quote, which is exactly how the limit becomes invisible."
+    },
+    {
+      "stage": "post",
+      "question": "The case states that the underlying claim — enterprise team leads repeatedly lose decisions and context after recurring meetings — has never been tested. How should this fact be handled?",
+      "options": [
+        "As a neutral gap to note in an appendix while proceeding with the request as stated",
+        "As a reason to discard the signal, since untested claims cannot inform a roadmap",
+        "As the largest single fact in the signal: the mechanism behind the request is unverified, so the request cannot stand in for the problem",
+        "As a task for analytics to close by segmenting meeting-related events"
+      ],
+      "correct": 2,
+      "explanation": "Everything the request implies about value depends on a mechanism nobody has checked, so the untested status is load-bearing rather than incidental. D is tempting and quietly impossible: the case states meeting type is not captured at all, so analytics cannot close this gap by segmentation."
+    },
+    {
+      "stage": "post",
+      "question": "The three requesting accounts represent roughly 20% of current revenue. What does that figure establish?",
+      "options": [
+        "That the problem is widespread among high-value customers",
+        "That the expected value of building summaries exceeds the expected value of the alternatives",
+        "That the requests are more likely to be accurate descriptions of the underlying work",
+        "The size of the commercial consequence attached to these accounts — not anything about whether the problem is real or common"
+      ],
+      "correct": 3,
+      "explanation": "Contract value measures what is at stake with these accounts. It says nothing about prevalence, mechanism, or accuracy. A is the tempting distractor because revenue concentration feels like it multiplies the evidence, when it only multiplies the consequence of being wrong in either direction."
+    },
+    {
+      "stage": "post",
+      "question": "A PM starts writing population, window, source and limit next to every sentence in every document. What is wrong with this?",
+      "options": [
+        "The discipline is for load-bearing claims; applied to everything it produces unread documents and protects no decision",
+        "Nothing — full bounding is the standard the lesson sets",
+        "Bounding should be done by the analytics team, not the PM",
+        "The four fields belong in a research repository rather than in planning documents"
+      ],
+      "correct": 0,
+      "explanation": "This is the boundary of the model. The purpose is to protect claims that decisions rest on; background context gains nothing and costs attention. D is tempting because a repository sounds tidier, but moving the fields away from the claim is the exact failure the lesson describes — a limit that does not travel with the sentence stops existing."
+    }
+  ]
+}

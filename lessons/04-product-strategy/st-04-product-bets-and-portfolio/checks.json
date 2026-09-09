@@ -1,0 +1,66 @@
+{
+  "id": "ST-04",
+  "title": "Product bets and portfolio",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "For four quarters, a team's scoring system has funded almost only feature work. What is the structural explanation?",
+      "options": [
+        "The scoring weights are miscalibrated and should be retuned each quarter",
+        "Scale, risk, and enabling bets buy non-events or indirect benefits, so they lose item-by-item comparisons on any attribution-based score",
+        "The team lacks engineering capacity to take on infrastructure work",
+        "Stakeholders are overriding the ranking with political pressure"
+      ],
+      "correct": 1,
+      "explanation": "The bets buy different kinds of benefit, so ranking them on one scale systematically favours the visible and attributable. A is the competent-sounding distractor: retuning weights treats a category error as a calibration problem, so the same class of work loses again next quarter."
+    },
+    {
+      "stage": "post",
+      "question": "Noted's dependency loses support in 10 weeks. Migration is estimated at three to five weeks. Nothing breaks immediately, but security patches stop. How should this enter the portfolio?",
+      "options": [
+        "As a risk bet, sized by naming the exposure date, the cost if it lands, and the smallest action that removes it",
+        "As a scale bet, since it concerns platform health rather than customer value",
+        "As the top-ranked item, since a dated obligation always outranks discretionary work",
+        "As an enabling bet, since the new dependency will make later work cheaper"
+      ],
+      "correct": 0,
+      "explanation": "It removes an exposure whose benefit is that something bad does not happen, which is the definition of a risk bet, and honest sizing needs the three questions. C is tempting because the date feels decisive, but the case says nothing breaks immediately, so treating it as automatically top-ranked skips the sizing question entirely."
+    },
+    {
+      "stage": "post",
+      "question": "A PM's diagnosis says the binding constraint is that the paying population's workspaces degrade as they grow. The funded portfolio is 70% new features, 20% growth, 10% scale. What is the correct reading?",
+      "options": [
+        "The portfolio is reasonable, since features drive the growth the constraint depends on",
+        "The scale share should be raised slightly at the next planning cycle",
+        "The strategy and the funding disagree, and the funding is the one that is real",
+        "The diagnosis is too narrow and should be broadened to cover feature work"
+      ],
+      "correct": 2,
+      "explanation": "Read the allocation back and infer the constraint from it: a stranger would infer a feature-gap constraint, not a degradation constraint. B is the tempting move because it sounds like continuous improvement, but a small adjustment leaves the contradiction between the stated diagnosis and the real allocation in place."
+    },
+    {
+      "stage": "post",
+      "question": "A team allocates 30% of engineering capacity to a platform migration that only two engineers are qualified to perform. What does the boundary of this model require?",
+      "options": [
+        "Reduce the migration share so the percentage matches the number of qualified engineers",
+        "Allocate by the specific people or teams holding each capability, because a team-wide percentage implies a reassignment that cannot happen",
+        "Train more engineers so capacity becomes fungible before allocating",
+        "Move the migration outside the portfolio and track it as technical debt"
+      ],
+      "correct": 1,
+      "explanation": "Percentages assume capacity can move between bets; when it cannot, the split reads as rigor while describing nothing. A is tempting because it makes the arithmetic honest, but the resulting number still implies that the freed capacity converts into other bets, which it does not."
+    },
+    {
+      "stage": "post",
+      "question": "A PM presents a quarterly roadmap with dated items grouped under three themes and calls it the product strategy. What is the strongest reason to reject that claim?",
+      "options": [
+        "It lacks estimates of effort and confidence for each item",
+        "Roadmaps should be maintained by delivery leads rather than by product",
+        "The themes are not tied to company-level goals",
+        "It does not state a constraint, so it cannot say what any new request would displace"
+      ],
+      "correct": 3,
+      "explanation": "A roadmap says what will be built and when; it cannot resolve a mid-cycle trade-off because it contains no claim about why anything is hard. C is the tempting answer, since linking to company goals looks like rigor, but goal alignment still admits every request that touches a goal."
+    }
+  ]
+}

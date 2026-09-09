@@ -1,0 +1,66 @@
+{
+  "id": "DS-02",
+  "title": "Sequence, slice, and dependencies",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A team breaks a feature into six tickets: schema, pipeline, service, API, interface, polish. Each is small, estimated, and reviewable. What is the defect?",
+      "options": [
+        "The tickets are too large and should be split further",
+        "The order is wrong; polish should come before the interface",
+        "The breakdown follows the architecture, so all learning and all integration risk land in the final week",
+        "Nothing is wrong; the pieces come together at the launch date, which is when the feature becomes real"
+      ],
+      "correct": 2,
+      "explanation": "Smaller is not the same as sliced. Nothing finished early can be shown, tested, or kept, and the pieces only meet once. Option D is the most tempting because it matches how most calendars are drawn: it treats launch as a single dated event, which is exactly what pushes all learning and all integration risk into the week with the least room to respond. Option A is the wrong axis, since splitting the schema ticket in half changes nothing about when the team learns."
+    },
+    {
+      "stage": "post",
+      "question": "Your feature needs an identity service that another team owns and has not built yet. How should this dependency be handled?",
+      "options": [
+        "Write an interface contract and build against a stub, because this is a capability dependency",
+        "Sequence your work after their delivery date, because you cannot build on something that does not exist",
+        "Open a bounded investigation with a decision date, because the shape of the work is unknown",
+        "Escalate to leadership so their team is re-prioritized to unblock you"
+      ],
+      "correct": 0,
+      "explanation": "A capability dependency needs a contract and a stub so both sides can move. Option B is the tempting one and the most common error in practice: it reads as realistic sequencing, but it converts another team's schedule into your critical path for no reason. Option C misreads a capability dependency as a knowledge dependency; you know what you need, you just do not have it yet."
+    },
+    {
+      "stage": "post",
+      "question": "A dependency migration has a moment where the old system stops and the new one starts. A PM insists on slicing that moment into three incremental steps. What is the likely result?",
+      "options": [
+        "Lower risk, since incremental change is always safer than a single switch",
+        "Dual-running complexity that can be riskier than one rehearsed switch",
+        "Slower delivery but strictly better evidence about the migration",
+        "No change, since the cutover is atomic in the database regardless"
+      ],
+      "correct": 1,
+      "explanation": "This is the floor of the slicing model. You can slice preparation, compatibility, verification, rehearsal, and rollback readiness, but not the moment itself. Option A is the belief that makes competent teams do this: incrementalism is usually safer, and here it means maintaining two live paths, which is its own failure surface."
+    },
+    {
+      "stage": "post",
+      "question": "Engineering estimates a migration at three to five weeks against a ten-week deadline. Which first slice best fits the sequencing rule?",
+      "options": [
+        "The largest module, so the bulk of the work is behind you early",
+        "The lowest-risk module, so the team builds confidence and momentum",
+        "The module the team has already scoped, so the first slice finishes predictably",
+        "The part that contains the reason the estimate spans two weeks, so the spread narrows"
+      ],
+      "correct": 3,
+      "explanation": "Order by which uncertainty is most expensive to discover late. With a ten-week horizon and a two-week spread, the spread itself is the thing to attack first. Option A is the answer that sounds like progress and is the most tempting: it moves the most work, but if the unknown part turns out to be the five-week end, you find out in week six with nothing left to trade."
+    },
+    {
+      "stage": "post",
+      "question": "A team ships thin vertical slices every few days. Nobody looks at what a slice produced before the next one starts. What does the team have?",
+      "options": [
+        "A working sequence; evidence accumulates and can be reviewed at the end",
+        "Smaller tickets with a better name, because a slice yields evidence only when someone asks a question of it",
+        "A risk-shaped sequence, since vertical slicing reduces integration risk by itself",
+        "An option-value problem, because partial slices cannot be kept"
+      ],
+      "correct": 1,
+      "explanation": "Evidence yield is a property of the review, not of the slice shape. Option A is the honest-sounding trap: reviewing at the end is exactly the pattern vertical slicing was meant to replace, and by then no slice can change the next one. Option C is partly true — integration safety does improve — but it is not what the question asks about, and it does not restore the lost learning."
+    }
+  ]
+}

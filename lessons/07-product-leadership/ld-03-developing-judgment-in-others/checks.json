@@ -1,0 +1,66 @@
+{
+  "id": "LD-03",
+  "title": "Developing judgment in others",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A support lead argues for building a feature on the strength of three customer requests that all arrived through one account manager. The leader replies: \"Three requests through one channel is not prevalence — go test the underlying claim first.\" What is the cost of this response?",
+      "options": [
+        "None; the advice is accurate and saves a wasted cycle",
+        "It is correct advice that produces dependence — the next recommendation will also arrive unexamined, waiting for the leader to find the gap",
+        "It is too harsh and will discourage the support lead from bringing signals forward",
+        "It confuses evidence quality with prioritization, which are separate questions"
+      ],
+      "correct": 1,
+      "explanation": "The advice is right, which is what makes it the expensive failure. A is the tempting answer because accuracy feels like sufficiency; but the person learns the leader's conclusion, not how to reach one, and returns next month with the same unexamined shape. C misreads the problem as tone."
+    },
+    {
+      "stage": "post",
+      "question": "Which of these is a calibrated coaching question rather than a verdict in question form?",
+      "options": [
+        "\"Do you really think three requests count as a pattern?\"",
+        "\"Wouldn't you agree we should test this before we commit a cycle?\"",
+        "\"Walk me through how each of these three requests reached us. What was the path?\"",
+        "\"What is the true prevalence of this problem across all enterprise leads?\""
+      ],
+      "correct": 2,
+      "explanation": "C is answerable from what the person already holds, has probably not been examined, and cannot be answered without exposing the single-channel problem. A and B are verdicts with question marks. D is the tempting one — it sounds rigorous and points at the real gap, but there is no path to an answer this week, so it produces paralysis rather than thinking."
+    },
+    {
+      "stage": "post",
+      "question": "A PM presents a decision. The leader thinks the reasoning has a hole but wants to keep ownership with the PM. Which response best preserves ownership?",
+      "options": [
+        "\"Let's work through it together in our one-to-one and land on something we're both happy with\"",
+        "\"Your evidence section does not say who you did not hear from. What would tell you they disagreed?\"",
+        "\"I'd probably go the other way on this, but it's your call\"",
+        "\"Send it to me and I'll add the missing analysis so we can move quickly\""
+      ],
+      "correct": 1,
+      "explanation": "B names the missing exposure without naming a preferred conclusion, so the PM does the work. A and D are the phase's recurring trap — both sound supportive and both quietly relocate the decision to the leader. C is more subtle: stating a preferred answer while calling it their choice makes the rest of the conversation about pleasing the leader."
+    },
+    {
+      "stage": "post",
+      "question": "A decision must be made today, and the person holding it cannot close the evidence gap in time. What does the model say?",
+      "options": [
+        "Coach anyway; the deadline is less important than the development",
+        "Approve their current reasoning to preserve their ownership",
+        "Extend the deadline, since a decision made without the evidence is not worth making",
+        "Give the answer, and label it — say you are deciding this one, and name the question you would have asked"
+      ],
+      "correct": 3,
+      "explanation": "This is the boundary of the model. Coaching costs more per decision and pays back only when the class recurs and there is time to close the gap. A is tempting because development sounds like the higher value, but coaching someone into a deadline they will miss is not development. Labelling the takeback is what keeps it instructive rather than corrosive."
+    },
+    {
+      "stage": "post",
+      "question": "After eight weeks of coaching, which observation best indicates that judgment has actually transferred?",
+      "options": [
+        "The person's recommendations are better written and better evidenced than before",
+        "The person agrees with the leader's assessment more often than they used to",
+        "The person now arrives with the weakest exposure in their own case already named and addressed",
+        "The person escalates fewer decisions and acts more independently"
+      ],
+      "correct": 2,
+      "explanation": "The test is whether the gap gets found before it reaches you. A is the tempting distractor: output quality can improve purely because the person learned which boxes you check, which is compliance. B measures convergence on your taste. D can equally mean they have stopped surfacing things you should see."
+    }
+  ]
+}

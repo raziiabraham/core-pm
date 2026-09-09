@@ -40,3 +40,8 @@ yarn-error.log*
 /outputs/
 /tmp/
 /work/
+
+# learner state, when someone takes the course inside a clone of this repo
+/PM-LEARNING.md
+/PM-LEARNING-*.md
+/artifacts/

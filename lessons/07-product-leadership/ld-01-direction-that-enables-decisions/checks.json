@@ -1,0 +1,66 @@
+{
+  "id": "LD-01",
+  "title": "Direction that enables decisions",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A product leader publishes a direction. Every person on the team says they agree with it. Over the next month, six trade-offs are escalated to the leader. What does the agreement tell you?",
+      "options": [
+        "The direction is sound and the team needs coaching on applying it",
+        "The escalations are normal; most trade-offs should reach the leader",
+        "Almost nothing — agreement is cheap when the direction has not yet asked anyone to give something up",
+        "The direction needs to be repeated more often in team meetings"
+      ],
+      "correct": 2,
+      "explanation": "Agreement measures comfort, not usability. A direction with no ordering excludes no option, so nobody has to object to it. The tempting answer is A: it keeps the document intact and moves the fault to the team. But six escalations in a month are evidence about the artifact, not about the readers."
+    },
+    {
+      "stage": "post",
+      "question": "Which of these sentences can resolve a live conflict between two funded options?",
+      "options": [
+        "Retention of existing paid workspaces beats new-segment expansion this quarter",
+        "We win by making documents worth returning to",
+        "We are a customer-obsessed team that moves fast and learns",
+        "Our north star is weekly returning documents per active workspace"
+      ],
+      "correct": 0,
+      "explanation": "Only A names what loses. B and C are aspirations that any option can be argued to serve. D is the tempting one — a well-defined metric feels like direction, and a competent PM would offer it. But a metric tells you what to measure, not which of two options to fund when both plausibly move it."
+    },
+    {
+      "stage": "post",
+      "question": "You hand your direction to someone who was not in the room, along with two competing requests. They resolve it confidently, using reasoning you disagree with. What is the correct response?",
+      "options": [
+        "Explain the context they were missing, and confirm the right answer",
+        "Treat the exercise as inconclusive, since they lacked background",
+        "Reassign the decision to someone with more context",
+        "Change the text of the direction, because you have just learned what it actually says"
+      ],
+      "correct": 3,
+      "explanation": "The reader applied the document as written. That is the signal you were buying. The tempting answer is A — supplying context looks generous and takes ten minutes, but it repairs one case verbally and leaves the document broken for the next reader, who may not be able to reach you."
+    },
+    {
+      "stage": "post",
+      "question": "A leader writes: \"When in doubt, prefer the interests of existing paid seats.\" A week later a team cites it to postpone a security migration that loses vendor support in ten weeks. What went wrong?",
+      "options": [
+        "The team misapplied a clear rule and needs correcting",
+        "The constraint was written without naming the class it does not cover",
+        "Direction should never contain constraints, only aspirations",
+        "The migration should have had its own metric so it could compete on equal terms"
+      ],
+      "correct": 1,
+      "explanation": "The rule did exactly what it said. Over-specified direction resolves cases it was never designed to reach, and a one-way consequence like end-of-support is one of them. A is tempting because the outcome is obviously wrong, but blaming the reader leaves the rule intact to do the same thing again next month."
+    },
+    {
+      "stage": "post",
+      "question": "Which trade-off belongs in written direction rather than in the leader's own decisions?",
+      "options": [
+        "Whether to accept an unusual one-off contract with an unclear reversal cost",
+        "Whether to change the company's pricing model",
+        "Whether a single-customer feature request displaces planned work — a shape that recurs several times a quarter",
+        "Whether to replace a vendor whose contract ends this year"
+      ],
+      "correct": 2,
+      "explanation": "Direction should absorb the recurring class, not the singular case. C recurs, so a rule pays for itself and stops the same conversation happening four more times. A, B, and D are one-off, high-consequence, or hard to reverse — deciding those personally is cheap and correct. A is the tempting distractor because \"unusual\" sounds like exactly the case a rule should cover; it is the opposite."
+    }
+  ]
+}

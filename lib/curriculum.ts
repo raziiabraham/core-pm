@@ -13,7 +13,7 @@ export type CurriculumPhase = {
   number: string;
   title: string;
   promise: string;
-  sourcePrograms: string[];
+  domains: string[];
   lessons: CurriculumLesson[];
 };
 
@@ -30,7 +30,7 @@ const lesson = (id: string, title: string, minutes: number, prerequisites: strin
 export const curriculum: CurriculumPhase[] = [
   {
     id: "PF", number: "01", title: "Problem Framing", promise: "Turn noise, requests, and symptoms into a bounded decision worth investigating.",
-    sourcePrograms: ["Mastering Product Management", "User Insights", "Finding Product-Market Fit"],
+    domains: ["Decision framing", "User insight", "Opportunity assessment"],
     lessons: [
       lesson("PF-01", "Decision before method", 22, [], "Research begins with the decision the evidence could change—not a favorite method or a preselected answer.", "Decision brief"),
       lesson("PF-02", "Problem, mechanism, alternatives", 26, ["PF-01"], "A symptom becomes useful only when you can name a plausible mechanism and competing explanations.", "Problem mechanism map"),
@@ -42,7 +42,7 @@ export const curriculum: CurriculumPhase[] = [
   },
   {
     id: "PJ", number: "02", title: "Product Judgment", promise: "Take a position without manufacturing certainty, then make the reasoning inspectable.",
-    sourcePrograms: ["Mastering Product Management", "Product Leadership", "Scaling Product Delivery"],
+    domains: ["Calibrated judgment", "Trade-off reasoning", "Decision architecture"],
     lessons: [
       lesson("PJ-01", "Calibrated product judgment", 28, ["PF-03", "PF-05"], "Judgment integrates evidence, accumulated exposure, strategic context, and accountability while preserving uncertainty.", "Calibrated product view"),
       lesson("PJ-02", "Define good", 24, ["PF-02", "PF-05"], "Teams cannot trade off intelligently until the desired change and its quality bar are explicit.", "Definition of good"),
@@ -54,7 +54,7 @@ export const curriculum: CurriculumPhase[] = [
   },
   {
     id: "EV", number: "03", title: "Evidence", promise: "Choose evidence that can answer the claim, then update belief without overclaiming.",
-    sourcePrograms: ["User Insights", "Data for Product Managers", "Experimentation + Testing"],
+    domains: ["Qualitative research", "Measurement design", "Causal inference"],
     lessons: [
       lesson("EV-01", "Evidence fit and sufficiency", 28, ["PF-01", "PF-04"], "Evidence quality depends on whether the method can answer the claim and whether the decision needs more certainty.", "Evidence plan"),
       lesson("EV-02", "Qualitative evidence and synthesis", 34, ["PF-03", "PF-05", "EV-01"], "Qualitative work reveals mechanism and context when observations stay separate from interpretation and contradiction survives synthesis.", "Insight synthesis"),
@@ -67,7 +67,7 @@ export const curriculum: CurriculumPhase[] = [
   },
   {
     id: "ST", number: "04", title: "Product Strategy", promise: "Convert evidence into a coherent choice about how the product will win—and what it will not do.",
-    sourcePrograms: ["Product Strategy", "Finding Product-Market Fit", "Mastering Product Management"],
+    domains: ["Strategic diagnosis", "Positioning", "Portfolio and sequencing"],
     lessons: [
       lesson("ST-01", "Strategic diagnosis", 31, ["PF-02", "PF-03", "EV-07"], "Strategy starts by identifying the constraint or dynamic that matters most, not by writing an aspiration.", "Strategic diagnosis"),
       lesson("ST-02", "Product-market hypothesis system", 35, ["PF-05", "EV-03", "EV-07", "ST-01"], "Audience, problem, value, acquisition, retention, and economics are linked hypotheses that can fail independently.", "Product-market hypothesis map"),
@@ -79,7 +79,7 @@ export const curriculum: CurriculumPhase[] = [
   },
   {
     id: "TJ", number: "05", title: "Technical Judgment", promise: "Reason about systems, build choices, and AI without pretending to own specialist expertise.",
-    sourcePrograms: ["Technical Strategy", "Scaling Product Delivery", "Data for Product Managers"],
+    domains: ["Systems reasoning", "Build trade-offs", "AI system evaluation"],
     lessons: [
       lesson("TJ-01", "Technical abstraction without ignorance", 30, ["PF-02", "PJ-02"], "A PM should understand boundaries, failure modes, constraints, and consequences deeply enough to ask better product questions.", "System boundary sketch"),
       lesson("TJ-02", "System boundaries and trade-offs", 34, ["PJ-03", "TJ-01"], "Technical choices move cost, latency, reliability, security, and ownership across system boundaries rather than removing them.", "Technical trade-off map"),
@@ -90,7 +90,7 @@ export const curriculum: CurriculumPhase[] = [
   },
   {
     id: "DS", number: "06", title: "Product Delivery Systems", promise: "Carry intent through slicing, commitment, exposure, adaptation, and learning.",
-    sourcePrograms: ["Scaling Product Delivery", "Technical Strategy", "Mastering Product Management"],
+    domains: ["Delivery systems", "Staged exposure", "Operational learning"],
     lessons: [
       lesson("DS-01", "From evidence to commitment", 28, ["PJ-02", "PJ-05", "EV-07", "ST-06"], "Commitment begins when product value and effort conviction are strong enough to displace real alternatives.", "Commitment brief"),
       lesson("DS-02", "Sequence, slice, and dependencies", 35, ["ST-05", "TJ-02", "TJ-03", "DS-01"], "Smaller sequential delivery should create evidence, option value, and safe integration—not merely smaller tickets.", "Delivery sequence"),
@@ -102,7 +102,7 @@ export const curriculum: CurriculumPhase[] = [
   },
   {
     id: "LD", number: "07", title: "Product Leadership", promise: "Create direction, autonomy, and accountability that improve judgment beyond one PM.",
-    sourcePrograms: ["Product Leadership", "Product Strategy", "Scaling Product Delivery"],
+    domains: ["Direction setting", "Decision rights", "Judgment coaching"],
     lessons: [
       lesson("LD-01", "Direction that enables decisions", 29, ["ST-06"], "Direction succeeds when people can use it to resolve a real trade-off without asking the leader to decide again.", "Decision-enabling direction"),
       lesson("LD-02", "Decision rights and progressive autonomy", 32, ["PJ-04", "PJ-06"], "Autonomy grows when authority, consequence, evidence standards, and escalation boundaries are explicit.", "Decision-rights map"),
@@ -120,7 +120,7 @@ export const totalMinutes = allLessons.reduce((sum, item) => sum + item.minutes,
 
 export const learningPaths = [
   { id: "complete", title: "Complete foundation", description: "All 43 lessons in dependency order.", lessons: allLessons.map((item) => item.id), hours: Math.round(totalMinutes / 60) },
-  { id: "field", title: "Decision field path", description: "The original 12-lesson applied spine and one cumulative case.", lessons: ["PF-01", "PJ-01", "PF-06", "EV-01", "EV-02", "EV-07", "ST-01", "ST-04", "TJ-05", "DS-01", "DS-04", "DS-05"], hours: 6 },
+  { id: "field", title: "Decision field path", description: "Twelve applied lessons carrying one consequential decision from first signal to outcome.", lessons: ["PF-01", "PJ-01", "PF-06", "EV-01", "EV-02", "EV-07", "ST-01", "ST-04", "TJ-05", "DS-01", "DS-04", "DS-05"], hours: 6 },
   { id: "technical", title: "Technical + AI judgment", description: "For PMs working closely with engineering and AI systems.", lessons: ["PF-01", "PJ-03", "PJ-06", "EV-03", "EV-04", "EV-05", "TJ-01", "TJ-02", "TJ-03", "TJ-04", "TJ-05", "DS-02", "DS-05"], hours: 7 },
   { id: "leadership", title: "Product leadership", description: "For group PMs and product leaders scaling judgment through others.", lessons: ["PJ-04", "PJ-05", "PJ-06", "ST-04", "ST-06", "DS-03", "DS-04", "DS-06", "LD-01", "LD-02", "LD-03", "LD-04", "LD-05", "LD-06", "LD-07"], hours: 8 },
 ];

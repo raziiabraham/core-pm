@@ -1,0 +1,66 @@
+{
+  "id": "PF-04",
+  "title": "Right-sized framing",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A dependency loses support in ten weeks and migration is estimated at three to five weeks. A PM opens a document on the team's long-term dependency-risk policy. What is the strongest objection?",
+      "options": [
+        "Policy work belongs to engineering leadership, not to product",
+        "The document is fine, but it should be timeboxed to one week",
+        "The next consequential choice — migrate in one block or spread the work — can be made without it, so the document delays the decision while resembling diligence",
+        "Ten weeks is too short a horizon to reason about policy usefully"
+      ],
+      "correct": 2,
+      "explanation": "This is the removal test. Delete the broadest section and ask whether the next choice can still be made; here it can, so the section is context rather than framing. B is the tempting distractor: timeboxing limits the cost of the wrong-sized frame without fixing the size, and the week still comes out of a ten-week window."
+    },
+    {
+      "stage": "post",
+      "question": "Which choice most clearly justifies a broad frame?",
+      "options": [
+        "A one-way choice whose consequence is large and which will set the precedent later decisions follow",
+        "A high-consequence choice that can be reversed within a sprint at low cost",
+        "A low-consequence choice that is expensive to reverse",
+        "A choice several senior stakeholders hold strong and conflicting opinions about"
+      ],
+      "correct": 0,
+      "explanation": "Only high consequence combined with one-way commitment justifies broad framing, and precedent-setting widens it further. D is the tempting distractor because stakeholder heat feels like a reason to frame broadly, but disagreement is a fact about the room, not a property of the choice — a broad frame there usually buys consensus theatre rather than a better decision."
+    },
+    {
+      "stage": "post",
+      "question": "A PM narrows the dependency question to \"which two engineers take the migration.\" What is the specific defect?",
+      "options": [
+        "Staffing questions should always follow scoping questions in sequence",
+        "It excludes the timing choice, so the consequence of a wrong answer — running past end-of-support — lands outside the frame",
+        "It ignores the possibility of hiring a contractor for the migration",
+        "Two engineers is too few for a three-to-five-week estimate with wide uncertainty"
+      ],
+      "correct": 1,
+      "explanation": "A frame must be at least large enough to contain the consequence of getting the answer wrong. Staffing cannot absorb a timing failure. D is tempting because it engages with the estimate, but it argues about the answer inside the narrow frame rather than noticing that the frame excludes the real risk."
+    },
+    {
+      "stage": "post",
+      "question": "The case notes that after end-of-support, security patches stop but nothing breaks immediately. How does this fact bear on frame size?",
+      "options": [
+        "It lowers consequence, so the choice can be deferred until something visibly breaks",
+        "It raises consequence, because unpatched software is an immediate outage risk",
+        "It is background context and does not affect framing",
+        "It separates the axes: nothing breaking keeps near-term disruption low, while patches stopping makes the exposure accumulate and hard to reverse — so the frame must cover timing, not just execution"
+      ],
+      "correct": 3,
+      "explanation": "Consequence and reversibility must be judged separately, and this fact points in different directions on each. A is the tempting distractor and the most common real-world reading: it collapses both axes into \"not urgent\", which is precisely how a ten-week window becomes a six-week one."
+    },
+    {
+      "stage": "post",
+      "question": "A narrow frame produced an answer the PM dislikes, so they widen the frame and re-run the analysis. When is this legitimate?",
+      "options": [
+        "Whenever the first answer conflicts with the PM's judgment, since judgment is what a PM is for",
+        "When new evidence or a newly visible consequence changed what the frame must contain — and the widening is stated openly, along with what it changes",
+        "Never; a frame committed to at the start of the work cannot be revised",
+        "When a more senior stakeholder requests a broader view"
+      ],
+      "correct": 1,
+      "explanation": "Frames are judgments under incomplete information and can be revised, but the trigger must be a change in the world rather than a change in how much you like the answer. A is the tempting distractor because PM judgment is real; the difference is that legitimate re-framing is declared before the outcome is known, not applied afterwards to find a scale at which you win."
+    }
+  ]
+}

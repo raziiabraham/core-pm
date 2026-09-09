@@ -1,0 +1,66 @@
+{
+  "id": "LD-05",
+  "title": "Team capability architecture",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A team with a strong delivery record cannot segment a metric decline, cannot defend its inherited metric definition, and has an 18% identity gap in its event data. The leader hires two experienced shipping PMs. What is the most likely result?",
+      "options": [
+        "Balanced improvement, since more senior capacity helps every area",
+        "The measurement gap closes gradually as the new PMs encounter it",
+        "More of the same work, faster — and if the missing capability is the one that chooses what to build, the error gets larger",
+        "Delivery slows temporarily during onboarding, then improves overall"
+      ],
+      "correct": 2,
+      "explanation": "Capacity added to an existing capability set produces more of the same output. B is the tempting answer because good PMs do notice gaps, but noticing is depth 1; nobody in this team can do the measurement work, so encountering it changes nothing except who is frustrated by it."
+    },
+    {
+      "stage": "post",
+      "question": "Which of these is stated as a capability rather than a trait?",
+      "options": [
+        "Can define a metric's population, event, window, and aggregation, and defend it against challenge",
+        "Is data-driven and comfortable with ambiguity",
+        "Has five years of experience in a similar product category",
+        "Is a strong communicator who builds trust across functions"
+      ],
+      "correct": 0,
+      "explanation": "A names something observable in an artifact or a decision, so two people can check it. D is the tempting one — communication really is load-bearing for a PM, but as written it can only be felt, which is how hiring in your own image survives review. Restate it as \"can write a decision memo an executive acts on without a meeting\"."
+    },
+    {
+      "stage": "post",
+      "question": "A leader plans to close a measurement gap by developing an existing PM into it. What single check most determines whether this will work?",
+      "options": [
+        "Whether the PM is motivated and has asked for the growth",
+        "Whether there is a real decision, with a real consequence, that the PM will hold while developing",
+        "Whether a course or a mentor is available",
+        "Whether the PM is at depth 1 rather than depth 0"
+      ],
+      "correct": 1,
+      "explanation": "Development without a decision to practise on produces recognition and then stalls. A and C are tempting because motivation and support genuinely help, and their absence would sink the plan too — but with both present and no real decision attached, you get reading and shadowing, which is depth 1 dressed up as depth 3."
+    },
+    {
+      "stage": "post",
+      "question": "A team says it can get analysis from a central data team when it needs it. What makes this a real interface rather than a hope?",
+      "options": [
+        "A shared channel and a good working relationship",
+        "A history of the data team helping when asked",
+        "An agreement that the data team will prioritize product requests",
+        "A named person, an agreed latency, and an agreed evidence standard"
+      ],
+      "correct": 3,
+      "explanation": "Without those three, the queue silently sets your evidence standard: when the wait is four weeks and the decision is due in two, the team decides on what it has and records nothing about the standard it missed. A and B describe goodwill, which is real and which evaporates precisely when the other team is busy."
+    },
+    {
+      "stage": "post",
+      "question": "A leader hires against a genuine gap — someone whose strengths nobody else on the team has. Six months later that person is isolated and considered a poor fit. What was most likely missed?",
+      "options": [
+        "The gap was not real, and the team's original instincts were correct",
+        "The translation surface — a decision they own, a forum their work lands in, an artifact the team already reads",
+        "Cultural screening during the interview process",
+        "The hire was too senior for the team's stage"
+      ],
+      "correct": 1,
+      "explanation": "Complementary hiring has a bill: someone unlike the team has no natural advocate and no way to demonstrate value inside existing rituals. A is the conclusion the team itself will reach, which is why it is the dangerous one — it retires the gap without ever testing it, and the next hire will be someone more like everyone else."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="960" height="300" role="img" aria-label="One signal routed down two paths. Naming the decision first ends in a changed action. Picking a method first ends in output that changes nothing.">
+  <rect width="960" height="300" fill="#29332f"/>
+
+  <text x="56" y="34" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="400" fill="#f0b99d" letter-spacing="0.6">Fig. 01 · Decision before method</text>
+
+  <rect x="56" y="52" width="848" height="40" fill="none" stroke="#d9e4dc" stroke-width="1"/>
+  <text x="480" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#d9e4dc" text-anchor="middle">Signal · activation fell 11% over six weeks</text>
+
+  <path d="M252 92 L252 110 L252 110" fill="none" stroke="#d9e4dc" stroke-width="1"/>
+  <line x1="252" y1="110" x2="252" y2="121" stroke="#d9e4dc" stroke-width="1"/><path d="M248 121 L252 128 L256 121" fill="none" stroke="#d9e4dc" stroke-width="1"/>
+  <path d="M708 92 L708 110 L708 110" fill="none" stroke="#9fbdb2" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="708" y1="110" x2="708" y2="121" stroke="#9fbdb2" stroke-width="1" stroke-dasharray="4 4"/><path d="M704 121 L708 128 L712 121" fill="none" stroke="#9fbdb2" stroke-width="1"/>
+
+  <rect x="56" y="130" width="392" height="54" fill="none" stroke="#d9e4dc" stroke-width="1"/><line x1="56" y1="130" x2="448" y2="130" stroke="#f0b99d" stroke-width="3"/><text x="252" y="163" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#d9e4dc" text-anchor="middle">Decision named, two live alternatives</text>
+  <line x1="252" y1="184" x2="252" y2="199" stroke="#d9e4dc" stroke-width="1"/><path d="M248 199 L252 206 L256 199" fill="none" stroke="#d9e4dc" stroke-width="1"/>
+  <rect x="56" y="208" width="392" height="54" fill="none" stroke="#d9e4dc" stroke-width="1"/><text x="252" y="241" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#d9e4dc" text-anchor="middle">Evidence that discriminates</text>
+  <text x="252" y="288" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#f0b99d" text-anchor="middle">An action changes</text>
+
+  <rect x="512" y="130" width="392" height="54" fill="none" stroke="#9fbdb2" stroke-width="1" stroke-dasharray="4 4"/><text x="708" y="163" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#9fbdb2" text-anchor="middle">Method picked first</text>
+  <line x1="708" y1="184" x2="708" y2="199" stroke="#9fbdb2" stroke-width="1" stroke-dasharray="4 4"/><path d="M704 199 L708 206 L712 199" fill="none" stroke="#9fbdb2" stroke-width="1"/>
+  <rect x="512" y="208" width="392" height="54" fill="none" stroke="#9fbdb2" stroke-width="1" stroke-dasharray="4 4"/><text x="708" y="241" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#9fbdb2" text-anchor="middle">Output that looks like progress</text>
+  <text x="708" y="288" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#9fbdb2" text-anchor="middle">Nothing changes</text>
+</svg>

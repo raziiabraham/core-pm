@@ -1,0 +1,66 @@
+{
+  "id": "ST-06",
+  "title": "Strategy communication and revision",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A well-received strategy document is understood by everyone, yet every trade-off still routes through the PM's calendar. What is missing?",
+      "options": [
+        "Decision rules, the named sacrifice, and a statement of what the strategy does not cover",
+        "A shorter summary that people can remember during a customer call",
+        "More frequent communication, so the strategy stays present in people's minds",
+        "Clear ownership of each roadmap item, so requests reach the right person"
+      ],
+      "correct": 0,
+      "explanation": "People can understand an explanation and still be unable to act from it, because acting requires rules, a known sacrifice, and a routing path for uncovered cases. B is the tempting answer, since memorability sounds like the problem, but a memorable summary produces confident slogans rather than defensible decisions."
+    },
+    {
+      "stage": "post",
+      "question": "You run the absent-author test. Your colleague reaches the decision you would have made, but explains it by repeating the strategy's headline sentence. What does this tell you?",
+      "options": [
+        "The narrative works, since the decision matched",
+        "The colleague needs more context on the case before the test is valid",
+        "They are guessing your preference, and will decide wrongly on the next case that looks different",
+        "The headline sentence should be rewritten to be less quotable"
+      ],
+      "correct": 2,
+      "explanation": "The test requires a defensible reason, not a matching answer, because a right answer without reasoning does not transfer to a different case. A is the tempting reading: outcome agreement is the easiest thing to observe and the least informative, since it can come from mimicry."
+    },
+    {
+      "stage": "post",
+      "question": "Which of these is a complete revision trigger?",
+      "options": [
+        "\"If enterprise demand keeps growing, we will revisit the positioning choice at the next planning cycle\"",
+        "\"If paid conversion in small-team workspaces falls below 4% for two consecutive months, the support lead flags it and we reopen the audience commitment\"",
+        "\"We will review the strategy monthly and adjust based on what we learn\"",
+        "\"If the team believes the diagnosis no longer holds, the PM will rewrite it\""
+      ],
+      "correct": 1,
+      "explanation": "It names an observable, a threshold, the person who would see it first, and a pre-agreed response. A is the tempting distractor because it names a real signal and a real response, but \"keeps growing\" has no threshold and nobody is assigned to notice it, so it will never fire."
+    },
+    {
+      "stage": "post",
+      "question": "Noted's PM writes a trigger: \"If more than 15% of recurring-meeting workspaces stop returning within 30 days, reopen the enterprise hypothesis.\" What is the defect?",
+      "options": [
+        "The threshold is too high to catch a real problem early",
+        "The response is too drastic for a retention movement of that size",
+        "Thirty days is too short a window for a retention claim",
+        "Meeting type is not captured in the product's data, so no workspace can be classified as recurring-meeting"
+      ],
+      "correct": 3,
+      "explanation": "A threshold on a quantity the instrumentation cannot produce is decoration, and the case states meeting type is not captured at all. C is tempting because window choice is a genuine measurement issue, but adjusting the window does not help when the population itself cannot be identified."
+    },
+    {
+      "stage": "post",
+      "question": "Over one quarter, three requests of the same type were approved as exceptions to the strategy. What is the correct response?",
+      "options": [
+        "Treat the repetition as evidence that either the strategy or the rule is wrong, and force a review",
+        "Tighten the approval process so fewer exceptions are granted",
+        "Accept them, since responding to customers is what a strategy exists to enable",
+        "Record them and continue, since each was individually justified"
+      ],
+      "correct": 0,
+      "explanation": "A repeated exception is a pattern, and a pattern is information about the rule, not a series of special cases. D is the tempting answer because recording exceptions is genuinely good practice — but recording without a review threshold is exactly how erosion gets documented instead of stopped."
+    }
+  ]
+}

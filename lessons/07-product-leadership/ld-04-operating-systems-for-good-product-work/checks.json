@@ -1,0 +1,66 @@
+{
+  "id": "LD-04",
+  "title": "Operating systems for good product work",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "Monitoring detects a 34% rise in response time on day two. It reaches no decision forum for six weeks. Nobody was careless. Which stage of information flow failed hardest, and why?",
+      "options": [
+        "Detection — the monitoring threshold was clearly set too loosely",
+        "Routing and standing — nobody owned carrying a monitoring signal into a product decision, and a problem with no complainant loses every prioritization contest",
+        "Cadence — the review meeting simply did not happen often enough",
+        "Artifact quality — the dashboard did not explain the business impact"
+      ],
+      "correct": 1,
+      "explanation": "Detection worked; the number was visible the whole time. C is the tempting answer because adding a meeting is the reflex fix, but a faster meeting fed by tickets would still never have seen this signal. The absence of tickets is a fact about the channel before it is a fact about the world."
+    },
+    {
+      "stage": "post",
+      "question": "A team reviews a metric weekly. The metric only moves meaningfully over about a month. What does this cadence produce?",
+      "options": [
+        "Early warning, which is worth the extra meetings",
+        "Nothing much either way, since a short meeting is cheap",
+        "Thrash — the team reacts to variance and calls it learning",
+        "Better data quality, because the numbers get checked more often"
+      ],
+      "correct": 2,
+      "explanation": "A decision cadence faster than the evidence cadence generates responses to noise. A is what a competent PM says, and early warning is a genuine goal — but you cannot get it from a metric that has not moved yet, only from a trigger on a leading observation."
+    },
+    {
+      "stage": "post",
+      "question": "A leader finds that every significant trade-off escalates to them. They propose adding a weekly cross-functional prioritization forum. What is wrong with this?",
+      "options": [
+        "The forum should be fortnightly to reduce overhead",
+        "Nothing — a forum is exactly how escalations get distributed",
+        "The forum needs a clearer pre-read artifact to be effective",
+        "An operating system cannot fix a direction or decision-rights problem; the escalation will simply become better attended"
+      ],
+      "correct": 3,
+      "explanation": "This is the boundary of the model. If nothing in the direction orders the competing values, and no rights map assigns the residue, a new room gives the same escalation a slide and six people's time. C is tempting because pre-reads genuinely improve forums, and it would improve this one — while leaving the underlying cause untouched."
+    },
+    {
+      "stage": "post",
+      "question": "Which recurring meeting should be first in line for removal?",
+      "options": [
+        "The well-attended weekly review that everyone finds useful but which disposed of no decision last month",
+        "The sparsely attended monthly forum where two capacity decisions were made",
+        "The quarterly retro, because retros rarely change anything",
+        "The engineering-only technical review, since the PM is not present"
+      ],
+      "correct": 0,
+      "explanation": "The audit question is what was decided, not who came or how it felt. A is uncomfortable precisely because attendance and satisfaction are high — which is why it survives every review. B passes the test despite poor attendance. If A has real value as shared context, keep it and label it as such; do not count it as decision infrastructure."
+    },
+    {
+      "stage": "post",
+      "question": "A team runs a quarterly planning forum. A core dependency loses vendor support in ten weeks. What does the cadence rule require?",
+      "options": [
+        "Move the whole planning forum to a six-week cycle",
+        "Give this decision a trigger rather than a calendar slot, because the consequence closes faster than the loop runs",
+        "Raise it at the next quarterly forum with a higher priority score",
+        "Delegate the decision to engineering so the forum is not needed"
+      ],
+      "correct": 1,
+      "explanation": "Cadence answers to two constraints, and when the consequence clock is shorter than the loop, the consequence wins. A over-corrects the entire system for one decision and imposes the cost on everything else. C is the answer that loses the option: by the next quarterly forum, part of the ten weeks is already spent."
+    }
+  ]
+}

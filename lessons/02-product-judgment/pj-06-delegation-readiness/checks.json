@@ -1,0 +1,66 @@
+{
+  "id": "PJ-06",
+  "title": "Delegation readiness",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A PM hands over \"look into the activation drop and come back with what you find.\" The delegate returns competent work answering a different question. What failed?",
+      "options": [
+        "The delegate lacked the judgment to identify the decision behind the request",
+        "The intent was not portable — the decision the work serves, and its alternatives, stayed in the PM's head",
+        "The time box was too short for a proper investigation",
+        "The PM should have reviewed progress at the halfway point"
+      ],
+      "correct": 1,
+      "explanation": "A topic was handed over, not a decision, so the delegate had nothing to optimise against but the task. Option D is the tempting fix a PM reaches for after one bad handover — a mid-point check would have caught the drift, but it treats a missing contract as a monitoring problem and keeps the PM as the constraint."
+    },
+    {
+      "stage": "post",
+      "question": "A PM writes a detailed contract for the activation investigation, then adds: \"You own this now.\" What is wrong with that last sentence?",
+      "options": [
+        "Nothing — clear ownership is what makes delegation work",
+        "It should specify which parts they own and which the PM retains",
+        "It conflicts with the escalation conditions, which imply the PM is still involved",
+        "Accountability for the outcome does not transfer with the work, and saying it does pushes the delegate to over-hedge or over-commit"
+      ],
+      "correct": 3,
+      "explanation": "Delegation moves the work and sometimes the choice; it never moves the consequence out of your area. Option A is the standard management instinct and it sounds empowering, but a delegate who believes they now carry the consequence will manage their own risk instead of the decision's."
+    },
+    {
+      "stage": "post",
+      "question": "An associate PM is ready to grow. The work is a reversible copy experiment on the empty document state. What does the boundary of this lesson recommend?",
+      "options": [
+        "Delegate the framing, leave the frame deliberately open, and say that the ambiguity is the assignment",
+        "Write a full five-element contract, since consistent contracts build good habits",
+        "Delegate at the execute level first, then raise the level once they have delivered",
+        "Keep the framing and delegate the analysis, so the learning is contained"
+      ],
+      "correct": 0,
+      "explanation": "Framing is how judgment develops, and low-consequence reversible work is where it is safe to develop it. Option B is the trained answer — a complete contract handed to someone ready to frame the problem converts growth work into execution work while the PM tells themselves they are developing someone."
+    },
+    {
+      "stage": "post",
+      "question": "Which of these is usable as an escalation condition in a delegation contract?",
+      "options": [
+        "\"Come back if you feel the investigation is going off track.\"",
+        "\"Escalate anything that might affect the enterprise accounts.\"",
+        "\"Come back before continuing if the decline concentrates in one acquisition channel.\"",
+        "\"Check in with me weekly so we can review progress together.\""
+      ],
+      "correct": 2,
+      "explanation": "An escalation condition must be an observation the delegate can actually see with the access you gave them. Option B is the tempting one: it names something consequential, but \"might affect\" is a judgment call, so the delegate either escalates constantly or waits until it is obvious, which is too late."
+    },
+    {
+      "stage": "post",
+      "question": "A PM's contract for the activation work is silent on whether the inherited activation definition can be challenged. Why does that single omission matter so much?",
+      "options": [
+        "It leaves the delegate unsure who to ask, which will cost a few days",
+        "It affects whether the analysis is comparable with historical reporting",
+        "It decides whether the assignment is measuring a decline or questioning whether the measure describes the job at all",
+        "It means the evidence standard cannot be applied, since the metric is undefined"
+      ],
+      "correct": 2,
+      "explanation": "Those are two different assignments with different outputs, and the delegate will assume the narrower one. Option D is close and reads well, but the standard can be applied to the inherited definition perfectly well — the problem is that doing so answers a question the PM may not have meant to ask."
+    }
+  ]
+}

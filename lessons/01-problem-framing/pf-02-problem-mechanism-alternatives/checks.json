@@ -1,0 +1,66 @@
+{
+  "id": "PF-02",
+  "title": "Problem, mechanism, alternatives",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A PM offers two explanations for the activation decline: \"the new signup flow added friction\" and \"the AI suggestion prompt confuses people on the empty document.\" What is wrong with this pair?",
+      "options": [
+        "Both share the assumption that the cause is inside the first session, so they are one explanation in two forms",
+        "Neither names a specific user segment",
+        "Two explanations are not enough; a decline of this size needs at least four",
+        "They are stated as opinions rather than as measured facts"
+      ],
+      "correct": 0,
+      "explanation": "Competing explanations must disagree about something that matters. Both of these locate the cause inside the first session, so no evidence can separate them from a cause outside it. The tempting distractor is B: missing segmentation is a real weakness, but adding a segment to both explanations still leaves them sharing the same buried assumption."
+    },
+    {
+      "stage": "post",
+      "question": "Which of these is a mechanism rather than a relabelled symptom?",
+      "options": [
+        "Performance degrades once a workspace reaches significant scale",
+        "Large-workspace users are having a worse experience than small-workspace users",
+        "Response times are unacceptable for our highest-value accounts",
+        "Workspaces above roughly 500 documents re-check permissions for every document on search, and search runs on page load"
+      ],
+      "correct": 3,
+      "explanation": "D names actors, a step order, and a trigger, so it predicts things you could check without shipping. A is the tempting distractor because it sounds technical, but \"degrades at scale\" only restates that the symptom appears in large workspaces. No observation could rule it out."
+    },
+    {
+      "stage": "post",
+      "question": "You believe large-workspace slowness comes from permission re-checks during search. What makes this belief testable before any code is written?",
+      "options": [
+        "Estimating how many engineering days the fix would take",
+        "A side prediction it makes about something you have not looked at yet — for example, that slow sessions should cluster on search-heavy usage rather than on document opens",
+        "Confirming that the 34% rise is statistically significant",
+        "Getting the engineering lead to agree the theory is consistent with the codebase"
+      ],
+      "correct": 1,
+      "explanation": "A mechanism earns its place by predicting something beyond the symptom it was invented to explain. B names an observation that could come back the wrong way. D is the tempting distractor: expert agreement raises plausibility, and plausibility is exactly what makes a wrong mechanism hard to displace."
+    },
+    {
+      "stage": "post",
+      "question": "No support ticket has ever mentioned speed, but monitoring shows a 34% P95 rise for large workspaces. How should this absence be treated?",
+      "options": [
+        "As proof that the monitoring signal is a measurement artifact and no user is affected",
+        "As irrelevant, since behavioural data always outranks self-reported complaints",
+        "As evidence that has to be assigned to a mechanism — it damages some explanations and supports others, and you must say which",
+        "As a reason to survey large-workspace users before doing any other analysis"
+      ],
+      "correct": 2,
+      "explanation": "Silence discriminates. It counts against any mechanism in which users notice and suffer, and it is consistent with one in which the rise sits in rare or background requests. A is the tempting distractor: it takes a single consistent explanation and treats it as the only one, which is the same shortcut that produces wrong tickets."
+    },
+    {
+      "stage": "post",
+      "question": "A cheap, reversible change would help under every mechanism your team has written down. What does the model say to do?",
+      "options": [
+        "Hold the change until the mechanism is established, because acting without a mechanism is what this lesson warns against",
+        "Ship it and observe, because distinguishing mechanisms buys nothing when the action does not change",
+        "Ship it and record it as confirmation of the most likely mechanism if the metric improves",
+        "Split the change into variants, one per mechanism, and run them against each other"
+      ],
+      "correct": 1,
+      "explanation": "This is the boundary of the model. Diagnosis is worth its cost only when different mechanisms would lead to different actions. A is the tempting distractor because it applies the rule correctly in the wrong situation, turning rigour into procedure. C also fails: a change that helps under every mechanism confirms none of them."
+    }
+  ]
+}

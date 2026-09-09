@@ -1,0 +1,66 @@
+{
+  "id": "EV-03",
+  "title": "Measurement models and metrics",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "Noted's activation is \"created a document and returned within seven days.\" A revised signup flow shipped six weeks ago, and activation fell 11%. Which slot is most likely to explain a fall with no change in user behaviour?",
+      "options": [
+        "Aggregation, because a rolling rate is more volatile than a cohort rate",
+        "Population, because the signup change alters who enters the denominator and when",
+        "Value link, because returning to the product was never the right outcome",
+        "Window, because seven days is too short to observe activation"
+      ],
+      "correct": 1,
+      "explanation": "A signup change moves who is counted and at what moment they start being counted, so the number can drop with identical behaviour. Option C is true and irrelevant here: a weak value link makes the metric a poor target, but it does not produce a six-week movement."
+    },
+    {
+      "stage": "post",
+      "question": "A PM proposes rebuilding the activation definition and restating the six-week trend on the new definition. What must be checked first?",
+      "options": [
+        "Whether the team agrees the new definition is better than the old one",
+        "Whether the new number will be higher or lower than the old one",
+        "Whether the underlying events exist far enough back and carry every field the new definition needs",
+        "Whether the new definition uses the same seven-day window as the old one"
+      ],
+      "correct": 2,
+      "explanation": "History can only be restated if the raw events support it. In Noted, actor identity is missing for about 18% of events, so a definition that depends on identifying the actor may not be computable historically at all. Option A is the tempting process answer: agreement about quality says nothing about whether the recomputation is possible."
+    },
+    {
+      "stage": "post",
+      "question": "Which pairing gives the strongest protection against a metric being optimised without producing value?",
+      "options": [
+        "Documents created per user, paired with total documents created",
+        "Documents created per user, paired with share of documents reopened after seven days",
+        "Documents created per user, paired with weekly active users",
+        "Documents created per user, paired with a stated target and an owner"
+      ],
+      "correct": 1,
+      "explanation": "The cheapest way to raise document creation is to auto-create documents, and that path would push reopen rate down — so the counter-metric degrades exactly when the number is gamed. Option C is the standard pairing and fails: auto-creating documents does not reduce weekly active users, so the pair moves together under the cheap path."
+    },
+    {
+      "stage": "post",
+      "question": "Noted's user-level activation is falling while workspace-level activation is flat. What is the most defensible reading?",
+      "options": [
+        "One of the two numbers is computed incorrectly and should be reconciled",
+        "The workspace number should be preferred, since workspaces hold the paid seats",
+        "Activation is not really falling, since the two measures disagree",
+        "Both can be correct: they count different entities, so a shift in users per workspace would produce exactly this pattern"
+      ],
+      "correct": 3,
+      "explanation": "The unit of the population is part of the metric's meaning, and two units can move in opposite directions truthfully at the same time. Option A is the instinct of a careful PM and it wastes the finding: treating the disagreement as a bug hides the mix shift that the disagreement is pointing at."
+    },
+    {
+      "stage": "post",
+      "question": "A team writes a fully specified metric: population, event, window, aggregation, and aggregation unit are all unambiguous, and two analysts compute the same number. What has still not been established?",
+      "options": [
+        "That the number stands in for a user outcome anyone cares about, and how that link could break",
+        "That the metric is comparable to industry benchmarks",
+        "That the metric will be stable over time",
+        "That the metric has an owner and a target"
+      ],
+      "correct": 0,
+      "explanation": "Specification buys agreement, not relevance. A precisely defined number can be precisely disconnected from the job. Option C is tempting because stability sounds like the missing property — but a stable, well-defined, irrelevant metric is exactly the failure this boundary describes."
+    }
+  ]
+}

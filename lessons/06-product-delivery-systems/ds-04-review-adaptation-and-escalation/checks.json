@@ -1,0 +1,66 @@
+{
+  "id": "DS-04",
+  "title": "Review, adaptation, and escalation",
+  "questions": [
+    {
+      "stage": "post",
+      "question": "A PM writes to leadership: \"P95 for large workspaces is up 34% and still rising. These workspaces hold most paid seats. Flagging for visibility.\" Leadership replies \"keep an eye on it.\" What failed?",
+      "options": [
+        "The message lacked supporting data, so leadership could not evaluate it",
+        "Leadership failed to act on a clearly stated risk",
+        "The message named no decision and no date, so the default carried on and executed itself",
+        "The signal should have gone to engineering rather than to leadership"
+      ],
+      "correct": 2,
+      "explanation": "A status has no addressee who must act. Without a stated choice, a decider, a date and a default, nothing was requested and nothing changed. Option B is the tempting reading, because it feels like leadership dropped the ball; but the message asked for visibility and it received visibility. The escalation got what it requested."
+    },
+    {
+      "stage": "post",
+      "question": "A senior reviewer sees a weakness in a PM's plan and rewrites the affected section. The plan improves. What is the system cost?",
+      "options": [
+        "None; the reviewer has more context and the work is better",
+        "The owner learns that plans are corrected above them, and brings the next one later and thinner",
+        "The reviewer now owns the plan's outcome, which was not intended",
+        "The review took longer than naming the problem would have"
+      ],
+      "correct": 1,
+      "explanation": "A reviewer may name any problem and may not choose the fix. The work got better once; the system that produces work got worse, and the damage shows up in the next plan rather than this one. Option C is true in a narrow sense and is the answer a governance-minded PM gives, but the durable cost is to the owner's judgment, not to the accountability chart."
+    },
+    {
+      "stage": "post",
+      "question": "During a build, a review reveals that two slices should swap order and one should shrink. The committed outcome, population, and displacement are unchanged. What is the correct handling?",
+      "options": [
+        "The owner decides and records it as an amendment to the sequence",
+        "Escalate, because the sequence was agreed with stakeholders",
+        "Change it silently; sequence details are implementation",
+        "Re-open the commitment brief, since any date change affects the commitment"
+      ],
+      "correct": 0,
+      "explanation": "This is a tier-two change: inside the commitment, decided by the owner, written down. Option B is the answer a conscientious PM gives after learning to escalate, and it is the more damaging error at scale, because a team that escalates tier-two changes trains its leadership to micro-manage and slows every subsequent decision."
+    },
+    {
+      "stage": "post",
+      "question": "Monitoring shows a large-workspace slowdown. No support tickets mention speed. How should the absence of tickets be treated in an escalation?",
+      "options": [
+        "As evidence that users are not experiencing harm yet",
+        "As a reason to wait until tickets arrive before requesting a decision",
+        "As neutral, since absence of evidence carries no information either way",
+        "As evidence about the listening channel first, and only then as evidence about users"
+      ],
+      "correct": 3,
+      "explanation": "Zero tickets tells you what reached the support queue. Whether it tells you anything about user experience depends on whether those users have a channel and a habit of using it. Option A is the natural reading and the most expensive one here, because the affected workspaces hold a disproportionate share of paid seats and may escalate commercially rather than through support."
+    },
+    {
+      "stage": "post",
+      "question": "A team routes a known, accepted risk through its escalation path every month so leadership stays aware. What does this cost?",
+      "options": [
+        "Nothing, as long as the message is accurate and brief",
+        "Real escalations lose force, because the path no longer signals that a decision is required",
+        "Leadership time, which is the main constraint being consumed",
+        "The risk becomes over-weighted relative to newer risks"
+      ],
+      "correct": 1,
+      "explanation": "A recurring accepted risk needs notification, not escalation. Mixing the two trains the recipient to read the path as awareness, so the next message that genuinely needs a decision is answered with acknowledgement. Option C names a real cost, and it is the smaller one: leadership time can be recovered, whereas a devalued escalation path fails at the moment it is needed most."
+    }
+  ]
+}
