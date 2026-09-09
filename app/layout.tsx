@@ -17,8 +17,20 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://corepm.raziiabraham.com"),
   title: "CORE / PM — A Self-Paced Product Management Course",
   description: "43 lessons across framing, judgment, evidence, strategy, technology, delivery, and leadership — taught interactively by your coding agent. Install with: npx skills add raziiabraham/core-pm",
-  openGraph: { title: "CORE / PM — Re-own the PM Core", description: "Seven phases. Forty-three lessons. One body of product judgment.", images: ["/og.png"] },
-  twitter: { card: "summary_large_image", title: "CORE / PM — Re-own the PM Core", description: "Seven phases. Forty-three lessons. One body of product judgment.", images: ["/og.png"] },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "CORE / PM",
+    title: "CORE / PM — Re-own the PM Core",
+    description: "Seven phases. Forty-three lessons. One body of product judgment.",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "CORE / PM — Re-own the PM core. 43 lessons, 7 phases, ~22 hours. Install with npx skills add raziiabraham/core-pm." }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CORE / PM — Re-own the PM Core",
+    description: "Seven phases. Forty-three lessons. One body of product judgment.",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "CORE / PM — Re-own the PM core. 43 lessons, 7 phases, ~22 hours." }],
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

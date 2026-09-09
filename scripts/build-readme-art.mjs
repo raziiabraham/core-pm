@@ -15,6 +15,8 @@
 // curriculum. Requires Node 22.13+ for TypeScript type stripping.
 
 import { mkdirSync, writeFileSync } from "node:fs";
+
+import sharp from "sharp";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -113,6 +115,38 @@ function hero() {
 `;
 }
 
+// ------------------------------------------------------------- share card
+
+// 1200x630 is what Open Graph and Twitter/X crop to. Previews render small,
+// so this carries far less than the README hero: the real headline, one line
+// of promise, the install command, and the counts. Rasterised to
+// public/og.png because no major platform unfurls an SVG.
+function ogCard() {
+  const W = 1200;
+  const H = 630;
+  const hours = Math.round(totalMinutes / 60);
+  const counts = `${allLessons.length} lessons · ${curriculum.length} phases · ~${hours} hours`;
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="CORE / PM — re-own the PM core. ${counts}.">
+  <rect width="${W}" height="${H}" fill="${C.ground}"/>
+
+  ${text(80, 104, "CORE / PM", { size: 21, family: MONO, weight: 700, fill: C.accent, spacing: 2 })}
+  ${text(1120, 104, counts, { size: 17, family: MONO, fill: C.muted, anchor: "end" })}
+  <line x1="80" y1="130" x2="1120" y2="130" stroke="${C.rule}" stroke-width="1"/>
+
+  ${text(80, 268, "Re-own the", { size: 104, family: SERIF, fill: C.ink })}
+  ${text(80, 372, "PM core.", { size: 104, family: SERIF, fill: C.mint })}
+
+  ${text(80, 428, "Your coding agent becomes your tutor, and argues back.", { size: 25, fill: "#cfdbd5" })}
+
+  <rect x="80" y="466" width="700" height="88" fill="${C.panel}" stroke="${C.frame}" stroke-width="1"/>
+  ${text(104, 500, "Learn in your terminal", { size: 14, family: MONO, fill: C.muted, spacing: 0.8 })}
+  ${text(104, 534, "npx skills add raziiabraham/core-pm", { size: 22, family: MONO, fill: C.ink })}
+
+</svg>
+`;
+}
+
 // ------------------------------------------------------- figure: two paths
 
 function decisionChain() {
@@ -167,6 +201,15 @@ function decisionChain() {
 
 mkdirSync(out, { recursive: true });
 writeFileSync(join(out, "hero.svg"), hero());
+writeFileSync(join(out, "og.svg"), ogCard());
+
+// The share card also ships as PNG, because no major platform unfurls an SVG.
+// Rasterised here and committed, so the deploy needs no image toolchain and no
+// fonts beyond the system stacks this artwork already uses.
+await sharp(join(out, "og.svg"), { density: 144 })
+  .resize(1200, 630, { fit: "fill" })
+  .png({ compressionLevel: 9 })
+  .toFile(join(root, "public", "og.png"));
 writeFileSync(join(out, "figure-decision-chain.svg"), decisionChain());
 
 console.log("assets/hero.svg + assets/figure-decision-chain.svg written");
