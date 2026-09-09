@@ -14,7 +14,10 @@
 
 ## Learn in your terminal
 
+Install into a folder you will come back to. Your plan and your artifacts are written where you run it, so this becomes your course directory:
+
 ```bash
+mkdir -p ~/core-pm && cd ~/core-pm
 npx skills add raziiabraham/core-pm
 ```
 
@@ -27,6 +30,8 @@ Then, in Claude Code, Cursor, Codex, or any agent that reads `SKILL.md`:
 That runs a short interview, gives you a seven-scenario judgment placement, and writes `PM-LEARNING.md` — your plan. From then on, `/learn` teaches the next lesson and picks up exactly where you left off.
 
 No clone required. No server to run. No account. Every skill falls back to fetching lesson content straight from this repository.
+
+> **Scope:** the install is per-directory by default, which is why the `cd` matters. Add `-g` to install the skills once for every directory instead — but `PM-LEARNING.md` and `artifacts/` still land wherever you run `/start-learning`, so pick that spot deliberately either way.
 
 > **Codex and other hosts:** invocation syntax differs. Use `start-learning` and `learn` as plain skill names, or just say *"Use start-learning to begin the course."*
 

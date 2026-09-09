@@ -7,8 +7,11 @@ Everything is open. There is no gate, no password, and no account.
 ## How to take it
 
 ```bash
+mkdir -p ~/core-pm && cd ~/core-pm
 npx skills add raziiabraham/core-pm
 ```
+
+The install is per-directory by default, and `PM-LEARNING.md` plus `artifacts/` are written wherever you run it. Pick a folder you will come back to, or add `-g` to install the skills everywhere.
 
 Then `/start-learning` in Claude Code, or `start-learning` in Codex, or *"Use start-learning to begin the course"* in any other agent that reads `SKILL.md`.
 
