@@ -188,8 +188,69 @@ one thing guaranteed not to teach.
 - If the host renders markdown well, a small table can be shown as-is. Never
   dump mermaid source.
 
-Tell the learner once, early in their first lesson, that the same lesson is on
-the website with the diagrams drawn, if they would rather look at one.
+### When words are not enough — draw it
+
+The walkthrough above is the default, because the branch question is what
+teaches. But if the learner is still unclear after it, or asks to see the
+diagram, offer to draw it rather than repeating yourself. Say it as a real
+choice:
+
+> I can write this diagram to an HTML file you open in your browser. You can
+> also edit the diagram there and watch it redraw, if changing it would make it
+> clearer. Or the same lesson is on the course website with every diagram drawn.
+
+If they take the file, write it to `artifacts/diagrams/<LESSON-ID>.html` in the
+course home, tell them the path, and keep teaching. Do not wait for them to
+open it.
+
+The file must be self-contained and editable — one file, no build step, and the
+diagram source in a textarea so they can change it and press the button:
+
+```html
+<!doctype html>
+<meta charset="utf-8">
+<title><LESSON-ID> — <diagram name></title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 60rem; margin: 2rem auto;
+         padding: 0 1rem; line-height: 1.5; }
+  textarea { width: 100%; min-height: 10rem; font-family: ui-monospace, monospace;
+             font-size: .85rem; }
+  #out { margin: 1.5rem 0; overflow-x: auto; }
+</style>
+<h1><one-sentence statement of what the diagram shows></h1>
+<div id="out"></div>
+<p>Edit the diagram and redraw it:</p>
+<textarea id="src"><the mermaid source, verbatim from the lesson></textarea>
+<p><button id="go">Redraw</button> <span id="err"></span></p>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: false });
+  const src = document.getElementById('src'), out = document.getElementById('out'),
+        err = document.getElementById('err');
+  async function draw() {
+    err.textContent = '';
+    try {
+      const { svg } = await mermaid.render('d' + Date.now(), src.value);
+      out.innerHTML = svg;
+    } catch (e) { err.textContent = e.message; }
+  }
+  document.getElementById('go').addEventListener('click', draw);
+  draw();
+</script>
+```
+
+Three rules for this file.
+
+- **It supplements the walkthrough, it never replaces it.** Still ask the branch
+  question. A learner who only looks at a picture has not made a decision.
+- **Copy the mermaid source verbatim** from the lesson. Do not redraw it from
+  memory or simplify it.
+- **One file per lesson.** If a lesson has several diagrams, put them all in the
+  same file, each with its own heading and textarea. Do not scatter files.
+
+If the host renders mermaid inline, use that instead and skip the file. The
+website carries every diagram drawn, so mention it once in the first lesson as
+the third option.
 
 ## Step 3 — Record
 
